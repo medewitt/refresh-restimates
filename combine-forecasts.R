@@ -1,0 +1,116 @@
+# Purpose: Combine Historical Projections for Use
+
+
+# libraries ---------------------------------------------------------------
+library(data.table)
+library(purrr)
+library(stringr)
+library(dplyr)
+
+# raw data ----------------------------------------------------------------
+
+
+path <- fs::dir_info(path = here::here("data"),
+										 glob = "*all-counties.rds") %>%
+	mutate(date_created = as.Date(str_extract(basename(path), "[0-9]{4}-[0-9]{2}-[0-9]{2}"), format="%Y-%m-%d"))
+
+read_epi_now <- function(path, date){
+	test <- readRDS(path)
+	
+	out <- data.table::rbindlist(test$regional_estimates,idcol = "county")
+	
+	out$last_update <- date
+	
+	out
+}
+
+read_epi_now2 <- function(path, date){
+	test <- readRDS(path)
+	
+	out <- data.table::as.data.table(test$regional_estimates)
+	
+	out$last_update <- date
+	
+	out
+}
+
+# first generation --------------------------------------------------------
+path_2 <- copy(setDT(path))[date_created <as.Date("2020-10-24")]
+
+combined_information <- purrr::map2(path_2$path, path_2$date_created,
+																		~read_epi_now(.x,.y))
+
+names(combined_information) <- path_2$date_created
+
+combined_information <- rbindlist(combined_information)
+
+
+# second generation -------------------------------------------------------
+second_generation <-  copy(setDT(path))[date_created>as.Date("2020-10-24")]
+
+combined_info_2 <- purrr::map2(second_generation$path, second_generation$date_created,
+															 ~read_epi_now2(.x,.y))
+names(combined_info_2) <- second_generation$date_created
+combined_info_2 <- rbindlist(combined_info_2)
+
+combined_info_2<-rename(combined_info_2,
+												bottom = lower_90,
+												lower = lower_50,
+												central_lower = lower_20,
+												central_upper = upper_20,
+												upper = upper_50,
+												top = upper_90)
+
+# combine generations -----------------------------------------------------
+
+combined_information <- rbind(combined_information, combined_info_2)
+
+combined_information <- combined_information[order(last_update, decreasing = TRUE)]
+
+#combined_information <- combined_information[!(upper>50&variable=="R"), ,by = c("county", "date")]
+
+
+combined_information <- combined_information[, head(.SD, 1), by = c("county", "date", "last_update", "variable")]
+
+most_current_information <- combined_information[, .SD[which.max(last_update)], by = county] %>%
+	.[,c("county","last_update")]
+
+setkey(combined_information, county, last_update)
+setkey(most_current_information, county, last_update)
+
+most_current_information <- combined_information[most_current_information, nomatch=0]
+
+
+# unit checks -------------------------------------------------------------
+
+
+stopifnot(length(unique(most_current_information$county))==102)
+
+nc_only <- most_current_information[county=="North Carolina"][variable=="R"]
+nc_only_cases <- most_current_information[county=="North Carolina"][variable=="infections"]
+
+stopifnot(nrow(nc_only[mean<lower])==0)
+stopifnot(nrow(nc_only[median<lower])==0)
+stopifnot(nrow(nc_only[mean>top])==0)
+stopifnot(nrow(nc_only[median>top])==0)
+
+(update_dates <- most_current_information[,.(unique(last_update)), by = "county"][order(V1)])
+# Run validation Scripts
+library(dcmodify)
+v <- modifier(.file = here::here("validation", "rules.yaml"))
+
+dt_in <- as.data.frame(most_current_information)
+most_current_information_corrected <- modify(dt_in, v)
+
+most_current_information_corrected <- as.data.table(most_current_information_corrected)
+# big int -----------------------------------------------------------------
+
+most_current_information_corrected <- most_current_information_corrected[ , purrr::map_if(most_current_information_corrected,
+																										is.numeric, 
+																										function(x) round(x,5))]
+
+lapply(most_current_information_corrected, max)
+# write out latest --------------------------------------------------------
+
+fwrite(most_current_information_corrected, here::here("output", "latest_r_coviddata.csv"))
+

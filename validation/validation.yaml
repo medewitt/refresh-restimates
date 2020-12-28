@@ -1,0 +1,8 @@
+# Rules for Outputs of Reproduction/ Case Reports
+rules:
+-
+  expr: unique(county)==1-2
+  name: validateRegions
+  label: All Counties Present
+  description: |
+    Ensure that all counties appear at least once.

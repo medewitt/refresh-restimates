@@ -1,0 +1,11 @@
+INFO [2020-11-18 18:08:49] Reporting estimates using data up to: 2020-11-18
+INFO [2020-11-18 18:08:49] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
+INFO [2020-11-18 18:08:49] Producing estimates for: 102 regions
+INFO [2020-11-18 18:08:49] Regions excluded: 0 regions
+INFO [2020-11-18 18:08:49] Showing progress using progressr. Modify this behaviour using progressr::handlers.
+INFO [2020-11-19 11:00:08] Completed regional estimates
+INFO [2020-11-19 11:00:08] Regions with estimates: 52
+INFO [2020-11-19 11:00:08] Regions with runtime errors: 50
+INFO [2020-11-19 11:00:08] Producing summary
+INFO [2020-11-19 11:00:08] No summary directory specified so returning summary output
+INFO [2020-11-19 11:00:10] Saving timings information to : /mnt/resource/refresh-restimates/rt-estimates-out

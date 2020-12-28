@@ -1,0 +1,201 @@
+
+R version 4.0.2 (2020-06-22) -- "Taking Off Again"
+Copyright (C) 2020 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> # Purpose: Scan and Re-run failed counties
+> 
+> library(dplyr)
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+> 
+> out_files <- fs::dir_info(path = here::here("rt-estimates-out"),
++ 													recurse = TRUE)
+> 
+> a<-out_files %>%
++ 	filter(type == "directory") %>%
++ 	filter(grepl("\\d{4}-\\d{2}-\\d{2}$", path)) %>% 
++ 	rowwise() %>%
++ 	mutate(county = unlist(strsplit(path, '/'))[length(unlist(strsplit(path, '/')))-1]) %>%
++ 	#mutate(run_date = unlist(strsplit(path, '/'))[length(unlist(strsplit(path, '/')))-1]) %>%
++ 	mutate(run_date = basename(path)) %>% 
++ 	select(path, county, run_date, birth_time) %>%
++ 	group_by(county) %>%
++ 	filter(as.Date(run_date) == max(as.Date(run_date))) %>%
++ 	ungroup()
+> 
+> re_run = a %>% 
++ 	filter(as.Date(run_date)<(Sys.Date()-3)) %>% 
++ 	pull(county)
+> 
+> if(length(re_run)!=0){
++ 
++ # infra -------------------------------------------------------------------
++ 
++ 
++ # packages ----------------------------------------------------------------
++ library(EpiNow2)
++ library(magrittr)
++ library(data.table)
++ library(future)
++ library(purrr)
++ 
++ #options(future.globals.maxSize = 10000*1024^2)
++ 
++ dat <- nccovid::get_covid_state(data_source = "cone")
++ 
++ # Wait Until 15 Confirmed cases by county cumulative and within last 16 weeks
++ 
++ dat <- dat[date>=Sys.Date()-lubridate::weeks(16)]
++ 
++ dat <- dat[cases_confirmed_cum>15]
++ 
++ # Fix State Data Dump
++ dat <- dat[,cases_daily := fifelse(date==as.Date("2020-09-25"),
++ 																	 dplyr::lag(cases_daily,1), cases_daily), by = "county"]
++ 
++ reported_cases <- dat[,`:=` (region=county,
++ 														 confirm = cases_daily)][,.(date,confirm, region)][date>as.Date("2020-03-10")]
++ 
++ 
++ # correct for testing -----------------------------------------------------
++ 
++ nc_testing <- "https://raw.githubusercontent.com/conedatascience/covid-data/master/data/timeseries/nc-summary-stats.csv"
++ 
++ nc_testing <- data.table::fread(nc_testing)
++ 
++ dat_positivity_rate<- nc_testing[,date_n := as.numeric(as.Date(date))] %>%
++ 	.[date>as.Date("2020-03-15")]
++ 
++ mod <- mgcv::gam(positive_tests ~ s(date_n,bs = "gp"),
++ 								 data = dat_positivity_rate,
++ 								 family = stats::quasibinomial,
++ 								 weights = daily_tests)
++ start <- Sys.time()
++ cat(start)
++ # corrected cases for modelling -------------------------------------------
++ 
++ dat$predicted_positive <- predict(mod, newdata = dat[,date_n:=as.numeric(date)], type = "response")
++ 
++ dat <- dat[,predicted_positive := fifelse(predicted_positive<.02,.02, predicted_positive)]
++ 
++ first_case_dat <- dat[cases_daily>0, .SD[which.min(date)], by = county]
++ 
++ 
++ first_case_dat <- first_case_dat[,.(county,date)] %>%
++ 	setnames(old = "date", new = "first_case_date")
++ 
++ # Set Keys for Joining
++ setkey(first_case_dat, "county")
++ setkey(dat, "county")
++ 
++ 
++ dat <- dat[first_case_dat, nomatch = 0]
++ 
++ dat <- dat[date>=first_case_date]
++ 
++ increase_cases <- function (observed_cases, pos_rate, m = 10, k = 0.462) {
++ 	y <- observed_cases * pos_rate^k * m
++ 	return(y)
++ }
++ 
++ dat$confirm <- increase_cases(observed_cases = dat$cases_daily,
++ 															pos_rate = dat$predicted_positive)
++ 
++ reported_cases <- dat[,`:=` (region=county,
++ 														 confirm = round(confirm))] %>%
++ 	.[,.(date,confirm, region)] %>%
++ 	.[date>as.Date("2020-05-18")]
++ 
++ # Smooth on Regions for R estimation only.
++ cone_region <- reported_cases[region %chin% nccovid::cone_region,
++ 															.(confirm = sum(confirm)), by = "date"] %>%
++ 	.[,region:="Cone Health"] %>% 
++ 	.[,confirm:=data.table::frollmean(confirm, n = 3)] %>% 
++ 	.[,confirm :=round(confirm)]%>% 
++ 	.[!is.na(confirm)]
++ 
++ nc_overall <- reported_cases[,.(confirm = sum(confirm)), by = "date"] %>%
++ 	.[,region:="North Carolina"]%>% 
++ 	.[,confirm:=data.table::frollmean(confirm, n = 3)] %>% 
++ 	.[,confirm :=round(confirm)] %>% 
++ 	.[!is.na(confirm)]
++ 
++ reported_cases <-reported_cases %>%
++ 	merge(cone_region, all = TRUE) %>%
++ 	merge(nc_overall, all=TRUE)
++ 
++ # Correct for State Data Dump
++ reported_cases <- reported_cases[ ,confirm:= fifelse(date==as.Date("2020-09-25"),
++ 																										 shift(confirm,1),confirm), by = "region"]
++ 
++ 
++ 
++ # pull failed counties ----------------------------------------------------
++ 
++ reported_cases <- reported_cases[region%chin%re_run]
++ 
++ 
++ # setup -------------------------------------------------------------------
++ 
++ # NCDHHS Reporting Data Starting 2020-10-29
++ 
++ reporting_delay <- nccovid::nc_delay
++ 
++ generation_time <- EpiNow2::get_generation_time(disease = "SARS-CoV-2", source = "ganyani")
++ incubation_period <- EpiNow2::get_incubation_period(disease = "SARS-CoV-2", source = "lauer")
++ 
++ cat("prep completed")
++ 
++ # Load utils --------------------------------------------------------------
++ #if (!exists("setup_future", mode = "function")) source(here::here("util.R"))
++ #no_cores <- setup_future(reported_cases = reported_cases)
++ 
++ # run estimation ----------------------------------------------------------
++ #EpiNow2::setup_logging(file = "log.log")
++ 
++ cat('Running the full model')
++ 
++ 
++ estimates <- try(regional_epinow(reported_cases = reported_cases,
++ 																 generation_time = generation_time,
++ 																 target_folder = here::here("rt-estimates-out"),
++ 																 logs = here::here("epinow-logs"),
++ 																 delays = delay_opts(incubation_period,
++ 																	 										reporting_delay),
++ 																	 non_zero_points = 14, horizon = 14, 
++ 																	 stan = stan_opts(samples = 4000,
++ 																	 								 control = list(adapt_delta = 0.95),
++ 				chains = 4, cores = 12,
++ 																	 								 max_execution_time = 60*60*4,
++ 																	 								 future = FALSE),
++ 																	 rt = rt_opts(prior = list(mean = 1.25, sd = 0.1))))
++ plan("sequential")
++ }
+> 
+> proc.time()
+   user  system elapsed 
+  1.208   0.973   1.630 

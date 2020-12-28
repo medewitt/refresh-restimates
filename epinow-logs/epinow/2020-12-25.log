@@ -1,0 +1,209 @@
+INFO [2020-12-26 02:30:02] Initialising estimates for: Graham
+WARN [2020-12-26 02:40:49] Graham (chain: 1): There were 94 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2020-12-26 02:40:49] Graham (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2020-12-26 02:42:28] Completed estimates for: Graham
+INFO [2020-12-26 02:42:28] Initialising estimates for: Northampton
+ERROR [2020-12-26 02:42:29] Northampton (chain: 1): unable to fork, possible reason: Cannot allocate memory - mcfork, detached
+ERROR [2020-12-26 02:42:29] Northampton: model fitting was timed out or failed - 
+INFO [2020-12-26 02:42:29] Initialising estimates for: Warren
+ERROR [2020-12-26 02:42:29] Warren (chain: 1): unable to fork, possible reason: Cannot allocate memory - mcfork, detached
+ERROR [2020-12-26 02:42:29] Warren: model fitting was timed out or failed - 
+INFO [2020-12-26 02:42:29] Initialising estimates for: Stanly
+ERROR [2020-12-26 02:42:29] Stanly (chain: 1): unable to fork, possible reason: Cannot allocate memory - mcfork, detached
+ERROR [2020-12-26 02:42:29] Stanly: model fitting was timed out or failed - 
+INFO [2020-12-26 02:42:29] Initialising estimates for: Granville
+ERROR [2020-12-26 02:42:30] Granville (chain: 1): unable to fork, possible reason: Cannot allocate memory - mcfork, detached
+ERROR [2020-12-26 02:42:30] Granville: model fitting was timed out or failed - 
+INFO [2020-12-26 02:42:30] Initialising estimates for: Anson
+ERROR [2020-12-26 02:42:30] Anson (chain: 1): unable to fork, possible reason: Cannot allocate memory - mcfork, detached
+ERROR [2020-12-26 02:42:30] Anson: model fitting was timed out or failed - 
+INFO [2020-12-26 02:42:30] Initialising estimates for: Wilkes
+ERROR [2020-12-26 02:42:30] Wilkes (chain: 1): unable to fork, possible reason: Cannot allocate memory - mcfork, detached
+ERROR [2020-12-26 02:42:30] Wilkes: model fitting was timed out or failed - 
+INFO [2020-12-26 02:42:30] Initialising estimates for: Chowan
+ERROR [2020-12-26 02:42:30] Chowan (chain: 1): unable to fork, possible reason: Cannot allocate memory - mcfork, detached
+ERROR [2020-12-26 02:42:30] Chowan: model fitting was timed out or failed - 
+INFO [2020-12-26 02:42:31] Initialising estimates for: Stokes
+ERROR [2020-12-26 02:42:31] Stokes (chain: 1): unable to fork, possible reason: Cannot allocate memory - mcfork, detached
+ERROR [2020-12-26 02:42:31] Stokes: model fitting was timed out or failed - 
+INFO [2020-12-26 02:42:31] Initialising estimates for: Surry
+ERROR [2020-12-26 02:42:50] Surry (chain: 1): unable to fork, possible reason: Cannot allocate memory - mcfork, detached
+ERROR [2020-12-26 02:42:50] Surry: model fitting was timed out or failed - 
+INFO [2020-12-26 02:42:50] Initialising estimates for: Vance
+WARN [2020-12-26 02:57:47] Vance (chain: 1): There were 53 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2020-12-26 02:57:47] Vance (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2020-12-26 02:59:06] Completed estimates for: Vance
+INFO [2020-12-26 02:59:06] Initialising estimates for: Watauga
+ERROR [2020-12-26 02:59:07] Watauga (chain: 1): unable to fork, possible reason: Cannot allocate memory - mcfork, detached
+ERROR [2020-12-26 02:59:07] Watauga: model fitting was timed out or failed - 
+INFO [2020-12-26 02:59:07] Initialising estimates for: Henderson
+ERROR [2020-12-26 02:59:07] Henderson (chain: 1): unable to fork, possible reason: Cannot allocate memory - mcfork, detached
+ERROR [2020-12-26 02:59:07] Henderson: model fitting was timed out or failed - 
+INFO [2020-12-26 02:59:07] Initialising estimates for: Catawba
+ERROR [2020-12-26 02:59:07] Catawba (chain: 1): unable to fork, possible reason: Cannot allocate memory - mcfork, detached
+ERROR [2020-12-26 02:59:07] Catawba: model fitting was timed out or failed - 
+INFO [2020-12-26 02:59:07] Initialising estimates for: Harnett
+ERROR [2020-12-26 02:59:08] Harnett (chain: 1): unable to fork, possible reason: Cannot allocate memory - mcfork, detached
+ERROR [2020-12-26 02:59:08] Harnett: model fitting was timed out or failed - 
+INFO [2020-12-26 02:59:08] Initialising estimates for: Randolph
+ERROR [2020-12-26 02:59:08] Randolph (chain: 1): unable to fork, possible reason: Cannot allocate memory - mcfork, detached
+ERROR [2020-12-26 02:59:08] Randolph: model fitting was timed out or failed - 
+INFO [2020-12-26 02:59:08] Initialising estimates for: Bladen
+WARN [2020-12-26 03:03:46] Bladen (chain: 1): There were 326 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2020-12-26 03:03:46] Bladen (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2020-12-26 03:03:52] Bladen (chain: 1): Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2020-12-26 03:03:56] Bladen (chain: 1): Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+INFO [2020-12-26 03:04:52] Completed estimates for: Bladen
+INFO [2020-12-26 03:04:52] Initialising estimates for: Iredell
+WARN [2020-12-26 03:19:28] Iredell (chain: 1): There were 46 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2020-12-26 03:19:28] Iredell (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2020-12-26 03:20:20] Completed estimates for: Iredell
+INFO [2020-12-26 03:20:20] Initialising estimates for: Richmond
+ERROR [2020-12-26 03:20:20] Richmond (chain: 1): unable to fork, possible reason: Cannot allocate memory - mcfork, detached
+ERROR [2020-12-26 03:20:20] Richmond: model fitting was timed out or failed - 
+INFO [2020-12-26 03:20:20] Initialising estimates for: Beaufort
+ERROR [2020-12-26 03:20:20] Beaufort (chain: 1): unable to fork, possible reason: Cannot allocate memory - mcfork, detached
+ERROR [2020-12-26 03:20:20] Beaufort: model fitting was timed out or failed - 
+INFO [2020-12-26 03:20:20] Initialising estimates for: Edgecombe
+ERROR [2020-12-26 03:20:20] Edgecombe (chain: 1): unable to fork, possible reason: Cannot allocate memory - mcfork, detached
+ERROR [2020-12-26 03:20:20] Edgecombe: model fitting was timed out or failed - 
+INFO [2020-12-26 03:20:20] Initialising estimates for: Craven
+ERROR [2020-12-26 03:20:20] Craven (chain: 1): unable to fork, possible reason: Cannot allocate memory - mcfork, detached
+ERROR [2020-12-26 03:20:20] Craven: model fitting was timed out or failed - 
+INFO [2020-12-26 03:20:20] Initialising estimates for: Rockingham
+ERROR [2020-12-26 03:20:20] Rockingham (chain: 1): unable to fork, possible reason: Cannot allocate memory - mcfork, detached
+ERROR [2020-12-26 03:20:20] Rockingham: model fitting was timed out or failed - 
+INFO [2020-12-26 03:20:21] Initialising estimates for: Johnston
+ERROR [2020-12-26 03:20:21] Johnston (chain: 1): unable to fork, possible reason: Cannot allocate memory - mcfork, detached
+ERROR [2020-12-26 03:20:21] Johnston: model fitting was timed out or failed - 
+INFO [2020-12-26 03:20:21] Initialising estimates for: Nash
+ERROR [2020-12-26 03:20:21] Nash (chain: 1): unable to fork, possible reason: Cannot allocate memory - mcfork, detached
+ERROR [2020-12-26 03:20:21] Nash: model fitting was timed out or failed - 
+INFO [2020-12-26 03:20:21] Initialising estimates for: Onslow
+ERROR [2020-12-26 03:20:21] Onslow (chain: 1): unable to fork, possible reason: Cannot allocate memory - mcfork, detached
+ERROR [2020-12-26 03:20:21] Onslow: model fitting was timed out or failed - 
+INFO [2020-12-26 03:20:21] Initialising estimates for: Rutherford
+ERROR [2020-12-26 03:20:21] Rutherford (chain: 1): unable to fork, possible reason: Cannot allocate memory - mcfork, detached
+ERROR [2020-12-26 03:20:21] Rutherford: model fitting was timed out or failed - 
+INFO [2020-12-26 03:20:21] Runtime error in Northampton : Northampton: model fitting was timed out or failed - 
+INFO [2020-12-26 03:20:21] Runtime error in Warren : Warren: model fitting was timed out or failed - 
+INFO [2020-12-26 03:20:21] Runtime error in Stanly : Stanly: model fitting was timed out or failed - 
+INFO [2020-12-26 03:20:21] Runtime error in Granville : Granville: model fitting was timed out or failed - 
+INFO [2020-12-26 03:20:21] Runtime error in Anson : Anson: model fitting was timed out or failed - 
+INFO [2020-12-26 03:20:21] Runtime error in Wilkes : Wilkes: model fitting was timed out or failed - 
+INFO [2020-12-26 03:20:21] Runtime error in Chowan : Chowan: model fitting was timed out or failed - 
+INFO [2020-12-26 03:20:21] Runtime error in Stokes : Stokes: model fitting was timed out or failed - 
+INFO [2020-12-26 03:20:21] Runtime error in Surry : Surry: model fitting was timed out or failed - 
+INFO [2020-12-26 03:20:21] Runtime error in Watauga : Watauga: model fitting was timed out or failed - 
+INFO [2020-12-26 03:20:21] Runtime error in Henderson : Henderson: model fitting was timed out or failed - 
+INFO [2020-12-26 03:20:21] Runtime error in Catawba : Catawba: model fitting was timed out or failed - 
+INFO [2020-12-26 03:20:21] Runtime error in Harnett : Harnett: model fitting was timed out or failed - 
+INFO [2020-12-26 03:20:21] Runtime error in Randolph : Randolph: model fitting was timed out or failed - 
+INFO [2020-12-26 03:20:21] Runtime error in Richmond : Richmond: model fitting was timed out or failed - 
+INFO [2020-12-26 03:20:21] Runtime error in Beaufort : Beaufort: model fitting was timed out or failed - 
+INFO [2020-12-26 03:20:21] Runtime error in Edgecombe : Edgecombe: model fitting was timed out or failed - 
+INFO [2020-12-26 03:20:21] Runtime error in Craven : Craven: model fitting was timed out or failed - 
+INFO [2020-12-26 03:20:21] Runtime error in Rockingham : Rockingham: model fitting was timed out or failed - 
+INFO [2020-12-26 03:20:21] Runtime error in Johnston : Johnston: model fitting was timed out or failed - 
+INFO [2020-12-26 03:20:21] Runtime error in Nash : Nash: model fitting was timed out or failed - 
+INFO [2020-12-26 03:20:21] Runtime error in Onslow : Onslow: model fitting was timed out or failed - 
+INFO [2020-12-26 03:20:21] Runtime error in Rutherford : Rutherford: model fitting was timed out or failed - 
+INFO [2020-12-26 18:09:49] Initialising estimates for: Union
+INFO [2020-12-26 18:09:49] Initialising estimates for: Buncombe
+INFO [2020-12-26 18:09:50] Initialising estimates for: Gaston
+INFO [2020-12-26 18:09:51] Initialising estimates for: New Hanover
+WARN [2020-12-26 18:18:36] Buncombe (chain: 1): There were 95 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2020-12-26 18:18:36] Buncombe (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2020-12-26 18:20:08] Completed estimates for: Buncombe
+INFO [2020-12-26 18:20:16] Initialising estimates for: Forsyth
+WARN [2020-12-26 18:24:11] Gaston (chain: 1): There were 24 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2020-12-26 18:24:11] Gaston (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2020-12-26 18:27:05] Completed estimates for: Gaston
+INFO [2020-12-26 18:27:17] Initialising estimates for: Durham
+WARN [2020-12-26 18:27:53] New Hanover (chain: 1): There were 16 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2020-12-26 18:27:53] New Hanover (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2020-12-26 18:29:39] Completed estimates for: New Hanover
+INFO [2020-12-26 18:29:46] Initialising estimates for: Cumberland
+WARN [2020-12-26 18:34:30] Union (chain: 1): There were 51 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2020-12-26 18:34:30] Union (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2020-12-26 18:36:29] Completed estimates for: Union
+INFO [2020-12-26 18:36:35] Initialising estimates for: Guilford
+WARN [2020-12-26 18:38:23] Durham (chain: 1): There were 78 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2020-12-26 18:38:23] Durham (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2020-12-26 18:40:26] Completed estimates for: Durham
+INFO [2020-12-26 18:40:35] Initialising estimates for: Wake
+WARN [2020-12-26 18:41:07] Forsyth (chain: 1): There were 69 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2020-12-26 18:41:07] Forsyth (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2020-12-26 18:42:15] Completed estimates for: Forsyth
+INFO [2020-12-26 18:42:21] Initialising estimates for: Mecklenburg
+WARN [2020-12-26 18:42:21] Cumberland (chain: 1): There were 136 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2020-12-26 18:42:22] Cumberland (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+ERROR [2020-12-26 18:42:23] Mecklenburg (chain: 1): unable to fork, possible reason: Cannot allocate memory - mcfork, detached
+ERROR [2020-12-26 18:42:23] Mecklenburg: model fitting was timed out or failed - 
+INFO [2020-12-26 18:42:26] Initialising estimates for: Cone Health
+WARN [2020-12-26 18:42:54] Cumberland (chain: 1): Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+INFO [2020-12-26 18:44:14] Completed estimates for: Cumberland
+INFO [2020-12-26 18:44:20] Initialising estimates for: North Carolina
+WARN [2020-12-26 18:49:09] Guilford (chain: 1): There were 25 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2020-12-26 18:49:09] Guilford (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2020-12-26 18:50:51] Completed estimates for: Guilford
+WARN [2020-12-26 18:57:32] Wake (chain: 1): There were 37 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2020-12-26 18:57:32] Wake (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2020-12-26 18:58:12] Completed estimates for: Wake
+WARN [2020-12-26 21:12:40] North Carolina (chain: 1): There were 279 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2020-12-26 21:12:40] North Carolina (chain: 1): There were 882 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 14. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2020-12-26 21:12:40] North Carolina (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+ERROR [2020-12-26 21:12:40] North Carolina: model fitting was timed out or failed - 
+ERROR [2020-12-26 21:13:00] Cone Health: model fitting was timed out or failed - 
+INFO [2020-12-26 21:13:00] Runtime error in Mecklenburg : Mecklenburg: model fitting was timed out or failed - 
+INFO [2020-12-26 21:13:00] Runtime error in Cone Health : Cone Health: model fitting was timed out or failed - 
+INFO [2020-12-26 21:13:00] Runtime error in North Carolina : North Carolina: model fitting was timed out or failed - 

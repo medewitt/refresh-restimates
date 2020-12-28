@@ -1,0 +1,162 @@
+# Purpose: Run Estimation Routines
+
+# packages ----------------------------------------------------------------
+library(EpiNow2)
+library(magrittr)
+library(data.table)
+library(future)
+library(purrr)
+
+#options(future.globals.maxSize = 10000*1024^2)
+
+dat <- nccovid::get_covid_state(data_source = "cone", reporting_adj = TRUE)
+
+# Wait Until 15 Confirmed cases by county cumulative and within last 16 weeks
+
+dat <- dat[date>=Sys.Date()-lubridate::weeks(16)]
+
+dat <- dat[cases_confirmed_cum>15]
+
+# Fix State Data Dump
+dat <- dat[,cases_daily := fifelse(date==as.Date("2020-09-25"),
+																	 dplyr::lag(cases_daily,1), cases_daily), by = "county"]
+
+reported_cases <- dat[,`:=` (region=county,
+														 confirm = cases_daily)][,.(date,confirm, region)][date>as.Date("2020-03-10")]
+
+
+# correct for testing -----------------------------------------------------
+
+nc_testing <- "https://raw.githubusercontent.com/conedatascience/covid-data/master/data/timeseries/nc-summary-stats.csv"
+
+nc_testing <- data.table::fread(nc_testing)
+
+dat_positivity_rate<- nc_testing[,date_n := as.numeric(as.Date(date))] %>%
+	.[date>as.Date("2020-03-15")]
+
+mod <- mgcv::gam(positive_tests ~ s(date_n,bs = "gp"),
+								 data = dat_positivity_rate,
+								 family = stats::quasibinomial,
+								 weights = daily_tests)
+start <- Sys.time()
+cat(start)
+# corrected cases for modelling -------------------------------------------
+
+dat$predicted_positive <- predict(mod, newdata = dat[,date_n:=as.numeric(date)], type = "response")
+
+dat <- dat[,predicted_positive := fifelse(predicted_positive<.02,.02, predicted_positive)]
+
+first_case_dat <- dat[cases_daily>0, .SD[which.min(date)], by = county]
+
+
+first_case_dat <- first_case_dat[,.(county,date)] %>%
+	setnames(old = "date", new = "first_case_date")
+
+# Set Keys for Joining
+setkey(first_case_dat, "county")
+setkey(dat, "county")
+
+
+dat <- dat[first_case_dat, nomatch = 0]
+
+dat <- dat[date>=first_case_date]
+
+increase_cases <- function (observed_cases, pos_rate, m = 10, k = 0.462) {
+	y <- observed_cases * pos_rate^k * m
+	return(y)
+}
+
+dat$confirm <- increase_cases(observed_cases = dat$cases_daily,
+															pos_rate = dat$predicted_positive)
+
+reported_cases <- dat[,`:=` (region=county,
+														 confirm = round(confirm))] %>%
+	.[,.(date,confirm, region)] %>%
+	.[date>as.Date("2020-05-18")]
+
+# Smooth on Regions for R estimation only.
+cone_region <- reported_cases[region %chin% nccovid::cone_region,
+															.(confirm = sum(confirm)), by = "date"] %>%
+	.[,region:="Cone Health"] %>% 
+	.[,confirm:=data.table::frollmean(confirm, n = 6)] %>% 
+	.[,confirm :=round(confirm)]%>% 
+	.[!is.na(confirm)]
+
+nc_overall <- reported_cases[,.(confirm = sum(confirm)), by = "date"] %>%
+	.[,region:="North Carolina"]%>% 
+	.[,confirm:=data.table::frollmean(confirm, n = 6)] %>% 
+	.[,confirm :=round(confirm)] %>% 
+	.[!is.na(confirm)]
+
+reported_cases <-reported_cases %>%
+	merge(cone_region, all = TRUE) %>%
+	merge(nc_overall, all=TRUE)
+
+# Correct for State Data Dump
+reported_cases <- reported_cases[ ,confirm:= fifelse(date==as.Date("2020-09-25"),
+																										 shift(confirm,1),confirm), by = "region"]
+
+
+# pull low population density counties ------------------------------------
+
+county_info <- nccovid::nc_population[ ,1:2][order(july_2020, decreasing = TRUE)][county!="STATE"]
+
+county_single <- c(head(county_info$county,10), "North Carolina", "Cone Health")
+county_cumulative <- setdiff(county_info$county,county_single)
+
+
+# setup -------------------------------------------------------------------
+
+# NCDHHS Reporting Data Starting 2020-10-29
+
+reporting_delay <- nccovid::nc_delay
+
+generation_time <- EpiNow2::get_generation_time(disease = "SARS-CoV-2", source = "ganyani")
+incubation_period <- EpiNow2::get_incubation_period(disease = "SARS-CoV-2", source = "lauer")
+
+cat("prep completed")
+
+# Load utils --------------------------------------------------------------
+if (!exists("setup_future", mode = "function")) source(here::here("util.R"))
+no_cores <- setup_future(reported_cases = reported_cases)
+
+# run estimation ----------------------------------------------------------
+#EpiNow2::setup_logging(file = "log.log")
+debug <- FALSE
+if(debug){
+	#reported_cases <- reported_cases[region%chin%nccovid::cone_region]
+	reported_cases <- reported_cases[region%chin%c("Guilford", "Alamance")]
+	reported_cases_single <- reported_cases[region%chin%c("Alamance")]
+	
+	estimates <- regional_epinow(reported_cases = reported_cases[region=="Mecklenburg"],
+															 generation_time = generation_time,
+															 target_folder = here::here("rt-estimates-out"),
+															 logs = here::here("epinow-logs"),
+															 non_zero_points = 14, horizon = 14, 
+															 delays = delay_opts(incubation_period,
+															 										reporting_delay),
+															 stan = stan_opts(cores = 8, chains = 4,control = list(adapt_delta = 0.95, max_treedepth = 14),
+															 								 max_execution_time = 60*60*4),
+															 rt = rt_opts(prior = list(mean = 1.25, sd = 0.25)))
+} else {
+	if(file.exists(here::here("info.log"))){
+		unlink(here::here("info.log"))
+	}
+	cat('Running the full model')
+	
+	reported_cases_high_density <- reported_cases[region%in%county_single]
+	
+	estimates <- try(regional_epinow(reported_cases = reported_cases_high_density,
+																	 generation_time = generation_time,
+																	 target_folder = here::here("rt-estimates-out"),
+																	 logs = here::here("epinow-logs"),
+																	 delays = delay_opts(incubation_period,
+																	 										reporting_delay),
+																	 non_zero_points = 14, horizon = 14, 
+																	 stan = stan_opts(samples = 4000, control = list(adapt_delta = 0.95, max_treedepth = 14),
+																	 								 chains = 4, cores = no_cores,
+																	 								 max_execution_time = 60*60*4,
+																	 								 future = FALSE),
+																	 rt = rt_opts(prior = list(mean = 1.25, sd = 0.25))))
+}
+plan("sequential")

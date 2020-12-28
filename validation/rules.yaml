@@ -1,0 +1,87 @@
+# Rules for Outputs of Reproduction/ Case Reports
+rules:
+-
+  expr: if(variable=="R" & upper > 3) upper <- 3
+  name: upperR
+  label: Upper bounds on R
+  description: Validation that the reproduction number is not nonsense
+-
+  expr: if(variable=="R" & top > 3) top <- 3
+  name: topR
+  label: Upper bounds on R
+  description: Validation that the reproduction number is not nonsense
+-
+  expr: if(variable=="R" & central_upper > 3) central_upper <- 3
+  name: cental_upperR
+  label: Upper bounds on R
+  description: Validation that the reproduction number is not nonsense
+-
+  expr: if(variable=="R" & mean > 3) mean <- 3
+  name: meanR
+  label: Upper bounds on R
+  description: Validation that the reproduction number is not nonsense
+-
+  expr: if(variable=="R" & median > 3) median <- 3
+  name: medianR
+  label: Upper bounds on R
+  description: Validation that the reproduction number is not nonsense
+-
+  expr: if(variable=="R" & bottom > 3) bottom <- 3
+  name: bottomR
+  label: Upper bounds on R
+  description: Validation that the reproduction number is not nonsense
+-
+  expr: if(variable=="R" & lower > 3) lower <- 3
+  name: lowerR
+  label: Upper bounds on R
+  description: Validation that the reproduction number is not nonsense
+-
+  expr: if(variable=="R" & central_lower > 3) central_upper <- 3
+  name: cental_lowerR
+  label: Upper bounds on R
+  description: Validation that the reproduction number is not nonsense
+-
+  expr: if(top > 500000) top <- 500000
+  name: overflow
+  label: integer overflow
+  description: Correct for overflow and BigInt on some values
+-
+  expr: if(upper > 500000) upper <- 500000
+  name: overflow
+  label: integer overflow
+  description: Correct for overflow and BigInt on some values
+-
+  expr: if(central_upper > 500000) central_upper <- 500000
+  name: overflow
+  label: integer overflow
+  description: Correct for overflow and BigInt on some values
+-
+  expr: if(mean > 500000) mean <- 500000
+  name: overflow
+  label: integer overflow
+  description: Correct for overflow and BigInt on some values
+-
+  expr: if(sd > 500000) sd <- 500000
+  name: overflow
+  label: integer overflow
+  description: Correct for overflow and BigInt on some values
+-
+  expr: if(median > 500000) median <- 500000
+  name: overflow
+  label: integer overflow
+  description: Correct for overflow and BigInt on some values
+-
+  expr: if(central_lower > 500000) central_lower <- 500000
+  name: overflow
+  label: integer overflow
+  description: Correct for overflow and BigInt on some values
+-
+  expr: if(bottom > 500000) bottom <- 500000
+  name: overflow
+  label: integer overflow
+  description: Correct for overflow and BigInt on some values
+-
+  expr: if(lower > 500000) lower <- 500000
+  name: overflow
+  label: integer overflow
+  description: Correct for overflow and BigInt on some values
