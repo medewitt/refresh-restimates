@@ -65,8 +65,8 @@ The following objects are masked from ‘package:base’:
 + 
 + #options(future.globals.maxSize = 10000*1024^2)
 + 
-+ dat <- nccovid::get_covid_state(data_source = "cone")
-+ 
++ #dat <- nccovid::get_covid_state(data_source = "cone")
++ dat <- nccovid::get_covid_state(data_source = "cone", reporting_adj = TRUE)
 + # Wait Until 15 Confirmed cases by county cumulative and within last 16 weeks
 + 
 + dat <- dat[date>=Sys.Date()-lubridate::weeks(16)]
@@ -198,4 +198,4 @@ The following objects are masked from ‘package:base’:
 > 
 > proc.time()
    user  system elapsed 
-  1.208   0.973   1.630 
+  1.233   0.966   0.835 
