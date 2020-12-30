@@ -34,5 +34,6 @@ cone_overall[,county:="Cone Health"]
 
 # combine again -----------------------------------------------------------
 
-out <- rbind(dat,nc_overall,cone_overall, fill = TRUE )
+out <- rbindlist(dat,nc_overall,cone_overall, fill = TRUE )
+
 data.table::fwrite(out, here::here("output", "latest_r_coviddata.csv"))

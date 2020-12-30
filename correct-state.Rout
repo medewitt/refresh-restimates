@@ -53,9 +53,7 @@ Type 'q()' to quit R.
 > 
 > # combine again -----------------------------------------------------------
 > 
-> out <- rbind(dat,nc_overall,cone_overall, fill = TRUE )
-> data.table::fwrite(out, here::here("output", "latest_r_coviddata.csv"))
-> 
-> proc.time()
-   user  system elapsed 
-  1.704   0.840   0.639 
+> out <- rbindlist(dat,nc_overall,cone_overall, fill = TRUE )
+Error in rbindlist(dat, nc_overall, cone_overall, fill = TRUE) : 
+  could not find function "rbindlist"
+Execution halted
