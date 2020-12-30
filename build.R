@@ -14,4 +14,7 @@ cat("done with estimates")
 system("R CMD BATCH --vanilla process-outputs.R")
 cat("done with processing")
 system("R CMD BATCH --vanilla combine-forecasts.R")
+
 cat("done with combination")
+
+system("R CMD BATCH --vanilla  correct-state.R")

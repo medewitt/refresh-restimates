@@ -19,16 +19,18 @@ target_cols <- target_cols[!target_cols%in%c("county", "date",
 
 # state wide --------------------------------------------------------------
 
-nc_overall <- dat_pop[, lapply(.SD, weighted.mean, w = pop), by = c("date", "variable", "strat", "type"), .SDcols = target_cols]
+nc_overall <- dat_pop[, lapply(.SD, weighted.mean, w = pop, na.rm = TRUE), by = c("date", "variable", "strat", "type"), .SDcols = target_cols]
 
 nc_overall <- nc_overall[ , .SD[1],by = c("date", "variable", "strat")]
 
+nc_overall[,county:="North Carolina"]
 # region ------------------------------------------------------------------
 
-cone_overall <- dat_pop[county %in% nccovid::cone_region, lapply(.SD, weighted.mean, w = pop), by = c("date", "variable", "strat", "type"), .SDcols = target_cols]
+cone_overall <- dat_pop[county %in% nccovid::cone_region, lapply(.SD, weighted.mean, w = pop, na.rm = TRUE), by = c("date", "variable", "strat", "type"), .SDcols = target_cols]
 
 cone_overall <- nc_overall[ , .SD[1],by = c("date", "variable", "strat")]
 
+cone_overall[,county:="Cone Health"]
 
 # combine again -----------------------------------------------------------
 
