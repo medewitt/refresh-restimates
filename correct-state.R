@@ -5,6 +5,9 @@ dat <- data.table::fread(here::here("output", "latest_r_coviddata.csv"))
 dat <- dat[!county %in% c("North Carolina", "Cone Health")]												 												 
 dat <- dat[!is.na(county)]
 
+dat <- dat[last_update>Sys.Date()-5]
+
+
 nc_population <- nccovid::nc_population[,1:2]
 
 names(nc_population) <- c("county", "pop")

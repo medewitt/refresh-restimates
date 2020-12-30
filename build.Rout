@@ -23,26 +23,3 @@ starting> cat("\nFirst Batch\n")
 
 First Batch
 > system("R CMD BATCH --vanilla generate-estimates-1.R")
-> cat("\nSecond Batch\n")
-
-Second Batch
-> system("R CMD BATCH --vanilla generate-estimates-2.R")
-> cat("\nSecond Batch\n")
-
-Second Batch
-> system("R CMD BATCH --vanilla generate-estimates-3.R")
-> cat("\nProcessing Failures\n")
-
-Processing Failures
-> system("R CMD BATCH --vanilla generate-estimates-4.R")
-> cat("did state and loca again")
-did state and loca again> system("R CMD BATCH --vanilla re-process-missing.R")
-> cat("done with estimates")
-done with estimates> system("R CMD BATCH --vanilla process-outputs.R")
-> cat("done with processing")
-done with processing> system("R CMD BATCH --vanilla combine-forecasts.R")
-> cat("done with combination")
-done with combination> 
-> proc.time()
-      user     system    elapsed 
-228490.563    344.864  34074.020 
