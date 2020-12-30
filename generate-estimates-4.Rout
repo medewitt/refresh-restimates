@@ -75,7 +75,7 @@ Using: cone as the data source
 + 								 weights = daily_tests)
 > start <- Sys.time()
 > cat(start)
-1609225893> # corrected cases for modelling -------------------------------------------
+1609287150> # corrected cases for modelling -------------------------------------------
 > 
 > dat$predicted_positive <- predict(mod, newdata = dat[,date_n:=as.numeric(date)], type = "response")
 > 
@@ -165,26 +165,26 @@ prep completed>
 + 		     stan = stan_opts(samples = 6000, control = list(adapt_delta = 0.95, max_treedepth = 15),
 +                      chains = 4, cores = 8,
 +                       max_execution_time = 60*60*4, future = FALSE), rt = rt_opts(prior = list(mean = 1.25, sd = 0.25))))
-INFO [2020-12-29 07:11:33] Producing following optional outputs: regions, summary, samples, plots, latest
+INFO [2020-12-30 00:12:31] Producing following optional outputs: regions, summary, samples, plots, latest
 Logging threshold set at INFO for the EpiNow2 logger
-Writing EpiNow2 logs to: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2020-12-28.log
+Writing EpiNow2 logs to: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2020-12-29.log
 Logging threshold set at INFO for the EpiNow2.epinow logger
-Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2020-12-28.log
-INFO [2020-12-29 07:11:33] Reporting estimates using data up to: 2020-12-28
-INFO [2020-12-29 07:11:33] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
-INFO [2020-12-29 07:11:33] Producing estimates for: Cone Health, North Carolina
-INFO [2020-12-29 07:11:33] Regions excluded: none
-INFO [2020-12-29 07:11:33] Showing progress using progressr.
-INFO [2020-12-29 11:19:59] Completed regional estimates
-INFO [2020-12-29 11:19:59] Regions with estimates: 0
-INFO [2020-12-29 11:19:59] Regions with runtime errors: 2
-INFO [2020-12-29 11:20:00] Producing summary
-INFO [2020-12-29 11:20:00] No summary directory specified so returning summary output
-INFO [2020-12-29 11:20:00] Errors caught whilst generating summary statistics: 
-INFO [2020-12-29 11:20:00] Error in .checkTypos(e, names_x): Object 'variable' not found amongst 
+Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2020-12-29.log
+INFO [2020-12-30 00:12:31] Reporting estimates using data up to: 2020-12-29
+INFO [2020-12-30 00:12:31] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
+INFO [2020-12-30 00:12:31] Producing estimates for: Cone Health, North Carolina
+INFO [2020-12-30 00:12:31] Regions excluded: none
+INFO [2020-12-30 00:12:31] Showing progress using progressr.
+INFO [2020-12-30 00:46:51] Completed regional estimates
+INFO [2020-12-30 00:46:51] Regions with estimates: 0
+INFO [2020-12-30 00:46:51] Regions with runtime errors: 2
+INFO [2020-12-30 00:46:51] Producing summary
+INFO [2020-12-30 00:46:51] No summary directory specified so returning summary output
+INFO [2020-12-30 00:46:51] Errors caught whilst generating summary statistics: 
+INFO [2020-12-30 00:46:51] Error in .checkTypos(e, names_x): Object 'variable' not found amongst 
 
-INFO [2020-12-29 11:20:00] Saving timings information to : /mnt/resource/refresh-restimates/rt-estimates-out
+INFO [2020-12-30 00:46:51] Saving timings information to : /mnt/resource/refresh-restimates/rt-estimates-out
 > 
 > proc.time()
-     user    system   elapsed 
-56661.918     8.938 14911.230 
+    user   system  elapsed 
+83885.80    60.68 22559.49 

@@ -44,5 +44,5 @@ done with processing> system("R CMD BATCH --vanilla combine-forecasts.R")
 > cat("done with combination")
 done with combination> 
 > proc.time()
-     user    system   elapsed 
-272037.16    388.85  39334.66 
+      user     system    elapsed 
+242229.758    306.266  40849.095 
