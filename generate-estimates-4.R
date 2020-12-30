@@ -4,7 +4,7 @@
 library(EpiNow2)
 library(magrittr)
 library(data.table)
-library(future)
+#library(future)
 library(purrr)
 
 #options(future.globals.maxSize = 10000*1024^2)

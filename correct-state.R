@@ -1,0 +1,36 @@
+# Population Weight Cone and North Carolina
+
+dat <- data.table::fread(here::here("output", "latest_r_coviddata.csv"))
+
+dat <- dat[!county %in% c("North Carolina", "Cone Health")]												 												 
+
+nc_population <- nccovid::nc_population[,1:2]
+
+names(nc_population) <- c("county", "pop")
+
+dat_pop <- merge(dat, nc_population, by = "county", all.x = TRUE)
+
+target_cols <- names(dat)
+
+target_cols <- target_cols[!target_cols%in%c("county", "date", 
+																						 "last_update", 
+																						 "variable", "strat", 
+																						 "type", "sd")]
+
+# state wide --------------------------------------------------------------
+
+nc_overall <- dat_pop[, lapply(.SD, weighted.mean, w = pop), by = c("date", "variable", "strat", "type"), .SDcols = target_cols]
+
+nc_overall <- nc_overall[ , .SD[1],by = c("date", "variable", "strat")]
+
+# region ------------------------------------------------------------------
+
+cone_overall <- dat_pop[county %in% nccovid::cone_region, lapply(.SD, weighted.mean, w = pop), by = c("date", "variable", "strat", "type"), .SDcols = target_cols]
+
+cone_overall <- nc_overall[ , .SD[1],by = c("date", "variable", "strat")]
+
+
+# combine again -----------------------------------------------------------
+
+out <- rbind(dat,nc_overall,cone_overall, fill = TRUE )
+data.table::fwrite(out, here::here("output", "latest_r_coviddata.csv"))
