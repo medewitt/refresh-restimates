@@ -22,12 +22,15 @@ Type 'q()' to quit R.
 > dat <- data.table::fread(here::here("output", "latest_r_coviddata.csv"))
 > 
 > dat <- dat[!county %in% c("North Carolina", "Cone Health")]												 												 
+> dat <- dat[!is.na(county)]
 > 
 > nc_population <- nccovid::nc_population[,1:2]
 > 
 > names(nc_population) <- c("county", "pop")
 > 
 > dat_pop <- merge(dat, nc_population, by = "county", all.x = TRUE)
+> 
+> dat_pop <- dat_pop[!is.na(pop)]
 > 
 > target_cols <- names(dat)
 > 
@@ -53,7 +56,10 @@ Type 'q()' to quit R.
 > 
 > # combine again -----------------------------------------------------------
 > 
-> out <- rbindlist(dat,nc_overall,cone_overall, fill = TRUE )
-Error in rbindlist(dat, nc_overall, cone_overall, fill = TRUE) : 
-  could not find function "rbindlist"
-Execution halted
+> out <- data.table::rbindlist(list(dat,nc_overall,cone_overall), fill = TRUE )
+> 
+> data.table::fwrite(out, here::here("output", "latest_r_coviddata.csv"))
+> 
+> proc.time()
+   user  system elapsed 
+  1.571   0.901   0.477 

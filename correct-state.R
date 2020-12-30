@@ -3,12 +3,15 @@
 dat <- data.table::fread(here::here("output", "latest_r_coviddata.csv"))
 
 dat <- dat[!county %in% c("North Carolina", "Cone Health")]												 												 
+dat <- dat[!is.na(county)]
 
 nc_population <- nccovid::nc_population[,1:2]
 
 names(nc_population) <- c("county", "pop")
 
 dat_pop <- merge(dat, nc_population, by = "county", all.x = TRUE)
+
+dat_pop <- dat_pop[!is.na(pop)]
 
 target_cols <- names(dat)
 
@@ -34,6 +37,6 @@ cone_overall[,county:="Cone Health"]
 
 # combine again -----------------------------------------------------------
 
-out <- rbindlist(dat,nc_overall,cone_overall, fill = TRUE )
+out <- data.table::rbindlist(list(dat,nc_overall,cone_overall), fill = TRUE )
 
 data.table::fwrite(out, here::here("output", "latest_r_coviddata.csv"))
