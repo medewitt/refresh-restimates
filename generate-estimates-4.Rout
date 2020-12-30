@@ -175,16 +175,16 @@ INFO [2020-12-30 00:12:31] Saving estimates to : /mnt/resource/refresh-restimate
 INFO [2020-12-30 00:12:31] Producing estimates for: Cone Health, North Carolina
 INFO [2020-12-30 00:12:31] Regions excluded: none
 INFO [2020-12-30 00:12:31] Showing progress using progressr.
-INFO [2020-12-30 00:46:51] Completed regional estimates
-INFO [2020-12-30 00:46:51] Regions with estimates: 0
-INFO [2020-12-30 00:46:51] Regions with runtime errors: 2
-INFO [2020-12-30 00:46:51] Producing summary
-INFO [2020-12-30 00:46:51] No summary directory specified so returning summary output
-INFO [2020-12-30 00:46:51] Errors caught whilst generating summary statistics: 
-INFO [2020-12-30 00:46:51] Error in .checkTypos(e, names_x): Object 'variable' not found amongst 
+INFO [2020-12-30 03:32:45] Completed regional estimates
+INFO [2020-12-30 03:32:45] Regions with estimates: 0
+INFO [2020-12-30 03:32:45] Regions with runtime errors: 2
+INFO [2020-12-30 03:32:45] Producing summary
+INFO [2020-12-30 03:32:45] No summary directory specified so returning summary output
+INFO [2020-12-30 03:32:45] Errors caught whilst generating summary statistics: 
+INFO [2020-12-30 03:32:45] Error in .checkTypos(e, names_x): Object 'variable' not found amongst 
 
-INFO [2020-12-30 00:46:51] Saving timings information to : /mnt/resource/refresh-restimates/rt-estimates-out
+INFO [2020-12-30 03:32:45] Saving timings information to : /mnt/resource/refresh-restimates/rt-estimates-out
 > 
 > proc.time()
     user   system  elapsed 
-83885.80    60.68 22559.49 
+46297.21    11.25 12023.47 
