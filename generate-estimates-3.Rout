@@ -75,7 +75,7 @@ Using: cone as the data source
 +                  weights = daily_tests)
 > start <- Sys.time()
 > cat(start)
-1609375307> # corrected cases for modelling -------------------------------------------
+1609442972> # corrected cases for modelling -------------------------------------------
 > 
 > dat$predicted_positive <- predict(mod, newdata = dat[,date_n:=as.numeric(date)], type = "response")
 > 
@@ -154,7 +154,7 @@ prep completed>
 > # Load utils --------------------------------------------------------------
 > if (!exists("setup_future", mode = "function")) source(here::here("util.R"))
 > no_cores <- setup_future(reported_cases = reported_cases)
-INFO [2020-12-31 00:41:47] Using 4 workers with 4 cores per worker
+INFO [2020-12-31 19:29:34] Using 4 workers with 4 cores per worker
 > 
 > # run estimation ----------------------------------------------------------
 > #EpiNow2::setup_logging(file = "log.log")
@@ -196,18 +196,20 @@ INFO [2020-12-31 00:41:47] Using 4 workers with 4 cores per worker
 +                              rt = rt_opts(prior = list(mean = 1.25, sd = 0.25))))
 + 
 + }
-Running the full modelINFO [2020-12-31 00:41:47] Producing following optional outputs: regions, summary, samples, plots, latest
+Running the full modelINFO [2020-12-31 19:29:34] Producing following optional outputs: regions, summary, samples, plots, latest
 Logging threshold set at INFO for the EpiNow2 logger
-Writing EpiNow2 logs to: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2020-12-30.log
+Writing EpiNow2 logs to: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2020-12-31.log
 Logging threshold set at INFO for the EpiNow2.epinow logger
-Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2020-12-30.log
-INFO [2020-12-31 00:41:47] Reporting estimates using data up to: 2020-12-30
-INFO [2020-12-31 00:41:47] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
-INFO [2020-12-31 00:41:47] Producing estimates for: 40 regions
-INFO [2020-12-31 00:41:47] Regions excluded: 0 regions
-INFO [2020-12-31 00:41:47] Showing progress using progressr.
-Error in mcfork(detached) : 
-  unable to fork, possible reason: Cannot allocate memory
+Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2020-12-31.log
+INFO [2020-12-31 19:29:34] Reporting estimates using data up to: 2020-12-31
+INFO [2020-12-31 19:29:34] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
+INFO [2020-12-31 19:29:35] Producing estimates for: 40 regions
+INFO [2020-12-31 19:29:35] Regions excluded: 0 regions
+INFO [2020-12-31 19:29:35] Showing progress using progressr.
+Error : Failed to retrieve the result of MulticoreFuture (future_lapply-25) from the forked worker (on localhost; PID 6966). Post-mortem diagnostic: No process exists with this PID, i.e. the forked localhost worker is no longer alive.
+In addition: Warning message:
+In mccollect(jobs = jobs, wait = TRUE) :
+  1 parallel job did not deliver a result
 > 
 > # Now run program to make synthesis
 > # Done
@@ -215,5 +217,5 @@ Error in mcfork(detached) :
 > cat("done with estimates")
 done with estimates> 
 > proc.time()
-   user  system elapsed 
-  9.826   5.934   6.271 
+     user    system   elapsed 
+38782.675   150.625  4702.140 
