@@ -205,3 +205,14 @@ INFO [2020-12-30 18:05:08] Saving estimates to : /mnt/resource/refresh-restimate
 INFO [2020-12-30 18:05:08] Producing estimates for: Durham, Cumberland, Buncombe, Forsyth, New Hanover, Wake, Gaston, Union, Guilford, Mecklenburg, Cone Health, North Carolina
 INFO [2020-12-30 18:05:08] Regions excluded: none
 INFO [2020-12-30 18:05:08] Showing progress using progressr.
+INFO [2020-12-30 20:15:00] Completed regional estimates
+INFO [2020-12-30 20:15:00] Regions with estimates: 10
+INFO [2020-12-30 20:15:00] Regions with runtime errors: 2
+INFO [2020-12-30 20:15:00] Producing summary
+INFO [2020-12-30 20:15:00] No summary directory specified so returning summary output
+INFO [2020-12-30 20:15:00] Saving timings information to : /mnt/resource/refresh-restimates/rt-estimates-out
+> plan("sequential")
+> 
+> proc.time()
+    user   system  elapsed 
+64176.99    90.74  7798.55 
