@@ -75,22 +75,22 @@ reported_cases <- dat[,`:=` (region=county,
 	.[date>as.Date("2020-05-18")]
 
 # Smooth on Regions for R estimation only.
-cone_region <- reported_cases[region %chin% nccovid::cone_region,
-															.(confirm = sum(confirm)), by = "date"] %>%
-	.[,region:="Cone Health"] %>% 
-	.[,confirm:=data.table::frollmean(confirm, n = 6)] %>% 
-	.[,confirm :=round(confirm)]%>% 
-	.[!is.na(confirm)]
-
-nc_overall <- reported_cases[,.(confirm = sum(confirm)), by = "date"] %>%
-	.[,region:="North Carolina"]%>% 
-	.[,confirm:=data.table::frollmean(confirm, n = 6)] %>% 
-	.[,confirm :=round(confirm)] %>% 
-	.[!is.na(confirm)]
-
-reported_cases <-reported_cases %>%
-	merge(cone_region, all = TRUE) %>%
-	merge(nc_overall, all=TRUE)
+#cone_region <- reported_cases[region %chin% nccovid::cone_region,
+#															.(confirm = sum(confirm)), by = "date"] %>%
+#	.[,region:="Cone Health"] %>% 
+#	.[,confirm:=data.table::frollmean(confirm, n = 6)] %>% 
+#	.[,confirm :=round(confirm)]%>% 
+#	.[!is.na(confirm)]
+#
+#nc_overall <- reported_cases[,.(confirm = sum(confirm)), by = "date"] %>%
+#	.[,region:="North Carolina"]%>% 
+#	.[,confirm:=data.table::frollmean(confirm, n = 6)] %>% 
+#	.[,confirm :=round(confirm)] %>% 
+#	.[!is.na(confirm)]
+#
+#reported_cases <-reported_cases %>%
+#	merge(cone_region, all = TRUE) %>%
+#	merge(nc_overall, all=TRUE)
 
 # Correct for State Data Dump
 reported_cases <- reported_cases[ ,confirm:= fifelse(date==as.Date("2020-09-25"),
@@ -101,7 +101,7 @@ reported_cases <- reported_cases[ ,confirm:= fifelse(date==as.Date("2020-09-25")
 
 county_info <- nccovid::nc_population[ ,1:2][order(july_2020, decreasing = TRUE)][county!="STATE"]
 
-county_single <- c(head(county_info$county,10), "North Carolina", "Cone Health")
+county_single <- c(head(county_info$county,15), "North Carolina", "Cone Health")
 county_cumulative <- setdiff(county_info$county,county_single)
 
 
