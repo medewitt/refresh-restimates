@@ -195,47 +195,7 @@ The following objects are masked from ‘package:base’:
 + 																	 rt = rt_opts(prior = list(mean = 1.25, sd = 0.1))))
 + plan("sequential")
 + }
-
-Attaching package: ‘data.table’
-
-The following objects are masked from ‘package:dplyr’:
-
-    between, first, last
-
-
-Attaching package: ‘purrr’
-
-The following object is masked from ‘package:data.table’:
-
-    transpose
-
-The following object is masked from ‘package:magrittr’:
-
-    set_names
-
-The following object is masked from ‘package:EpiNow2’:
-
-    update_list
-
-Using: cone as the data source
-1609375316prep completedRunning the full modelINFO [2020-12-31 00:41:56] Producing following optional outputs: regions, summary, samples, plots, latest
-Logging threshold set at INFO for the EpiNow2 logger
-Writing EpiNow2 logs to: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2020-12-30.log
-Logging threshold set at INFO for the EpiNow2.epinow logger
-Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2020-12-30.log
-INFO [2020-12-31 00:41:56] Reporting estimates using data up to: 2020-12-30
-INFO [2020-12-31 00:41:56] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
-INFO [2020-12-31 00:41:56] Producing estimates for: Halifax
-INFO [2020-12-31 00:41:56] Regions excluded: none
-INFO [2020-12-31 00:41:56] Showing progress using progressr.
-INFO [2020-12-31 00:47:35] Completed estimates for: Halifax
-INFO [2020-12-31 00:47:36] Completed regional estimates
-INFO [2020-12-31 00:47:36] Regions with estimates: 1
-INFO [2020-12-31 00:47:36] Regions with runtime errors: 0
-INFO [2020-12-31 00:47:36] Producing summary
-INFO [2020-12-31 00:47:36] No summary directory specified so returning summary output
-INFO [2020-12-31 00:47:36] Saving timings information to : /mnt/resource/refresh-restimates/rt-estimates-out
 > 
 > proc.time()
    user  system elapsed 
-862.195  29.289 345.873 
+  1.291   1.035   0.884 

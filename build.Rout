@@ -34,8 +34,7 @@ Second Batch
 > cat("\nProcessing Failures\n")
 
 Processing Failures
-> #system("R CMD BATCH --vanilla generate-estimates-4.R")
-> cat("did state and loca again")
+> #system("R CMD BATCH --vanilla generate-estimates-4.R")> cat("did state and loca again")
 did state and loca again> system("R CMD BATCH --vanilla re-process-missing.R")
 > cat("done with estimates")
 done with estimates> system("R CMD BATCH --vanilla process-outputs.R")
@@ -47,5 +46,5 @@ done with combination>
 > system("R CMD BATCH --vanilla  correct-state.R")
 > 
 > proc.time()
-   user  system elapsed 
-915.466  78.379 397.542 
+     user    system   elapsed 
+185658.08    282.62  29955.40 
