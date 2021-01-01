@@ -27,7 +27,6 @@ First Batch
 
 Second Batch
 > system("R CMD BATCH --vanilla generate-estimates-2.R")
-/opt/R/4.0.2/lib/R/bin/BATCH: line 60:  3128 Killed                  ${R_HOME}/bin/R -f ${in} ${opts} ${R_BATCH_OPTIONS} > ${out} 2>&1
 > cat("\nSecond Batch\n")
 
 Second Batch
@@ -49,4 +48,4 @@ done with combination>
 > 
 > proc.time()
      user    system   elapsed 
-35401.259    87.702 29452.938 
+55428.705   157.477  5376.688 
