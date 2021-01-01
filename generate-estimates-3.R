@@ -104,7 +104,9 @@ county_info <- nccovid::nc_population[ ,1:2][order(july_2020, decreasing = TRUE)
 county_single <- c(head(county_info$county,60), "North Carolina", "Cone Health")
 county_cumulative <- setdiff(county_info$county,county_single)
 
+sample_one <- sample(county_cumulative, 25)
 
+sample_two <- setdiff(county_cumulative,sample_one)
 # setup -------------------------------------------------------------------
 
 # NCDHHS Reporting Data Starting 2020-10-29
@@ -144,7 +146,7 @@ if(file.exists(here::here("info.log"))){
 }
 cat('Running the full model')
 
-reported_cases_low_density <- reported_cases[region%in%county_cumulative]
+reported_cases_low_density <- reported_cases[region%in%sample_1]
 
 estimates <- try(regional_epinow(reported_cases = reported_cases_low_density,
                              generation_time = generation_time,
@@ -155,6 +157,22 @@ estimates <- try(regional_epinow(reported_cases = reported_cases_low_density,
                              non_zero_points = 14, horizon = 14, 
                              stan = stan_opts(init_fit = "cumulative",samples = 4000,
                                               chains = 4, cores = no_cores, control = list(adapt_delta = 0.95, max_treedepth = 14),
+                                              max_execution_time = 60*60*6,
+                                              future = FALSE),
+                             rt = rt_opts(prior = list(mean = 1.25, sd = 0.25))))
+
+reported_cases_low_density <- reported_cases[region%in%sample_2]
+
+estimates <- try(regional_epinow(reported_cases = reported_cases_low_density,
+                             generation_time = generation_time,
+                             target_folder = here::here("rt-estimates-out"),
+                             logs = here::here("epinow-logs"),
+                             delays = delay_opts(incubation_period,
+                                           reporting_delay),
+                             non_zero_points = 14, horizon = 14,
+                             stan = stan_opts(init_fit = "cumulative",samples = 4000,
+                                              chains = 4, cores = no_cores, control = list(adapt_delta = 0.95, max_treed
+epth = 14),
                                               max_execution_time = 60*60*6,
                                               future = FALSE),
                              rt = rt_opts(prior = list(mean = 1.25, sd = 0.25))))
