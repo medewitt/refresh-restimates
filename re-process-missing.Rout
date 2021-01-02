@@ -195,53 +195,7 @@ The following objects are masked from ‘package:base’:
 + 																	 rt = rt_opts(prior = list(mean = 1.25, sd = 0.1))))
 + plan("sequential")
 + }
-
-Attaching package: ‘data.table’
-
-The following objects are masked from ‘package:dplyr’:
-
-    between, first, last
-
-
-Attaching package: ‘purrr’
-
-The following object is masked from ‘package:data.table’:
-
-    transpose
-
-The following object is masked from ‘package:magrittr’:
-
-    set_names
-
-The following object is masked from ‘package:EpiNow2’:
-
-    update_list
-
-Using: cone as the data source
-1609615464prep completedRunning the full modelINFO [2021-01-02 19:24:25] Producing following optional outputs: regions, summary, samples, plots, latest
-Logging threshold set at INFO for the EpiNow2 logger
-Writing EpiNow2 logs to: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-01-02.log
-Logging threshold set at INFO for the EpiNow2.epinow logger
-Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-01-02.log
-INFO [2021-01-02 19:24:25] Reporting estimates using data up to: 2021-01-02
-INFO [2021-01-02 19:24:25] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
-INFO [2021-01-02 19:24:25] Producing estimates for: Pamlico, Duplin, Haywood, Cherokee, Bladen, Warren, Chatham
-INFO [2021-01-02 19:24:25] Regions excluded: none
-INFO [2021-01-02 19:24:25] Showing progress using progressr.
-INFO [2021-01-02 19:28:34] Completed estimates for: Pamlico
-INFO [2021-01-02 19:34:32] Completed estimates for: Duplin
-INFO [2021-01-02 19:40:11] Completed estimates for: Haywood
-INFO [2021-01-02 19:48:24] Completed estimates for: Cherokee
-INFO [2021-01-02 19:52:56] Completed estimates for: Bladen
-INFO [2021-01-02 19:52:56] Completed regional estimates
-INFO [2021-01-02 19:52:56] Regions with estimates: 5
-INFO [2021-01-02 19:52:56] Regions with runtime errors: 2
-INFO [2021-01-02 19:52:56] Producing summary
-INFO [2021-01-02 19:52:56] No summary directory specified so returning summary output
-INFO [2021-01-02 19:52:56] Saving timings information to : /mnt/resource/refresh-restimates/rt-estimates-out
 > 
 > proc.time()
-    user   system  elapsed 
-4623.853   42.594 1718.650 
-Warning message:
-system call failed: Cannot allocate memory 
+   user  system elapsed 
+  1.320   0.885   1.548 
