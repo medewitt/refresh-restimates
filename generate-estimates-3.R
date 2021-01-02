@@ -19,10 +19,10 @@ dat <- dat[cases_confirmed_cum>15]
 
 # Fix State Data Dump
 dat <- dat[,cases_daily := fifelse(date==as.Date("2020-09-25"),
-                              dplyr::lag(cases_daily,1), cases_daily), by = "county"]
+                                   dplyr::lag(cases_daily,1), cases_daily), by = "county"]
 
 reported_cases <- dat[,`:=` (region=county,
-           confirm = cases_daily)][,.(date,confirm, region)][date>as.Date("2020-03-10")]
+                             confirm = cases_daily)][,.(date,confirm, region)][date>as.Date("2020-03-10")]
 
 
 # correct for testing -----------------------------------------------------
@@ -62,12 +62,12 @@ dat <- dat[first_case_dat, nomatch = 0]
 dat <- dat[date>=first_case_date]
 
 increase_cases <- function (observed_cases, pos_rate, m = 10, k = 0.462) {
-    y <- observed_cases * pos_rate^k * m
-    return(y)
+  y <- observed_cases * pos_rate^k * m
+  return(y)
 }
 
 dat$confirm <- increase_cases(observed_cases = dat$cases_daily,
-                                pos_rate = dat$predicted_positive)
+                              pos_rate = dat$predicted_positive)
 
 reported_cases <- dat[,`:=` (region=county,
                              confirm = round(confirm))] %>%
@@ -94,7 +94,7 @@ reported_cases <-reported_cases %>%
 
 # Correct for State Data Dump
 reported_cases <- reported_cases[ ,confirm:= fifelse(date==as.Date("2020-09-25"),
-                                   shift(confirm,1),confirm), by = "region"]
+                                                     shift(confirm,1),confirm), by = "region"]
 
 
 # pull low population density counties ------------------------------------
@@ -124,62 +124,39 @@ no_cores <- setup_future(reported_cases = reported_cases)
 
 # run estimation ----------------------------------------------------------
 #EpiNow2::setup_logging(file = "log.log")
-debug <- FALSE
-if(debug){
-  #reported_cases <- reported_cases[region%chin%nccovid::cone_region]
-  reported_cases <- reported_cases[region%chin%c("Guilford", "Alamance")]
-  reported_cases_single <- reported_cases[region%chin%c("Alamance")]
+  cat('Running the full model')
+  
+  reported_cases_low_density <- reported_cases[region%in%sample_one]
+  
+  estimates <- try(regional_epinow(reported_cases = reported_cases_low_density,
+                                   generation_time = generation_time,
+                                   target_folder = here::here("rt-estimates-out"),
+                                   logs = here::here("epinow-logs"),
+                                   delays = delay_opts(incubation_period,
+                                                       reporting_delay),
+                                   non_zero_points = 14, horizon = 14, 
+                                   stan = stan_opts(init_fit = "cumulative",samples = 4000,
+                                                    chains = 4, cores = no_cores, control = list(adapt_delta = 0.95, max_treedepth = 14),
+                                                    max_execution_time = 60*60*6,
+                                                    future = FALSE),
+                                   rt = rt_opts(prior = list(mean = 1.25, sd = 0.25))))
+  
+  reported_cases_low_density <- reported_cases[region%in%sample_two]
+  
+  estimates <- try(regional_epinow(reported_cases = reported_cases_low_density,
+                                   generation_time = generation_time,
+                                   target_folder = here::here("rt-estimates-out"),
+                                   logs = here::here("epinow-logs"),
+                                   delays = delay_opts(incubation_period,
+                                                       reporting_delay),
+                                   non_zero_points = 14, horizon = 14,
+                                   stan = stan_opts(init_fit = "cumulative",samples = 4000,
+                                                    chains = 4, cores = no_cores, control = list(adapt_delta = 0.95, max_treed
+                                                                                                 epth = 14),
+                                                    max_execution_time = 60*60*6,
+                                                    future = FALSE),
+                                   rt = rt_opts(prior = list(mean = 1.25, sd = 0.25))))
+  
 
-  estimates <- regional_epinow(reported_cases = reported_cases[region=="Mecklenburg"],
-                             generation_time = generation_time,
-                             target_folder = here::here("rt-estimates-out"),
-                             logs = here::here("epinow-logs"),
-                             non_zero_points = 14, horizon = 14, 
-                             delays = delay_opts(incubation_period,
-                                                 reporting_delay),
-                             stan = stan_opts(cores = 8, chains = 4,
-                                              max_execution_time = 60*60*4),
-                             rt = rt_opts(prior = list(mean = 1.25, sd = 0.25)))
-} else {
-if(file.exists(here::here("info.log"))){
-  unlink(here::here("info.log"))
-}
-cat('Running the full model')
-
-reported_cases_low_density <- reported_cases[region%in%sample_1]
-
-estimates <- try(regional_epinow(reported_cases = reported_cases_low_density,
-                             generation_time = generation_time,
-                             target_folder = here::here("rt-estimates-out"),
-                             logs = here::here("epinow-logs"),
-                             delays = delay_opts(incubation_period,
-                                           reporting_delay),
-                             non_zero_points = 14, horizon = 14, 
-                             stan = stan_opts(init_fit = "cumulative",samples = 4000,
-                                              chains = 4, cores = no_cores, control = list(adapt_delta = 0.95, max_treedepth = 14),
-                                              max_execution_time = 60*60*6,
-                                              future = FALSE),
-                             rt = rt_opts(prior = list(mean = 1.25, sd = 0.25))))
-
-reported_cases_low_density <- reported_cases[region%in%sample_2]
-
-estimates <- try(regional_epinow(reported_cases = reported_cases_low_density,
-                             generation_time = generation_time,
-                             target_folder = here::here("rt-estimates-out"),
-                             logs = here::here("epinow-logs"),
-                             delays = delay_opts(incubation_period,
-                                           reporting_delay),
-                             non_zero_points = 14, horizon = 14,
-                             stan = stan_opts(init_fit = "cumulative",samples = 4000,
-                                              chains = 4, cores = no_cores, control = list(adapt_delta = 0.95, max_treed
-epth = 14),
-                                              max_execution_time = 60*60*6,
-                                              future = FALSE),
-                             rt = rt_opts(prior = list(mean = 1.25, sd = 0.25))))
-
-}
-
-# Now run program to make synthesis
-# Done
 plan("sequential")
 cat("done with estimates")
