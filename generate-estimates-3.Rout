@@ -75,7 +75,7 @@ Using: cone as the data source
 +                  weights = daily_tests)
 > start <- Sys.time()
 > cat(start)
-1609700829> # corrected cases for modelling -------------------------------------------
+1609707612> # corrected cases for modelling -------------------------------------------
 > 
 > dat$predicted_positive <- predict(mod, newdata = dat[,date_n:=as.numeric(date)], type = "response")
 > 
@@ -96,7 +96,7 @@ Using: cone as the data source
 > 
 > dat <- dat[date>=first_case_date]
 > 
-> increase_cases <- function (observed_cases, pos_rate, m = 10, k = 0.462) {
+> increase_cases <- function (observed_cases, pos_rate, m = 2.5, k = 0) {
 +   y <- observed_cases * pos_rate^k * m
 +   return(y)
 + }
@@ -136,12 +136,15 @@ Using: cone as the data source
 > 
 > county_info <- nccovid::nc_population[ ,1:2][order(july_2020, decreasing = TRUE)][county!="STATE"]
 > 
-> county_single <- c(head(county_info$county,60), "North Carolina", "Cone Health")
+> county_single <- c(head(county_info$county,20), "North Carolina", "Cone Health")
 > county_cumulative <- setdiff(county_info$county,county_single)
 > 
-> sample_one <- sample(county_cumulative, 25)
+> range_values <- data.frame(county_cumulative)
 > 
-> sample_two <- setdiff(county_cumulative,sample_one)
+> range_values$n <- rep(1:8,each = 10)
+> 
+> permutes <- split(range_values, f = range_values$n)
+> 
 > # setup -------------------------------------------------------------------
 > 
 > # NCDHHS Reporting Data Starting 2020-10-29
@@ -156,15 +159,15 @@ prep completed>
 > # Load utils --------------------------------------------------------------
 > if (!exists("setup_future", mode = "function")) source(here::here("util.R"))
 > no_cores <- setup_future(reported_cases = reported_cases)
-INFO [2021-01-03 19:07:09] Using 4 workers with 4 cores per worker
+INFO [2021-01-03 21:00:13] Using 4 workers with 4 cores per worker
 > 
 > # run estimation ----------------------------------------------------------
 > #EpiNow2::setup_logging(file = "log.log")
 >   cat('Running the full model')
 Running the full model>   
->   reported_cases_low_density <- reported_cases[region%in%sample_one]
->   
->   estimates <- try(regional_epinow(reported_cases = reported_cases_low_density,
+> for(i in seq_along(permutes)){
++   
++   try(regional_epinow(reported_cases = reported_cases[region %in% permutes[[i]]$county_cumulative],
 +                                    generation_time = generation_time,
 +                                    target_folder = here::here("rt-estimates-out"),
 +                                    logs = here::here("epinow-logs"),
@@ -176,53 +179,26 @@ Running the full model>
 +                                                     max_execution_time = 60*60*6,
 +                                                     future = FALSE),
 +                                    rt = rt_opts(prior = list(mean = 1.25, sd = 0.25))))
-INFO [2021-01-03 19:07:09] Producing following optional outputs: regions, summary, samples, plots, latest
++ }
+INFO [2021-01-03 21:00:13] Producing following optional outputs: regions, summary, samples, plots, latest
 Logging threshold set at INFO for the EpiNow2 logger
 Writing EpiNow2 logs to: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-01-03.log
 Logging threshold set at INFO for the EpiNow2.epinow logger
 Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-01-03.log
-INFO [2021-01-03 19:07:09] Reporting estimates using data up to: 2021-01-03
-INFO [2021-01-03 19:07:09] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
-INFO [2021-01-03 19:07:09] Producing estimates for: Bladen, Currituck, Madison, Polk, Washington, Yadkin, Yancey, Alleghany, Chowan, Hertford, Anson, Montgomery, Northampton, Person, Caswell, Greene, Scotland, Cherokee, Graham, Avery, Ashe, Bertie, Tyrrell, Jones, Swain
-INFO [2021-01-03 19:07:09] Regions excluded: none
-INFO [2021-01-03 19:07:09] Showing progress using progressr.
-Error : Failed to retrieve the result of MulticoreFuture (future_lapply-15) from the forked worker (on localhost; PID 12632). Post-mortem diagnostic: No process exists with this PID, i.e. the forked localhost worker is no longer alive.
-In addition: Warning message:
-In mccollect(jobs = jobs, wait = TRUE) :
-  1 parallel job did not deliver a result
->   plan("sequential")
-> no_cores <- setup_future(reported_cases = reported_cases)
-INFO [2021-01-03 19:53:14] Using 4 workers with 4 cores per worker
-> 
->   reported_cases_low_density <- reported_cases[region%in%sample_two]
->   
->   estimates <- try(regional_epinow(reported_cases = reported_cases_low_density,
-+                                    generation_time = generation_time,
-+                                    target_folder = here::here("rt-estimates-out"),
-+                                    logs = here::here("epinow-logs"),
-+                                    delays = delay_opts(incubation_period,
-+                                                        reporting_delay),
-+                                    non_zero_points = 14, horizon = 14,
-+                                    stan = stan_opts(init_fit = "cumulative",samples = 4000,
-+                                                     chains = 4, cores = no_cores, control = list(adapt_delta = 0.95, max_treedepth = 14), max_execution_time = 60*60*6,
-+                                                     future = FALSE),
-+                                    rt = rt_opts(prior = list(mean = 1.25, sd = 0.25))))
-INFO [2021-01-03 19:53:14] Producing following optional outputs: regions, summary, samples, plots, latest
+INFO [2021-01-03 21:00:14] Reporting estimates using data up to: 2021-01-03
+INFO [2021-01-03 21:00:14] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
+INFO [2021-01-03 21:00:14] Producing estimates for: Moore, Henderson, Randolph, Craven, Harnett, Robeson, Cleveland, Rowan, Wayne, Nash
+INFO [2021-01-03 21:00:14] Regions excluded: none
+INFO [2021-01-03 21:00:14] Showing progress using progressr.
+Error in mcfork(detached) : 
+  unable to fork, possible reason: Cannot allocate memory
+INFO [2021-01-03 21:00:15] Producing following optional outputs: regions, summary, samples, plots, latest
 Logging threshold set at INFO for the EpiNow2 logger
 Writing EpiNow2 logs to: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-01-03.log
 Logging threshold set at INFO for the EpiNow2.epinow logger
 Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-01-03.log
-INFO [2021-01-03 19:53:14] Reporting estimates using data up to: 2021-01-03
-INFO [2021-01-03 19:53:14] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
-INFO [2021-01-03 19:53:14] Producing estimates for: Alexander, Macon, Mitchell, Gates, Martin, Pamlico, Warren, Camden, Davie, Perquimans, Transylvania, Pasquotank, Clay, Dare, Hyde
-INFO [2021-01-03 19:53:14] Regions excluded: none
-INFO [2021-01-03 19:53:14] Showing progress using progressr.
-Error : Failed to retrieve the result of MulticoreFuture (future_lapply-15) from the forked worker (on localhost; PID 12632). Post-mortem diagnostic: No process exists with this PID, i.e. the forked localhost worker is no longer alive.
->   
-> 
-> plan("sequential")
-> cat("done with estimates")
-done with estimates> 
-> proc.time()
-     user    system   elapsed 
-19763.250   139.033  2770.760 
+INFO [2021-01-03 21:00:15] Reporting estimates using data up to: 2021-01-03
+INFO [2021-01-03 21:00:15] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
+INFO [2021-01-03 21:00:15] Producing estimates for: Surry, Burke, Caldwell, Carteret, Chatham, Franklin, Wilkes, Lincoln, Wilson, Rockingham
+INFO [2021-01-03 21:00:15] Regions excluded: none
+INFO [2021-01-03 21:00:15] Showing progress using progressr.
