@@ -75,7 +75,7 @@ Using: cone as the data source
 + 								 weights = daily_tests)
 > start <- Sys.time()
 > cat(start)
-1609619046> # corrected cases for modelling -------------------------------------------
+1609697107> # corrected cases for modelling -------------------------------------------
 > 
 > dat$predicted_positive <- predict(mod, newdata = dat[,date_n:=as.numeric(date)], type = "response")
 > 
@@ -154,7 +154,7 @@ prep completed>
 > # Load utils --------------------------------------------------------------
 > if (!exists("setup_future", mode = "function")) source(here::here("util.R"))
 > no_cores <- setup_future(reported_cases = reported_cases)
-INFO [2021-01-02 20:24:06] Using 4 workers with 4 cores per worker
+INFO [2021-01-03 18:05:07] Using 4 workers with 4 cores per worker
 > 
 > # run estimation ----------------------------------------------------------
 > #EpiNow2::setup_logging(file = "log.log")
@@ -195,17 +195,17 @@ INFO [2021-01-02 20:24:06] Using 4 workers with 4 cores per worker
 + 																	 								 future = FALSE),
 + 																	 rt = rt_opts(prior = list(mean = 1.25, sd = 0.25))))
 + }
-Running the full modelINFO [2021-01-02 20:24:07] Producing following optional outputs: regions, summary, samples, plots, latest
+Running the full modelINFO [2021-01-03 18:05:07] Producing following optional outputs: regions, summary, samples, plots, latest
 Logging threshold set at INFO for the EpiNow2 logger
-Writing EpiNow2 logs to: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-01-02.log
+Writing EpiNow2 logs to: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-01-03.log
 Logging threshold set at INFO for the EpiNow2.epinow logger
-Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-01-02.log
-INFO [2021-01-02 20:24:07] Reporting estimates using data up to: 2021-01-02
-INFO [2021-01-02 20:24:07] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
-INFO [2021-01-02 20:24:07] Producing estimates for: Buncombe, Cabarrus, Cumberland, Durham, Forsyth, Gaston, Guilford, Iredell, Johnston, Mecklenburg, New Hanover, Onslow, Pitt, Union, Wake
-INFO [2021-01-02 20:24:07] Regions excluded: none
-INFO [2021-01-02 20:24:07] Showing progress using progressr.
-Error : Failed to retrieve the result of MulticoreFuture (future_lapply-13) from the forked worker (on localhost; PID 15883). Post-mortem diagnostic: No process exists with this PID, i.e. the forked localhost worker is no longer alive.
+Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-01-03.log
+INFO [2021-01-03 18:05:07] Reporting estimates using data up to: 2021-01-03
+INFO [2021-01-03 18:05:07] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
+INFO [2021-01-03 18:05:07] Producing estimates for: Buncombe, Cabarrus, Cumberland, Durham, Forsyth, Gaston, Guilford, Iredell, Johnston, Mecklenburg, New Hanover, Onslow, Pitt, Union, Wake
+INFO [2021-01-03 18:05:07] Regions excluded: none
+INFO [2021-01-03 18:05:07] Showing progress using progressr.
+Error : Failed to retrieve the result of MulticoreFuture (future_lapply-13) from the forked worker (on localhost; PID 19131). Post-mortem diagnostic: No process exists with this PID, i.e. the forked localhost worker is no longer alive.
 In addition: Warning message:
 In mccollect(jobs = jobs, wait = TRUE) :
   1 parallel job did not deliver a result
@@ -213,4 +213,4 @@ In mccollect(jobs = jobs, wait = TRUE) :
 > 
 > proc.time()
      user    system   elapsed 
-22518.646    49.917  2060.580 
+18555.986    95.133  1833.415 
