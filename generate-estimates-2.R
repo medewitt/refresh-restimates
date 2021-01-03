@@ -103,11 +103,7 @@ reported_cases <- reported_cases[ ,confirm:= fifelse(date==as.Date("2020-09-25")
 
 county_info <- nccovid::nc_population[ ,1:2][order(july_2020, decreasing = TRUE)][county!="STATE"]
 
-<<<<<<< HEAD
 county_single <- c(tail(county_info$county,60), "North Carolina", "Cone Health")
-=======
-county_single <- c(head(county_info$county,15),tail(county_info$county,60), "North Carolina", "Cone Health")
->>>>>>> 27866a8e0b9f02a69305acb55611e2e11b114aea
 county_cumulative <- setdiff(county_info$county,county_single)
 
 
