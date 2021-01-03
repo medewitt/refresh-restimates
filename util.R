@@ -7,9 +7,9 @@ setup_future <- function(jobs, min_cores_per_worker = 4) {
 		## If running as a script enable this
 		options(future.fork.enable = TRUE)
 	}
-	
-	workers <- min(ceiling(future::availableCores() / min_cores_per_worker), jobs)
-	cores_per_worker <- max(1, round(future::availableCores() / workers, 0))
+        ncores_used <- future::availableCores()-2	
+	workers <- min(ceiling(ncores_used / min_cores_per_worker), jobs)
+	cores_per_worker <- max(1, round( ncores_used/ workers, 0))
 	
 	futile.logger::flog.info("Using %s workers with %s cores per worker",
 													 workers, cores_per_worker)

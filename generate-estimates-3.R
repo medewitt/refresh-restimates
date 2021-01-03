@@ -140,7 +140,9 @@ no_cores <- setup_future(reported_cases = reported_cases)
                                                     max_execution_time = 60*60*6,
                                                     future = FALSE),
                                    rt = rt_opts(prior = list(mean = 1.25, sd = 0.25))))
-  
+  plan("sequential")
+no_cores <- setup_future(reported_cases = reported_cases)
+
   reported_cases_low_density <- reported_cases[region%in%sample_two]
   
   estimates <- try(regional_epinow(reported_cases = reported_cases_low_density,
@@ -151,9 +153,7 @@ no_cores <- setup_future(reported_cases = reported_cases)
                                                        reporting_delay),
                                    non_zero_points = 14, horizon = 14,
                                    stan = stan_opts(init_fit = "cumulative",samples = 4000,
-                                                    chains = 4, cores = no_cores, control = list(adapt_delta = 0.95, max_treed
-                                                                                                 epth = 14),
-                                                    max_execution_time = 60*60*6,
+                                                    chains = 4, cores = no_cores, control = list(adapt_delta = 0.95, max_treedepth = 14), max_execution_time = 60*60*6,
                                                     future = FALSE),
                                    rt = rt_opts(prior = list(mean = 1.25, sd = 0.25))))
   
