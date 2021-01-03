@@ -61,7 +61,7 @@ dat <- dat[first_case_dat, nomatch = 0]
 
 dat <- dat[date>=first_case_date]
 
-increase_cases <- function (observed_cases, pos_rate, m = 10, k = 0.462) {
+increase_cases <- function (observed_cases, pos_rate, m = 2.5, k = 0) {
 	y <- observed_cases * pos_rate^k * m
 	return(y)
 }
@@ -153,7 +153,7 @@ if(debug){
 																	 delays = delay_opts(incubation_period,
 																	 										reporting_delay),
 																	 non_zero_points = 14, horizon = 14, 
-																	 stan = stan_opts(samples = 4000, control = list(adapt_delta = 0.95, max_treedepth = 14),
+																	 stan = stan_opts(samples = 3000, control = list(adapt_delta = 0.95, max_treedepth = 14),
 																	 								 chains = 4, cores = no_cores,
 																	 								 max_execution_time = 60*60*4,
 																	 								 future = FALSE),

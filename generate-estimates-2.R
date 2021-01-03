@@ -63,9 +63,9 @@ dat <- dat[first_case_dat, nomatch = 0]
 
 dat <- dat[date>=first_case_date]
 
-increase_cases <- function (observed_cases, pos_rate, m = 10, k = 0.462) {
-    y <- observed_cases * pos_rate^k * m
-    return(y)
+increase_cases <- function (observed_cases, pos_rate, m = 2.5, k = 0) {
+  y <- observed_cases * pos_rate^k * m
+  return(y)
 }
 
 dat$confirm <- increase_cases(observed_cases = dat$cases_daily,
@@ -103,7 +103,7 @@ reported_cases <- reported_cases[ ,confirm:= fifelse(date==as.Date("2020-09-25")
 
 county_info <- nccovid::nc_population[ ,1:2][order(july_2020, decreasing = TRUE)][county!="STATE"]
 
-county_single <- c(tail(county_info$county,30), "North Carolina", "Cone Health")
+county_single <- c(head(county_info$county,15),tail(county_info$county,60), "North Carolina", "Cone Health")
 county_cumulative <- setdiff(county_info$county,county_single)
 
 
@@ -155,7 +155,7 @@ estimates <- try(regional_epinow(reported_cases = reported_cases_low_density,
                              delays = delay_opts(incubation_period,
                                            reporting_delay),
                              non_zero_points = 14, horizon = 14, 
-                             stan = stan_opts(init_fit = "cumulative",samples = 6000,
+                             stan = stan_opts(init_fit = "cumulative",samples = 4000,
                                               chains = 4, cores = no_cores, control = list(adapt_delta = 0.95, max_treedepth = 15),
                                               max_execution_time = 60*60*6,
                                               future = FALSE),
