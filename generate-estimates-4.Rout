@@ -75,7 +75,7 @@ Using: cone as the data source
 + 								 weights = daily_tests)
 > start <- Sys.time()
 > cat(start)
-1609367537> # corrected cases for modelling -------------------------------------------
+1609710556> # corrected cases for modelling -------------------------------------------
 > 
 > dat$predicted_positive <- predict(mod, newdata = dat[,date_n:=as.numeric(date)], type = "response")
 > 
@@ -96,7 +96,7 @@ Using: cone as the data source
 > 
 > dat <- dat[date>=first_case_date]
 > 
-> increase_cases <- function (observed_cases, pos_rate, m = 10, k = 0.462) {
+> increase_cases <- function (observed_cases, pos_rate, m = 2.5, k = 0) {
 + 	y <- observed_cases * pos_rate^k * m
 + 	return(y)
 + }
@@ -162,29 +162,31 @@ prep completed>
 + 		      logs = here::here("epinow-logs"),
 +                       delays = delay_opts(incubation_period, reporting_delay),
 +                       non_zero_points = 14, horizon = 14, 
-+ 		     stan = stan_opts(samples = 6000, control = list(adapt_delta = 0.95, max_treedepth = 15),
++ 		     stan = stan_opts(samples = 4000, control = list(adapt_delta = 0.95, max_treedepth = 15),
 +                      chains = 4, cores = 8,
 +                       max_execution_time = 60*60*4, future = FALSE), rt = rt_opts(prior = list(mean = 1.25, sd = 0.25))))
-INFO [2020-12-30 22:32:17] Producing following optional outputs: regions, summary, samples, plots, latest
+INFO [2021-01-03 21:49:16] Producing following optional outputs: regions, summary, samples, plots, latest
 Logging threshold set at INFO for the EpiNow2 logger
-Writing EpiNow2 logs to: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2020-12-30.log
+Writing EpiNow2 logs to: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-01-03.log
 Logging threshold set at INFO for the EpiNow2.epinow logger
-Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2020-12-30.log
-INFO [2020-12-30 22:32:17] Reporting estimates using data up to: 2020-12-30
-INFO [2020-12-30 22:32:17] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
-INFO [2020-12-30 22:32:17] Producing estimates for: Cone Health, North Carolina
-INFO [2020-12-30 22:32:17] Regions excluded: none
-INFO [2020-12-30 22:32:17] Showing progress using progressr.
-INFO [2020-12-31 02:24:05] Completed regional estimates
-INFO [2020-12-31 02:24:05] Regions with estimates: 0
-INFO [2020-12-31 02:24:05] Regions with runtime errors: 2
-INFO [2020-12-31 02:24:05] Producing summary
-INFO [2020-12-31 02:24:05] No summary directory specified so returning summary output
-INFO [2020-12-31 02:24:05] Errors caught whilst generating summary statistics: 
-INFO [2020-12-31 02:24:05] Error in .checkTypos(e, names_x): Object 'variable' not found amongst 
+Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-01-03.log
+INFO [2021-01-03 21:49:16] Reporting estimates using data up to: 2021-01-03
+INFO [2021-01-03 21:49:16] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
+INFO [2021-01-03 21:49:16] Producing estimates for: Cone Health, North Carolina
+INFO [2021-01-03 21:49:16] Regions excluded: none
+INFO [2021-01-03 21:49:16] Showing progress using progressr.
+[[1]]
+Stan model 'estimate_infections' does not contain samples.
 
-INFO [2020-12-31 02:24:05] Saving timings information to : /mnt/resource/refresh-restimates/rt-estimates-out
+INFO [2021-01-03 23:50:34] Completed estimates for: Cone Health
+here are whatever error messages were returned
+INFO [2021-01-04 01:32:04] Completed regional estimates
+INFO [2021-01-04 01:32:04] Regions with estimates: 1
+INFO [2021-01-04 01:32:04] Regions with runtime errors: 1
+INFO [2021-01-04 01:32:04] Producing summary
+INFO [2021-01-04 01:32:04] No summary directory specified so returning summary output
+INFO [2021-01-04 01:32:05] Saving timings information to : /mnt/resource/refresh-restimates/rt-estimates-out
 > 
 > proc.time()
      user    system   elapsed 
-45607.405    29.719 13915.336 
+41994.972    19.797 13374.051 

@@ -218,26 +218,25 @@ The following object is masked from ‘package:EpiNow2’:
     update_list
 
 Using: cone as the data source
-1609703603prep completedRunning the full modelINFO [2021-01-03 19:53:24] Producing following optional outputs: regions, summary, samples, plots, latest
+1609723931prep completedRunning the full modelINFO [2021-01-04 01:32:11] Producing following optional outputs: regions, summary, samples, plots, latest
 Logging threshold set at INFO for the EpiNow2 logger
 Writing EpiNow2 logs to: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-01-03.log
 Logging threshold set at INFO for the EpiNow2.epinow logger
 Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-01-03.log
-INFO [2021-01-03 19:53:24] Reporting estimates using data up to: 2021-01-03
-INFO [2021-01-03 19:53:24] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
-INFO [2021-01-03 19:53:24] Producing estimates for: Scotland, Lee, Cone Health, North Carolina, Swain
-INFO [2021-01-03 19:53:24] Regions excluded: none
-INFO [2021-01-03 19:53:24] Showing progress using progressr.
-INFO [2021-01-03 19:59:19] Completed estimates for: Scotland
-INFO [2021-01-03 19:59:20] Completed regional estimates
-INFO [2021-01-03 19:59:20] Regions with estimates: 1
-INFO [2021-01-03 19:59:20] Regions with runtime errors: 4
-INFO [2021-01-03 19:59:20] Producing summary
-INFO [2021-01-03 19:59:20] No summary directory specified so returning summary output
-INFO [2021-01-03 19:59:20] Saving timings information to : /mnt/resource/refresh-restimates/rt-estimates-out
+INFO [2021-01-04 01:32:11] Reporting estimates using data up to: 2021-01-03
+INFO [2021-01-04 01:32:11] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
+INFO [2021-01-04 01:32:11] Producing estimates for: Davie, Columbus, Martin, Bertie, Brunswick, Dare, Beaufort, Rutherford, Hoke, Catawba, Avery, Tyrrell, Stokes, Jones
+INFO [2021-01-04 01:32:11] Regions excluded: none
+INFO [2021-01-04 01:32:11] Showing progress using progressr.
+INFO [2021-01-04 02:01:36] Completed regional estimates
+INFO [2021-01-04 02:01:36] Regions with estimates: 5
+INFO [2021-01-04 02:01:36] Regions with runtime errors: 9
+INFO [2021-01-04 02:01:36] Producing summary
+INFO [2021-01-04 02:01:36] No summary directory specified so returning summary output
+INFO [2021-01-04 02:01:36] Saving timings information to : /mnt/resource/refresh-restimates/rt-estimates-out
 > 
 > proc.time()
     user   system  elapsed 
-1192.479    9.410  365.294 
+5904.760   13.654 1771.013 
 Warning message:
 system call failed: Cannot allocate memory 
