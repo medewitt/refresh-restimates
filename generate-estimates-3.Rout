@@ -75,7 +75,7 @@ Using: cone as the data source
 +                  weights = daily_tests)
 > start <- Sys.time()
 > cat(start)
-1609707612> # corrected cases for modelling -------------------------------------------
+1609787652> # corrected cases for modelling -------------------------------------------
 > 
 > dat$predicted_positive <- predict(mod, newdata = dat[,date_n:=as.numeric(date)], type = "response")
 > 
@@ -136,12 +136,12 @@ Using: cone as the data source
 > 
 > county_info <- nccovid::nc_population[ ,1:2][order(july_2020, decreasing = TRUE)][county!="STATE"]
 > 
-> county_single <- c(head(county_info$county,20), "North Carolina", "Cone Health")
+> county_single <- c(head(county_info$county,10), "North Carolina", "Cone Health")
 > county_cumulative <- setdiff(county_info$county,county_single)
 > 
 > range_values <- data.frame(county_cumulative)
 > 
-> range_values$n <- rep(1:8,each = 10)
+> range_values$n <- rep(1:5,each = 18)
 > 
 > permutes <- split(range_values, f = range_values$n)
 > 
@@ -159,7 +159,7 @@ prep completed>
 > # Load utils --------------------------------------------------------------
 > if (!exists("setup_future", mode = "function")) source(here::here("util.R"))
 > no_cores <- setup_future(reported_cases = reported_cases)
-INFO [2021-01-03 21:00:13] Using 4 workers with 4 cores per worker
+INFO [2021-01-04 19:14:14] Using 4 workers with 4 cores per worker
 > 
 > # run estimation ----------------------------------------------------------
 > #EpiNow2::setup_logging(file = "log.log")
@@ -174,112 +174,72 @@ Running the full model>
 +                                    delays = delay_opts(incubation_period,
 +                                                        reporting_delay),
 +                                    non_zero_points = 14, horizon = 14, 
-+                                    stan = stan_opts(init_fit = "cumulative",samples = 4000,
++                                    stan = stan_opts(init_fit = "cumulative",samples = 3000,
 +                                                     chains = 4, cores = no_cores, control = list(adapt_delta = 0.95, max_treedepth = 14),
 +                                                     max_execution_time = 60*60*6,
 +                                                     future = FALSE),
 +                                    rt = rt_opts(prior = list(mean = 1.25, sd = 0.25))))
 + }
-INFO [2021-01-03 21:00:13] Producing following optional outputs: regions, summary, samples, plots, latest
+INFO [2021-01-04 19:14:14] Producing following optional outputs: regions, summary, samples, plots, latest
 Logging threshold set at INFO for the EpiNow2 logger
-Writing EpiNow2 logs to: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-01-03.log
+Writing EpiNow2 logs to: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-01-04.log
 Logging threshold set at INFO for the EpiNow2.epinow logger
-Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-01-03.log
-INFO [2021-01-03 21:00:14] Reporting estimates using data up to: 2021-01-03
-INFO [2021-01-03 21:00:14] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
-INFO [2021-01-03 21:00:14] Producing estimates for: Moore, Henderson, Randolph, Craven, Harnett, Robeson, Cleveland, Rowan, Wayne, Nash
-INFO [2021-01-03 21:00:14] Regions excluded: none
-INFO [2021-01-03 21:00:14] Showing progress using progressr.
+Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-01-04.log
+INFO [2021-01-04 19:14:14] Reporting estimates using data up to: 2021-01-04
+INFO [2021-01-04 19:14:14] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
+INFO [2021-01-04 19:14:14] Producing estimates for: Brunswick, Craven, Randolph, Wayne, Orange, Henderson, Iredell, Robeson, Davidson, Onslow, Rowan, Harnett, Alamance, Cabarrus, Johnston, Catawba, Moore, Pitt
+INFO [2021-01-04 19:14:14] Regions excluded: none
+INFO [2021-01-04 19:14:14] Showing progress using progressr.
 Error in mcfork(detached) : 
   unable to fork, possible reason: Cannot allocate memory
-INFO [2021-01-03 21:00:15] Producing following optional outputs: regions, summary, samples, plots, latest
+INFO [2021-01-04 20:35:11] Producing following optional outputs: regions, summary, samples, plots, latest
 Logging threshold set at INFO for the EpiNow2 logger
-Writing EpiNow2 logs to: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-01-03.log
+Writing EpiNow2 logs to: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-01-04.log
 Logging threshold set at INFO for the EpiNow2.epinow logger
-Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-01-03.log
-INFO [2021-01-03 21:00:15] Reporting estimates using data up to: 2021-01-03
-INFO [2021-01-03 21:00:15] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
-INFO [2021-01-03 21:00:15] Producing estimates for: Surry, Burke, Caldwell, Carteret, Chatham, Franklin, Wilkes, Lincoln, Wilson, Rockingham
-INFO [2021-01-03 21:00:15] Regions excluded: none
-INFO [2021-01-03 21:00:15] Showing progress using progressr.
-INFO [2021-01-03 21:19:07] Completed estimates for: Surry
-INFO [2021-01-03 21:25:53] Completed estimates for: Burke
-INFO [2021-01-03 21:28:18] Completed estimates for: Caldwell
-INFO [2021-01-03 21:32:56] Completed estimates for: Carteret
-INFO [2021-01-03 21:36:15] Completed estimates for: Chatham
-INFO [2021-01-03 21:38:13] Completed estimates for: Franklin
-INFO [2021-01-03 21:42:36] Completed estimates for: Wilkes
-Error : Failed to retrieve the result of MulticoreFuture (future_lapply-10) from the forked worker (on localhost; PID 19385). Post-mortem diagnostic: No process exists with this PID, i.e. the forked localhost worker is no longer alive.
+Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-01-04.log
+INFO [2021-01-04 20:35:11] Reporting estimates using data up to: 2021-01-04
+INFO [2021-01-04 20:35:11] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
+INFO [2021-01-04 20:35:11] Producing estimates for: Haywood, Surry, Caldwell, Pender, Carteret, Chatham, Burke, Lincoln, Sampson, Wilkes, Rutherford, Stanly, Franklin, Rockingham, Lee, Cleveland, Nash, Wilson
+INFO [2021-01-04 20:35:11] Regions excluded: none
+INFO [2021-01-04 20:35:11] Showing progress using progressr.
+Error : Failed to retrieve the result of MulticoreFuture (future_lapply-11) from the forked worker (on localhost; PID 20270). Post-mortem diagnostic: No process exists with this PID, i.e. the forked localhost worker is no longer alive.
 In addition: Warning message:
 In mccollect(jobs = jobs, wait = TRUE) :
   1 parallel job did not deliver a result
-INFO [2021-01-03 21:49:10] Producing following optional outputs: regions, summary, samples, plots, latest
+INFO [2021-01-04 20:39:48] Producing following optional outputs: regions, summary, samples, plots, latest
 Logging threshold set at INFO for the EpiNow2 logger
-Writing EpiNow2 logs to: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-01-03.log
+Writing EpiNow2 logs to: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-01-04.log
 Logging threshold set at INFO for the EpiNow2.epinow logger
-Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-01-03.log
-INFO [2021-01-03 21:49:10] Reporting estimates using data up to: 2021-01-03
-INFO [2021-01-03 21:49:10] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
-INFO [2021-01-03 21:49:10] Producing estimates for: Sampson, Rutherford, Watauga, Duplin, Haywood, Pender, Stanly, Granville, Columbus, Lee
-INFO [2021-01-03 21:49:10] Regions excluded: none
-INFO [2021-01-03 21:49:10] Showing progress using progressr.
-Error : Failed to retrieve the result of MulticoreFuture (future_lapply-10) from the forked worker (on localhost; PID 19385). Post-mortem diagnostic: No process exists with this PID, i.e. the forked localhost worker is no longer alive.
-INFO [2021-01-03 21:49:10] Producing following optional outputs: regions, summary, samples, plots, latest
+Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-01-04.log
+INFO [2021-01-04 20:39:49] Reporting estimates using data up to: 2021-01-04
+INFO [2021-01-04 20:39:49] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
+INFO [2021-01-04 20:39:49] Producing estimates for: Alexander, Davie, Jackson, Person, Columbus, Halifax, Pasquotank, Edgecombe, McDowell, Lenoir, Beaufort, Granville, Vance, Hoke, Watauga, Richmond, Stokes, Duplin
+INFO [2021-01-04 20:39:49] Regions excluded: none
+INFO [2021-01-04 20:39:49] Showing progress using progressr.
+Error : Failed to retrieve the result of MulticoreFuture (future_lapply-11) from the forked worker (on localhost; PID 20270). Post-mortem diagnostic: No process exists with this PID, i.e. the forked localhost worker is no longer alive.
+INFO [2021-01-04 20:39:49] Producing following optional outputs: regions, summary, samples, plots, latest
 Logging threshold set at INFO for the EpiNow2 logger
-Writing EpiNow2 logs to: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-01-03.log
+Writing EpiNow2 logs to: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-01-04.log
 Logging threshold set at INFO for the EpiNow2.epinow logger
-Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-01-03.log
-INFO [2021-01-03 21:49:10] Reporting estimates using data up to: 2021-01-03
-INFO [2021-01-03 21:49:10] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
-INFO [2021-01-03 21:49:10] Producing estimates for: Halifax, McDowell, Jackson, Lenoir, Vance, Hoke, Richmond, Edgecombe, Beaufort, Stokes
-INFO [2021-01-03 21:49:10] Regions excluded: none
-INFO [2021-01-03 21:49:10] Showing progress using progressr.
-Error : Failed to retrieve the result of MulticoreFuture (future_lapply-10) from the forked worker (on localhost; PID 19385). Post-mortem diagnostic: No process exists with this PID, i.e. the forked localhost worker is no longer alive.
-INFO [2021-01-03 21:49:10] Producing following optional outputs: regions, summary, samples, plots, latest
+Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-01-04.log
+INFO [2021-01-04 20:39:49] Reporting estimates using data up to: 2021-01-04
+INFO [2021-01-04 20:39:49] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
+INFO [2021-01-04 20:39:49] Producing estimates for: Ashe, Madison, Transylvania, Anson, Macon, Martin, Polk, Caswell, Hertford, Dare, Yadkin, Cherokee, Montgomery, Greene, Northampton, Scotland, Currituck, Bladen
+INFO [2021-01-04 20:39:49] Regions excluded: none
+INFO [2021-01-04 20:39:49] Showing progress using progressr.
+Error : Failed to retrieve the result of MulticoreFuture (future_lapply-11) from the forked worker (on localhost; PID 20270). Post-mortem diagnostic: No process exists with this PID, i.e. the forked localhost worker is no longer alive.
+INFO [2021-01-04 20:39:49] Producing following optional outputs: regions, summary, samples, plots, latest
 Logging threshold set at INFO for the EpiNow2 logger
-Writing EpiNow2 logs to: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-01-03.log
+Writing EpiNow2 logs to: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-01-04.log
 Logging threshold set at INFO for the EpiNow2.epinow logger
-Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-01-03.log
-INFO [2021-01-03 21:49:10] Reporting estimates using data up to: 2021-01-03
-INFO [2021-01-03 21:49:10] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
-INFO [2021-01-03 21:49:10] Producing estimates for: Alexander, Bladen, Macon, Yadkin, Davie, Person, Transylvania, Pasquotank, Scotland, Dare
-INFO [2021-01-03 21:49:10] Regions excluded: none
-INFO [2021-01-03 21:49:10] Showing progress using progressr.
-Error : Failed to retrieve the result of MulticoreFuture (future_lapply-10) from the forked worker (on localhost; PID 19385). Post-mortem diagnostic: No process exists with this PID, i.e. the forked localhost worker is no longer alive.
-INFO [2021-01-03 21:49:10] Producing following optional outputs: regions, summary, samples, plots, latest
-Logging threshold set at INFO for the EpiNow2 logger
-Writing EpiNow2 logs to: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-01-03.log
-Logging threshold set at INFO for the EpiNow2.epinow logger
-Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-01-03.log
-INFO [2021-01-03 21:49:10] Reporting estimates using data up to: 2021-01-03
-INFO [2021-01-03 21:49:10] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
-INFO [2021-01-03 21:49:10] Producing estimates for: Currituck, Madison, Polk, Hertford, Martin, Anson, Montgomery, Caswell, Cherokee, Ashe
-INFO [2021-01-03 21:49:10] Regions excluded: none
-INFO [2021-01-03 21:49:10] Showing progress using progressr.
-Error : Failed to retrieve the result of MulticoreFuture (future_lapply-10) from the forked worker (on localhost; PID 19385). Post-mortem diagnostic: No process exists with this PID, i.e. the forked localhost worker is no longer alive.
-INFO [2021-01-03 21:49:10] Producing following optional outputs: regions, summary, samples, plots, latest
-Logging threshold set at INFO for the EpiNow2 logger
-Writing EpiNow2 logs to: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-01-03.log
-Logging threshold set at INFO for the EpiNow2.epinow logger
-Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-01-03.log
-INFO [2021-01-03 21:49:10] Reporting estimates using data up to: 2021-01-03
-INFO [2021-01-03 21:49:10] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
-INFO [2021-01-03 21:49:10] Producing estimates for: Mitchell, Yancey, Chowan, Warren, Perquimans, Northampton, Greene, Avery, Bertie, Swain
-INFO [2021-01-03 21:49:10] Regions excluded: none
-INFO [2021-01-03 21:49:10] Showing progress using progressr.
-Error : Failed to retrieve the result of MulticoreFuture (future_lapply-10) from the forked worker (on localhost; PID 19385). Post-mortem diagnostic: No process exists with this PID, i.e. the forked localhost worker is no longer alive.
-INFO [2021-01-03 21:49:10] Producing following optional outputs: regions, summary, samples, plots, latest
-Logging threshold set at INFO for the EpiNow2 logger
-Writing EpiNow2 logs to: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-01-03.log
-Logging threshold set at INFO for the EpiNow2.epinow logger
-Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-01-03.log
-INFO [2021-01-03 21:49:10] Reporting estimates using data up to: 2021-01-03
-INFO [2021-01-03 21:49:10] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
-INFO [2021-01-03 21:49:10] Producing estimates for: Washington, Alleghany, Gates, Pamlico, Camden, Graham, Clay, Tyrrell, Hyde, Jones
-INFO [2021-01-03 21:49:10] Regions excluded: none
-INFO [2021-01-03 21:49:10] Showing progress using progressr.
-Error : Failed to retrieve the result of MulticoreFuture (future_lapply-10) from the forked worker (on localhost; PID 19385). Post-mortem diagnostic: No process exists with this PID, i.e. the forked localhost worker is no longer alive.
+Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-01-04.log
+INFO [2021-01-04 20:39:49] Reporting estimates using data up to: 2021-01-04
+INFO [2021-01-04 20:39:49] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
+INFO [2021-01-04 20:39:49] Producing estimates for: Clay, Warren, Graham, Mitchell, Yancey, Bertie, Chowan, Avery, Gates, Tyrrell, Washington, Hyde, Jones, Perquimans, Swain, Pamlico, Alleghany, Camden
+INFO [2021-01-04 20:39:49] Regions excluded: none
+INFO [2021-01-04 20:39:49] Showing progress using progressr.
+Error : Failed to retrieve the result of MulticoreFuture (future_lapply-11) from the forked worker (on localhost; PID 20270). Post-mortem diagnostic: No process exists with this PID, i.e. the forked localhost worker is no longer alive.
 > 
 > proc.time()
-    user   system  elapsed 
-6971.314  139.487 2944.343 
+     user    system   elapsed 
+21063.731  2139.745  5143.614 

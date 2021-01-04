@@ -75,7 +75,7 @@ Using: cone as the data source
 + 								 weights = daily_tests)
 > start <- Sys.time()
 > cat(start)
-1609710556> # corrected cases for modelling -------------------------------------------
+1609792798> # corrected cases for modelling -------------------------------------------
 > 
 > dat$predicted_positive <- predict(mod, newdata = dat[,date_n:=as.numeric(date)], type = "response")
 > 
@@ -113,13 +113,13 @@ Using: cone as the data source
 > cone_region <- reported_cases[region %chin% nccovid::cone_region,
 + 															.(confirm = sum(confirm)), by = "date"] %>%
 + 	.[,region:="Cone Health"] %>% 
-+ 	.[,confirm:=data.table::frollmean(confirm, n = 6)] %>% 
++ 	#.[,confirm:=data.table::frollmean(confirm, n = 6)] %>% 
 + 	.[,confirm :=round(confirm)]%>% 
 + 	.[!is.na(confirm)]
 > 
 > nc_overall <- reported_cases[,.(confirm = sum(confirm)), by = "date"] %>%
 + 	.[,region:="North Carolina"]%>% 
-+ 	.[,confirm:=data.table::frollmean(confirm, n = 6)] %>% 
++ 	#.[,confirm:=data.table::frollmean(confirm, n = 6)] %>% 
 + 	.[,confirm :=round(confirm)] %>% 
 + 	.[!is.na(confirm)]
 > 
@@ -162,31 +162,30 @@ prep completed>
 + 		      logs = here::here("epinow-logs"),
 +                       delays = delay_opts(incubation_period, reporting_delay),
 +                       non_zero_points = 14, horizon = 14, 
-+ 		     stan = stan_opts(samples = 4000, control = list(adapt_delta = 0.95, max_treedepth = 15),
++ 		     stan = stan_opts(samples = 3000, control = list(adapt_delta = 0.95, max_treedepth = 15),
 +                      chains = 4, cores = 8,
-+                       max_execution_time = 60*60*4, future = FALSE), rt = rt_opts(prior = list(mean = 1.25, sd = 0.25))))
-INFO [2021-01-03 21:49:16] Producing following optional outputs: regions, summary, samples, plots, latest
++                       max_execution_time = 60*60*5, future = FALSE), rt = rt_opts(prior = list(mean = 1.25, sd = 0.25))))
+INFO [2021-01-04 20:39:58] Producing following optional outputs: regions, summary, samples, plots, latest
 Logging threshold set at INFO for the EpiNow2 logger
-Writing EpiNow2 logs to: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-01-03.log
+Writing EpiNow2 logs to: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-01-04.log
 Logging threshold set at INFO for the EpiNow2.epinow logger
-Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-01-03.log
-INFO [2021-01-03 21:49:16] Reporting estimates using data up to: 2021-01-03
-INFO [2021-01-03 21:49:16] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
-INFO [2021-01-03 21:49:16] Producing estimates for: Cone Health, North Carolina
-INFO [2021-01-03 21:49:16] Regions excluded: none
-INFO [2021-01-03 21:49:16] Showing progress using progressr.
-[[1]]
-Stan model 'estimate_infections' does not contain samples.
-
-INFO [2021-01-03 23:50:34] Completed estimates for: Cone Health
-here are whatever error messages were returned
-INFO [2021-01-04 01:32:04] Completed regional estimates
-INFO [2021-01-04 01:32:04] Regions with estimates: 1
-INFO [2021-01-04 01:32:04] Regions with runtime errors: 1
-INFO [2021-01-04 01:32:04] Producing summary
-INFO [2021-01-04 01:32:04] No summary directory specified so returning summary output
-INFO [2021-01-04 01:32:05] Saving timings information to : /mnt/resource/refresh-restimates/rt-estimates-out
+Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-01-04.log
+INFO [2021-01-04 20:39:58] Reporting estimates using data up to: 2021-01-04
+INFO [2021-01-04 20:39:58] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
+INFO [2021-01-04 20:39:58] Producing estimates for: Cone Health, North Carolina
+INFO [2021-01-04 20:39:58] Regions excluded: none
+INFO [2021-01-04 20:39:58] Showing progress using progressr.
+INFO [2021-01-04 20:44:27] Completed estimates for: Cone Health
+INFO [2021-01-04 20:50:55] Completed estimates for: North Carolina
+INFO [2021-01-04 20:50:55] Completed regional estimates
+INFO [2021-01-04 20:50:55] Regions with estimates: 2
+INFO [2021-01-04 20:50:55] Regions with runtime errors: 0
+INFO [2021-01-04 20:50:55] Producing summary
+INFO [2021-01-04 20:50:55] No summary directory specified so returning summary output
+INFO [2021-01-04 20:50:56] Saving timings information to : /mnt/resource/refresh-restimates/rt-estimates-out
 > 
 > proc.time()
-     user    system   elapsed 
-41994.972    19.797 13374.051 
+    user   system  elapsed 
+2320.497    8.863  664.707 
+Warning message:
+system call failed: Cannot allocate memory 
