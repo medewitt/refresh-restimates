@@ -8,6 +8,7 @@ library(future)
 library(purrr)
 option(future.fork.multithreading.enable = FALSE)
 RhpcBLASctl::omp_set_num_threads(1L)
+data.table::setDTthreads(1)
 #options(future.globals.maxSize = 10000*1024^2)
 
 #dat <- nccovid::get_covid_state(data_source = "cone")
