@@ -101,12 +101,12 @@ reported_cases <- reported_cases[ ,confirm:= fifelse(date==as.Date("2020-09-25")
 
 county_info <- nccovid::nc_population[ ,1:2][order(july_2020, decreasing = TRUE)][county!="STATE"]
 
-county_single <- c(head(county_info$county,20), "North Carolina", "Cone Health")
+county_single <- c(head(county_info$county,10), "North Carolina", "Cone Health")
 county_cumulative <- setdiff(county_info$county,county_single)
 
 range_values <- data.frame(county_cumulative)
 
-range_values$n <- rep(1:8,each = 10)
+range_values$n <- rep(1:5,each = 18)
 
 permutes <- split(range_values, f = range_values$n)
 
@@ -138,7 +138,7 @@ for(i in seq_along(permutes)){
                                    delays = delay_opts(incubation_period,
                                                        reporting_delay),
                                    non_zero_points = 14, horizon = 14, 
-                                   stan = stan_opts(init_fit = "cumulative",samples = 4000,
+                                   stan = stan_opts(init_fit = "cumulative",samples = 3000,
                                                     chains = 4, cores = no_cores, control = list(adapt_delta = 0.95, max_treedepth = 14),
                                                     max_execution_time = 60*60*6,
                                                     future = FALSE),

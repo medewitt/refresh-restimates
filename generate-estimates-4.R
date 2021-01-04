@@ -78,13 +78,13 @@ reported_cases <- dat[,`:=` (region=county,
 cone_region <- reported_cases[region %chin% nccovid::cone_region,
 															.(confirm = sum(confirm)), by = "date"] %>%
 	.[,region:="Cone Health"] %>% 
-	.[,confirm:=data.table::frollmean(confirm, n = 6)] %>% 
+	#.[,confirm:=data.table::frollmean(confirm, n = 6)] %>% 
 	.[,confirm :=round(confirm)]%>% 
 	.[!is.na(confirm)]
 
 nc_overall <- reported_cases[,.(confirm = sum(confirm)), by = "date"] %>%
 	.[,region:="North Carolina"]%>% 
-	.[,confirm:=data.table::frollmean(confirm, n = 6)] %>% 
+	#.[,confirm:=data.table::frollmean(confirm, n = 6)] %>% 
 	.[,confirm :=round(confirm)] %>% 
 	.[!is.na(confirm)]
 
@@ -127,6 +127,6 @@ estimates <- try(regional_epinow(reported_cases = reported_cases,															
 		      logs = here::here("epinow-logs"),
                       delays = delay_opts(incubation_period, reporting_delay),
                       non_zero_points = 14, horizon = 14, 
-		     stan = stan_opts(samples = 4000, control = list(adapt_delta = 0.95, max_treedepth = 15),
+		     stan = stan_opts(samples = 3000, control = list(adapt_delta = 0.95, max_treedepth = 15),
                      chains = 4, cores = 8,
-                      max_execution_time = 60*60*4, future = FALSE), rt = rt_opts(prior = list(mean = 1.25, sd = 0.25))))
+                      max_execution_time = 60*60*5, future = FALSE), rt = rt_opts(prior = list(mean = 1.25, sd = 0.25))))
