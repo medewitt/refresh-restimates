@@ -40,7 +40,226 @@ The following object is masked from ‘package:EpiNow2’:
 
     update_list
 
-> option(future.fork.multithreading.enable = FALSE)
-Error in option(future.fork.multithreading.enable = FALSE) : 
-  could not find function "option"
-Execution halted
+> options(future.fork.multithreading.enable = FALSE)
+> RhpcBLASctl::omp_set_num_threads(1L)
+> data.table::setDTthreads(1)
+> #options(future.globals.maxSize = 10000*1024^2)
+> 
+> #dat <- nccovid::get_covid_state(data_source = "cone")
+> dat <- nccovid::get_covid_state(data_source = "cone", reporting_adj = TRUE)
+Using: cone as the data source
+> # Wait Until 15 Confirmed cases by county cumulative and within last 16 weeks
+> 
+> dat <- dat[date>=Sys.Date()-lubridate::weeks(16)]
+> 
+> dat <- dat[cases_confirmed_cum>15]
+> 
+> # Fix State Data Dump
+> dat <- dat[,cases_daily := fifelse(date==as.Date("2020-09-25"),
++                                    dplyr::lag(cases_daily,1), cases_daily), by = "county"]
+> 
+> reported_cases <- dat[,`:=` (region=county,
++                              confirm = cases_daily)][,.(date,confirm, region)][date>as.Date("2020-03-10")]
+> 
+> 
+> # correct for testing -----------------------------------------------------
+> 
+> nc_testing <- "https://raw.githubusercontent.com/conedatascience/covid-data/master/data/timeseries/nc-summary-stats.csv"
+> 
+> nc_testing <- data.table::fread(nc_testing)
+> 
+> dat_positivity_rate<- nc_testing[,date_n := as.numeric(as.Date(date))] %>%
++   .[date>as.Date("2020-03-15")]
+> 
+> mod <- mgcv::gam(positive_tests ~ s(date_n,bs = "gp"),
++                  data = dat_positivity_rate,
++                  family = stats::quasibinomial,
++                  weights = daily_tests)
+> start <- Sys.time()
+> cat(start)
+1609965777> # corrected cases for modelling -------------------------------------------
+> 
+> dat$predicted_positive <- predict(mod, newdata = dat[,date_n:=as.numeric(date)], type = "response")
+> 
+> dat <- dat[,predicted_positive := fifelse(predicted_positive<.02,.02, predicted_positive)]
+> 
+> first_case_dat <- dat[cases_daily>0, .SD[which.min(date)], by = county]
+> 
+> 
+> first_case_dat <- first_case_dat[,.(county,date)] %>%
++   setnames(old = "date", new = "first_case_date")
+> 
+> # Set Keys for Joining
+> setkey(first_case_dat, "county")
+> setkey(dat, "county")
+> 
+> 
+> dat <- dat[first_case_dat, nomatch = 0]
+> 
+> dat <- dat[date>=first_case_date]
+> 
+> increase_cases <- function (observed_cases, pos_rate, m = 2.5, k = 0) {
++   y <- observed_cases * pos_rate^k * m
++   return(y)
++ }
+> 
+> dat$confirm <- increase_cases(observed_cases = dat$cases_daily,
++                               pos_rate = dat$predicted_positive)
+> 
+> reported_cases <- dat[,`:=` (region=county,
++                              confirm = round(confirm))] %>%
++   .[,.(date,confirm, region)] %>%
++   .[date>as.Date("2020-05-18")]
+> 
+> # Smooth on Regions for R estimation only.
+> cone_region <- reported_cases[region %chin% nccovid::cone_region,
++                               .(confirm = sum(confirm)), by = "date"] %>%
++   .[,region:="Cone Health"] %>% 
++   .[,confirm:=data.table::frollmean(confirm, n = 3)] %>% 
++   .[,confirm :=round(confirm)]%>% 
++   .[!is.na(confirm)]
+> 
+> nc_overall <- reported_cases[,.(confirm = sum(confirm)), by = "date"] %>%
++   .[,region:="North Carolina"]%>% 
++   .[,confirm:=data.table::frollmean(confirm, n = 3)] %>% 
++   .[,confirm :=round(confirm)] %>% 
++   .[!is.na(confirm)]
+> 
+> reported_cases <-reported_cases %>%
++   merge(cone_region, all = TRUE) %>%
++   merge(nc_overall, all=TRUE)
+> 
+> # Correct for State Data Dump
+> reported_cases <- reported_cases[ ,confirm:= fifelse(date==as.Date("2020-09-25"),
++                                                      shift(confirm,1),confirm), by = "region"]
+> 
+> 
+> # pull low population density counties ------------------------------------
+> 
+> county_info <- nccovid::nc_population[ ,1:2][order(july_2020, decreasing = TRUE)][county!="STATE"]
+> 
+> county_single <- c(head(county_info$county,10), "North Carolina", "Cone Health")
+> county_cumulative <- setdiff(county_info$county,county_single)
+> 
+> range_values <- data.frame(county_cumulative)
+> 
+> range_values$n <- rep(1:5,each = 18)
+> 
+> permutes <- split(range_values, f = range_values$n)
+> 
+> # setup -------------------------------------------------------------------
+> 
+> # NCDHHS Reporting Data Starting 2020-10-29
+> 
+> reporting_delay <- nccovid::nc_delay
+> 
+> generation_time <- EpiNow2::get_generation_time(disease = "SARS-CoV-2", source = "ganyani")
+> incubation_period <- EpiNow2::get_incubation_period(disease = "SARS-CoV-2", source = "lauer")
+> 
+> cat("prep completed")
+prep completed> 
+> # Load utils --------------------------------------------------------------
+> if (!exists("setup_future", mode = "function")) source(here::here("util.R"))
+> no_cores <- setup_future(reported_cases = reported_cases)
+INFO [2021-01-06 20:42:57] Using 4 workers with 4 cores per worker
+> 
+> # run estimation ----------------------------------------------------------
+> #EpiNow2::setup_logging(file = "log.log")
+>   cat('Running the full model')
+Running the full model>   
+> for(i in seq_along(permutes)){
++   
++   try(regional_epinow(reported_cases = reported_cases[region %in% permutes[[i]]$county_cumulative],
++                                    generation_time = generation_time,
++                                    target_folder = here::here("rt-estimates-out"),
++                                    logs = here::here("epinow-logs"),
++                                    delays = delay_opts(incubation_period,
++                                                        reporting_delay),
++                                    non_zero_points = 14, horizon = 14, 
++                                    stan = stan_opts(init_fit = "cumulative",samples = 3000,
++                                                     chains = 4, cores = no_cores, control = list(adapt_delta = 0.95, max_treedepth = 14),
++                                                     max_execution_time = 60*60*6,
++                                                     future = FALSE),
++                                    rt = rt_opts(prior = list(mean = 1.25, sd = 0.25))))
++ }
+INFO [2021-01-06 20:42:57] Producing following optional outputs: regions, summary, samples, plots, latest
+Logging threshold set at INFO for the EpiNow2 logger
+Writing EpiNow2 logs to: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-01-06.log
+Logging threshold set at INFO for the EpiNow2.epinow logger
+Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-01-06.log
+INFO [2021-01-06 20:42:57] Reporting estimates using data up to: 2021-01-06
+INFO [2021-01-06 20:42:57] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
+INFO [2021-01-06 20:42:57] Producing estimates for: Johnston, Moore, Randolph, Henderson, Orange, Rowan, Brunswick, Craven, Cabarrus, Wayne, Alamance, Catawba, Onslow, Iredell, Davidson, Harnett, Pitt, Robeson
+INFO [2021-01-06 20:42:57] Regions excluded: none
+INFO [2021-01-06 20:42:57] Showing progress using progressr.
+INFO [2021-01-06 21:37:02] Completed regional estimates
+INFO [2021-01-06 21:37:02] Regions with estimates: 18
+INFO [2021-01-06 21:37:02] Regions with runtime errors: 0
+INFO [2021-01-06 21:37:02] Producing summary
+INFO [2021-01-06 21:37:02] No summary directory specified so returning summary output
+INFO [2021-01-06 21:37:03] Saving timings information to : /mnt/resource/refresh-restimates/rt-estimates-out
+INFO [2021-01-06 21:37:03] Producing following optional outputs: regions, summary, samples, plots, latest
+Logging threshold set at INFO for the EpiNow2 logger
+Writing EpiNow2 logs to: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-01-06.log
+Logging threshold set at INFO for the EpiNow2.epinow logger
+Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-01-06.log
+INFO [2021-01-06 21:37:03] Reporting estimates using data up to: 2021-01-06
+INFO [2021-01-06 21:37:03] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
+INFO [2021-01-06 21:37:03] Producing estimates for: Haywood, Franklin, Carteret, Chatham, Lee, Rutherford, Caldwell, Surry, Wilkes, Burke, Lincoln, Nash, Pender, Sampson, Stanly, Wilson, Cleveland, Rockingham
+INFO [2021-01-06 21:37:03] Regions excluded: none
+INFO [2021-01-06 21:37:03] Showing progress using progressr.
+INFO [2021-01-06 22:28:26] Completed regional estimates
+INFO [2021-01-06 22:28:26] Regions with estimates: 18
+INFO [2021-01-06 22:28:26] Regions with runtime errors: 0
+INFO [2021-01-06 22:28:26] Producing summary
+INFO [2021-01-06 22:28:26] No summary directory specified so returning summary output
+INFO [2021-01-06 22:28:27] Saving timings information to : /mnt/resource/refresh-restimates/rt-estimates-out
+INFO [2021-01-06 22:28:27] Producing following optional outputs: regions, summary, samples, plots, latest
+Logging threshold set at INFO for the EpiNow2 logger
+Writing EpiNow2 logs to: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-01-06.log
+Logging threshold set at INFO for the EpiNow2.epinow logger
+Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-01-06.log
+INFO [2021-01-06 22:28:27] Reporting estimates using data up to: 2021-01-06
+INFO [2021-01-06 22:28:27] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
+INFO [2021-01-06 22:28:27] Producing estimates for: Jackson, Vance, Alexander, Davie, Halifax, Person, Stokes, Beaufort, Duplin, Lenoir, Granville, Hoke, Columbus, Richmond, Watauga, Edgecombe, McDowell, Pasquotank
+INFO [2021-01-06 22:28:27] Regions excluded: none
+INFO [2021-01-06 22:28:27] Showing progress using progressr.
+INFO [2021-01-06 23:23:44] Completed regional estimates
+INFO [2021-01-06 23:23:44] Regions with estimates: 18
+INFO [2021-01-06 23:23:44] Regions with runtime errors: 0
+INFO [2021-01-06 23:23:44] Producing summary
+INFO [2021-01-06 23:23:44] No summary directory specified so returning summary output
+INFO [2021-01-06 23:23:45] Saving timings information to : /mnt/resource/refresh-restimates/rt-estimates-out
+INFO [2021-01-06 23:23:45] Producing following optional outputs: regions, summary, samples, plots, latest
+Logging threshold set at INFO for the EpiNow2 logger
+Writing EpiNow2 logs to: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-01-06.log
+Logging threshold set at INFO for the EpiNow2.epinow logger
+Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-01-06.log
+INFO [2021-01-06 23:23:45] Reporting estimates using data up to: 2021-01-06
+INFO [2021-01-06 23:23:45] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
+INFO [2021-01-06 23:23:45] Producing estimates for: Dare, Madison, Ashe, Northampton, Caswell, Cherokee, Transylvania, Hertford, Bladen, Martin, Montgomery, Yadkin, Anson, Greene, Scotland, Currituck, Macon, Polk
+INFO [2021-01-06 23:23:45] Regions excluded: none
+INFO [2021-01-06 23:23:45] Showing progress using progressr.
+Error in mcfork(detached) : 
+  unable to fork, possible reason: Cannot allocate memory
+INFO [2021-01-06 23:44:01] Producing following optional outputs: regions, summary, samples, plots, latest
+Logging threshold set at INFO for the EpiNow2 logger
+Writing EpiNow2 logs to: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-01-06.log
+Logging threshold set at INFO for the EpiNow2.epinow logger
+Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-01-06.log
+INFO [2021-01-06 23:44:01] Reporting estimates using data up to: 2021-01-06
+INFO [2021-01-06 23:44:01] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
+INFO [2021-01-06 23:44:01] Producing estimates for: Avery, Bertie, Chowan, Gates, Hyde, Washington, Jones, Perquimans, Swain, Pamlico, Warren, Alleghany, Yancey, Graham, Mitchell, Clay, Tyrrell, Camden
+INFO [2021-01-06 23:44:01] Regions excluded: none
+INFO [2021-01-06 23:44:01] Showing progress using progressr.
+INFO [2021-01-07 00:46:35] Completed regional estimates
+INFO [2021-01-07 00:46:35] Regions with estimates: 17
+INFO [2021-01-07 00:46:35] Regions with runtime errors: 1
+INFO [2021-01-07 00:46:35] Producing summary
+INFO [2021-01-07 00:46:35] No summary directory specified so returning summary output
+INFO [2021-01-07 00:46:35] Saving timings information to : /mnt/resource/refresh-restimates/rt-estimates-out
+> 
+> proc.time()
+    user   system  elapsed 
+99027.06   205.54 14623.38 
+Error while shutting down parallel: unable to terminate some child processes
