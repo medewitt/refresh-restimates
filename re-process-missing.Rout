@@ -195,55 +195,7 @@ The following objects are masked from ‘package:base’:
 + 																	 rt = rt_opts(prior = list(mean = 1.25, sd = 0.1))))
 + plan("sequential")
 + }
-
-Attaching package: ‘data.table’
-
-The following objects are masked from ‘package:dplyr’:
-
-    between, first, last
-
-
-Attaching package: ‘purrr’
-
-The following object is masked from ‘package:data.table’:
-
-    transpose
-
-The following object is masked from ‘package:magrittr’:
-
-    set_names
-
-The following object is masked from ‘package:EpiNow2’:
-
-    update_list
-
-Using: cone as the data source
-1609981127prep completedRunning the full modelINFO [2021-01-07 00:58:48] Producing following optional outputs: regions, summary, samples, plots, latest
-Logging threshold set at INFO for the EpiNow2 logger
-Writing EpiNow2 logs to: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-01-06.log
-Logging threshold set at INFO for the EpiNow2.epinow logger
-Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-01-06.log
-INFO [2021-01-07 00:58:48] Reporting estimates using data up to: 2021-01-06
-INFO [2021-01-07 00:58:48] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
-INFO [2021-01-07 00:58:48] Producing estimates for: Greene, Martin, Currituck, Macon, Anson, Yadkin, Montgomery, Scotland, Polk
-INFO [2021-01-07 00:58:48] Regions excluded: none
-INFO [2021-01-07 00:58:48] Showing progress using progressr.
-INFO [2021-01-07 01:02:25] Completed estimates for: Greene
-INFO [2021-01-07 01:06:53] Completed estimates for: Martin
-INFO [2021-01-07 01:13:46] Completed estimates for: Currituck
-INFO [2021-01-07 01:17:17] Completed estimates for: Macon
-INFO [2021-01-07 01:21:52] Completed estimates for: Anson
-INFO [2021-01-07 01:27:17] Completed estimates for: Yadkin
-INFO [2021-01-07 01:30:48] Completed estimates for: Montgomery
-INFO [2021-01-07 01:36:18] Completed estimates for: Scotland
-INFO [2021-01-07 01:39:36] Completed estimates for: Polk
-INFO [2021-01-07 01:39:36] Completed regional estimates
-INFO [2021-01-07 01:39:36] Regions with estimates: 9
-INFO [2021-01-07 01:39:36] Regions with runtime errors: 0
-INFO [2021-01-07 01:39:36] Producing summary
-INFO [2021-01-07 01:39:36] No summary directory specified so returning summary output
-INFO [2021-01-07 01:39:37] Saving timings information to : /mnt/resource/refresh-restimates/rt-estimates-out
 > 
 > proc.time()
-    user   system  elapsed 
-7772.546   20.138 2454.576 
+   user  system elapsed 
+  1.391   1.211   1.124 
