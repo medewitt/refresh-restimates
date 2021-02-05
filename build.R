@@ -1,4 +1,9 @@
 try(system("export OPENBLAS_NUM_THREADS=1"))
+
+while(tail(nccovid::get_covid_state(select_county = "Guilford"),1)$date <Sys.Date()){
+Sys.sleep(60*30)
+}
+
 cat("starting")
 cat("\nFirst Batch\n")
 system("R CMD BATCH --vanilla generate-estimates-1.R")
