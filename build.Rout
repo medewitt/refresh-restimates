@@ -18,6 +18,13 @@ Type 'demo()' for some demos, 'help()' for on-line help, or
 Type 'q()' to quit R.
 
 > try(system("export OPENBLAS_NUM_THREADS=1"))
+> 
+> while(tail(nccovid::get_covid_state(select_county = "Guilford"),1)$date <Sys.Date()){
++ Sys.sleep(60*30)
++ }
+Using: cone as the data source
+Using: cone as the data source
+> 
 > cat("starting")
 starting> cat("\nFirst Batch\n")
 
@@ -48,4 +55,4 @@ done with combination>
 > 
 > proc.time()
       user     system    elapsed 
-362397.263    562.619  45747.293 
+272269.243    591.255  30570.076 
