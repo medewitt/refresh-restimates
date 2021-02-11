@@ -53,5 +53,6 @@ done with combination>
 > system("R CMD BATCH --vanilla  correct-state.R")
 > 
 > proc.time()
-      user     system    elapsed 
-306365.529    495.351  41637.617 
+     user    system   elapsed 
+339017.01    519.02  49375.03 
+.617 
