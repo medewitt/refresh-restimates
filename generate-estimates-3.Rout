@@ -77,7 +77,7 @@ Using: cone as the data source
 +                  weights = daily_tests)
 > start <- Sys.time()
 > cat(start)
-1612905650> # corrected cases for modelling -------------------------------------------
+1613003179> # corrected cases for modelling -------------------------------------------
 > 
 > dat$predicted_positive <- predict(mod, newdata = dat[,date_n:=as.numeric(date)], type = "response")
 > 
@@ -161,7 +161,7 @@ prep completed>
 > # Load utils --------------------------------------------------------------
 > if (!exists("setup_future", mode = "function")) source(here::here("util.R"))
 > no_cores <- setup_future(reported_cases = reported_cases)
-INFO [2021-02-09 21:20:51] Using 4 workers with 4 cores per worker
+INFO [2021-02-11 00:26:20] Using 4 workers with 4 cores per worker
 > 
 > # run estimation ----------------------------------------------------------
 > #EpiNow2::setup_logging(file = "log.log")
@@ -182,32 +182,64 @@ Running the full model>
 +                                                     future = FALSE),
 +                                    rt = rt_opts(prior = list(mean = 1.25, sd = 0.25))))
 + }
-INFO [2021-02-09 21:20:51] Producing following optional outputs: regions, summary, samples, plots, latest
+INFO [2021-02-11 00:26:20] Producing following optional outputs: regions, summary, samples, plots, latest
 Logging threshold set at INFO for the EpiNow2 logger
-Writing EpiNow2 logs to: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-02-09.log
+Writing EpiNow2 logs to: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-02-10.log
 Logging threshold set at INFO for the EpiNow2.epinow logger
-Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-02-09.log
-INFO [2021-02-09 21:20:51] Reporting estimates using data up to: 2021-02-09
-INFO [2021-02-09 21:20:51] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
-INFO [2021-02-09 21:20:51] Producing estimates for: Moore, Henderson, Wayne, Alamance, Brunswick, Orange, Rowan, Randolph, Harnett, Davidson, Pitt, Johnston, Cabarrus, Onslow, Robeson, Iredell, Craven, Catawba
-INFO [2021-02-09 21:20:51] Regions excluded: none
-INFO [2021-02-09 21:20:51] Showing progress using progressr.
-INFO [2021-02-09 22:12:33] Completed regional estimates
-INFO [2021-02-09 22:12:33] Regions with estimates: 18
-INFO [2021-02-09 22:12:33] Regions with runtime errors: 0
-INFO [2021-02-09 22:12:33] Producing summary
-INFO [2021-02-09 22:12:33] No summary directory specified so returning summary output
-INFO [2021-02-09 22:12:34] Saving timings information to : /mnt/resource/refresh-restimates/rt-estimates-out
-INFO [2021-02-09 22:12:34] Producing following optional outputs: regions, summary, samples, plots, latest
+Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-02-10.log
+INFO [2021-02-11 00:26:20] Reporting estimates using data up to: 2021-02-10
+INFO [2021-02-11 00:26:20] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
+INFO [2021-02-11 00:26:20] Producing estimates for: Orange, Craven, Moore, Rowan, Brunswick, Iredell, Harnett, Davidson, Cabarrus, Randolph, Henderson, Onslow, Alamance, Johnston, Pitt, Catawba, Robeson, Wayne
+INFO [2021-02-11 00:26:20] Regions excluded: none
+INFO [2021-02-11 00:26:20] Showing progress using progressr.
+INFO [2021-02-11 01:49:20] Completed regional estimates
+INFO [2021-02-11 01:49:21] Regions with estimates: 18
+INFO [2021-02-11 01:49:21] Regions with runtime errors: 0
+INFO [2021-02-11 01:49:21] Producing summary
+INFO [2021-02-11 01:49:21] No summary directory specified so returning summary output
+INFO [2021-02-11 01:49:21] Saving timings information to : /mnt/resource/refresh-restimates/rt-estimates-out
+INFO [2021-02-11 01:49:21] Producing following optional outputs: regions, summary, samples, plots, latest
 Logging threshold set at INFO for the EpiNow2 logger
-Writing EpiNow2 logs to: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-02-09.log
+Writing EpiNow2 logs to: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-02-10.log
 Logging threshold set at INFO for the EpiNow2.epinow logger
-Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-02-09.log
-INFO [2021-02-09 22:12:34] Reporting estimates using data up to: 2021-02-09
-INFO [2021-02-09 22:12:34] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
-INFO [2021-02-09 22:12:34] Producing estimates for: Chatham, Franklin, Wilkes, Burke, Pender, Surry, Carteret, Lee, Lincoln, Rockingham, Sampson, Wilson, Rutherford, Nash, Caldwell, Cleveland, Haywood, Stanly
-INFO [2021-02-09 22:12:34] Regions excluded: none
-INFO [2021-02-09 22:12:34] Showing progress using progressr.
+Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-02-10.log
+INFO [2021-02-11 01:49:21] Reporting estimates using data up to: 2021-02-10
+INFO [2021-02-11 01:49:21] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
+INFO [2021-02-11 01:49:21] Producing estimates for: Haywood, Stanly, Franklin, Carteret, Chatham, Surry, Lee, Rutherford, Wilkes, Rockingham, Pender, Sampson, Cleveland, Burke, Lincoln, Wilson, Nash, Caldwell
+INFO [2021-02-11 01:49:21] Regions excluded: none
+INFO [2021-02-11 01:49:21] Showing progress using progressr.
+INFO [2021-02-11 03:38:51] Completed regional estimates
+INFO [2021-02-11 03:38:51] Regions with estimates: 18
+INFO [2021-02-11 03:38:51] Regions with runtime errors: 0
+INFO [2021-02-11 03:38:51] Producing summary
+INFO [2021-02-11 03:38:51] No summary directory specified so returning summary output
+INFO [2021-02-11 03:38:52] Saving timings information to : /mnt/resource/refresh-restimates/rt-estimates-out
+INFO [2021-02-11 03:38:52] Producing following optional outputs: regions, summary, samples, plots, latest
+Logging threshold set at INFO for the EpiNow2 logger
+Writing EpiNow2 logs to: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-02-10.log
+Logging threshold set at INFO for the EpiNow2.epinow logger
+Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-02-10.log
+INFO [2021-02-11 03:38:52] Reporting estimates using data up to: 2021-02-10
+INFO [2021-02-11 03:38:52] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
+INFO [2021-02-11 03:38:52] Producing estimates for: Granville, Pasquotank, Hoke, Beaufort, Davie, Stokes, Alexander, Duplin, Richmond, Vance, Watauga, Lenoir, Person, Jackson, McDowell, Halifax, Columbus, Edgecombe
+INFO [2021-02-11 03:38:52] Regions excluded: none
+INFO [2021-02-11 03:38:52] Showing progress using progressr.
+INFO [2021-02-11 04:45:36] Completed regional estimates
+INFO [2021-02-11 04:45:36] Regions with estimates: 18
+INFO [2021-02-11 04:45:36] Regions with runtime errors: 0
+INFO [2021-02-11 04:45:36] Producing summary
+INFO [2021-02-11 04:45:36] No summary directory specified so returning summary output
+INFO [2021-02-11 04:45:37] Saving timings information to : /mnt/resource/refresh-restimates/rt-estimates-out
+INFO [2021-02-11 04:45:37] Producing following optional outputs: regions, summary, samples, plots, latest
+Logging threshold set at INFO for the EpiNow2 logger
+Writing EpiNow2 logs to: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-02-10.log
+Logging threshold set at INFO for the EpiNow2.epinow logger
+Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-02-10.log
+INFO [2021-02-11 04:45:37] Reporting estimates using data up to: 2021-02-10
+INFO [2021-02-11 04:45:37] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
+INFO [2021-02-11 04:45:37] Producing estimates for: Currituck, Montgomery, Scotland, Anson, Hertford, Martin, Transylvania, Northampton, Yadkin, Ashe, Bladen, Caswell, Dare, Macon, Greene, Cherokee, Madison, Polk
+INFO [2021-02-11 04:45:37] Regions excluded: none
+INFO [2021-02-11 04:45:37] Showing progress using progressr.
 error occurred during calling the sampler; sampling not done
 Stan model 'estimate_infections' does not contain samples.
 Stan model 'estimate_infections' does not contain samples.
@@ -230,91 +262,61 @@ Stan model 'estimate_infections' does not contain samples.
 Stan model 'estimate_infections' does not contain samples.
 Stan model 'estimate_infections' does not contain samples.
 Stan model 'estimate_infections' does not contain samples.
-Stan model 'estimate_infections' does not contain samples.
-Stan model 'estimate_infections' does not contain samples.
-Stan model 'estimate_infections' does not contain samples.
-Stan model 'estimate_infections' does not contain samples.
-Stan model 'estimate_infections' does not contain samples.
-Stan model 'estimate_infections' does not contain samples.
-Stan model 'estimate_infections' does not contain samples.
-Stan model 'estimate_infections' does not contain samples.
-Stan model 'estimate_infections' does not contain samples.
-Stan model 'estimate_infections' does not contain samples.
-Stan model 'estimate_infections' does not contain samples.
-Stan model 'estimate_infections' does not contain samples.
-Stan model 'estimate_infections' does not contain samples.
-Stan model 'estimate_infections' does not contain samples.
-Stan model 'estimate_infections' does not contain samples.
-Stan model 'estimate_infections' does not contain samples.
-Stan model 'estimate_infections' does not contain samples.
-Stan model 'estimate_infections' does not contain samples.
-Stan model 'estimate_infections' does not contain samples.
-Stan model 'estimate_infections' does not contain samples.
-Stan model 'estimate_infections' does not contain samples.
-Stan model 'estimate_infections' does not contain samples.
-Stan model 'estimate_infections' does not contain samples.
-Stan model 'estimate_infections' does not contain samples.
-Stan model 'estimate_infections' does not contain samples.
-Stan model 'estimate_infections' does not contain samples.
-Stan model 'estimate_infections' does not contain samples.
-Stan model 'estimate_infections' does not contain samples.
-Stan model 'estimate_infections' does not contain samples.
-error occurred during calling the sampler; sampling not done
-INFO [2021-02-10 00:35:05] Completed regional estimates
-INFO [2021-02-10 00:35:05] Regions with estimates: 18
-INFO [2021-02-10 00:35:05] Regions with runtime errors: 0
-INFO [2021-02-10 00:35:05] Producing summary
-INFO [2021-02-10 00:35:05] No summary directory specified so returning summary output
-INFO [2021-02-10 00:35:05] Saving timings information to : /mnt/resource/refresh-restimates/rt-estimates-out
-INFO [2021-02-10 00:35:05] Producing following optional outputs: regions, summary, samples, plots, latest
-Logging threshold set at INFO for the EpiNow2 logger
-Writing EpiNow2 logs to: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-02-09.log
-Logging threshold set at INFO for the EpiNow2.epinow logger
-Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-02-09.log
-INFO [2021-02-10 00:35:05] Reporting estimates using data up to: 2021-02-09
-INFO [2021-02-10 00:35:05] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
-INFO [2021-02-10 00:35:05] Producing estimates for: Duplin, Hoke, Pasquotank, Vance, Davie, Person, Stokes, Granville, Halifax, Columbus, Watauga, Lenoir, Jackson, Edgecombe, Beaufort, McDowell, Alexander, Richmond
-INFO [2021-02-10 00:35:05] Regions excluded: none
-INFO [2021-02-10 00:35:05] Showing progress using progressr.
-INFO [2021-02-10 01:23:01] Completed regional estimates
-INFO [2021-02-10 01:23:01] Regions with estimates: 18
-INFO [2021-02-10 01:23:01] Regions with runtime errors: 0
-INFO [2021-02-10 01:23:01] Producing summary
-INFO [2021-02-10 01:23:01] No summary directory specified so returning summary output
-INFO [2021-02-10 01:23:02] Saving timings information to : /mnt/resource/refresh-restimates/rt-estimates-out
-INFO [2021-02-10 01:23:02] Producing following optional outputs: regions, summary, samples, plots, latest
-Logging threshold set at INFO for the EpiNow2 logger
-Writing EpiNow2 logs to: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-02-09.log
-Logging threshold set at INFO for the EpiNow2.epinow logger
-Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-02-09.log
-INFO [2021-02-10 01:23:02] Reporting estimates using data up to: 2021-02-09
-INFO [2021-02-10 01:23:02] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
-INFO [2021-02-10 01:23:02] Producing estimates for: Polk, Anson, Ashe, Currituck, Macon, Transylvania, Caswell, Dare, Martin, Cherokee, Madison, Bladen, Montgomery, Scotland, Yadkin, Greene, Northampton, Hertford
-INFO [2021-02-10 01:23:02] Regions excluded: none
-INFO [2021-02-10 01:23:02] Showing progress using progressr.
-INFO [2021-02-10 02:19:25] Completed regional estimates
-INFO [2021-02-10 02:19:25] Regions with estimates: 18
-INFO [2021-02-10 02:19:25] Regions with runtime errors: 0
-INFO [2021-02-10 02:19:25] Producing summary
-INFO [2021-02-10 02:19:25] No summary directory specified so returning summary output
-INFO [2021-02-10 02:19:25] Saving timings information to : /mnt/resource/refresh-restimates/rt-estimates-out
-INFO [2021-02-10 02:19:25] Producing following optional outputs: regions, summary, samples, plots, latest
-Logging threshold set at INFO for the EpiNow2 logger
-Writing EpiNow2 logs to: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-02-09.log
-Logging threshold set at INFO for the EpiNow2.epinow logger
-Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-02-09.log
-INFO [2021-02-10 02:19:25] Reporting estimates using data up to: 2021-02-09
-INFO [2021-02-10 02:19:25] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
-INFO [2021-02-10 02:19:25] Producing estimates for: Alleghany, Pamlico, Washington, Chowan, Swain, Bertie, Graham, Mitchell, Clay, Tyrrell, Avery, Hyde, Gates, Jones, Perquimans, Warren, Yancey, Camden
-INFO [2021-02-10 02:19:25] Regions excluded: none
-INFO [2021-02-10 02:19:26] Showing progress using progressr.
-INFO [2021-02-10 03:09:51] Completed regional estimates
-INFO [2021-02-10 03:09:51] Regions with estimates: 18
-INFO [2021-02-10 03:09:51] Regions with runtime errors: 0
-INFO [2021-02-10 03:09:51] Producing summary
-INFO [2021-02-10 03:09:51] No summary directory specified so returning summary output
-INFO [2021-02-10 03:09:52] Saving timings information to : /mnt/resource/refresh-restimates/rt-estimates-out
+Stan model 'estINFO [2021-02-11 07:19:33] Completed regional estimates
+INFO [2021-02-11 07:19:33] Regions with estimates: 18
+INFO [2021-02-11 07:19:33] Regions with runtime errors: 0
+INFO [2021-02-11 07:19:33] Producing summary
+INFO [2021-02-11 07:19:33] No summary directory specified so returning summary output
+INFO [2021-02-11 07:19:34] Saving timings information to : /mnt/resource/refresh-restimates/rt-estimates-out
 > 
 > proc.time()
       user     system    elapsed 
-162854.648    232.336  20946.811 
+185245.904    267.635  24801.035 
+s not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+error occurred during calling the sampler; sampling not done
+INFO [2021-02-11 06:14:13] Completed regional estimates
+INFO [2021-02-11 06:14:13] Regions with estimates: 17
+INFO [2021-02-11 06:14:13] Regions with runtime errors: 1
+INFO [2021-02-11 06:14:13] Producing summary
+INFO [2021-02-11 06:14:13] No summary directory specified so returning summary output
+INFO [2021-02-11 06:14:14] Saving timings information to : /mnt/resource/refresh-restimates/rt-estimates-out
+INFO [2021-02-11 06:14:14] Producing following optional outputs: regions, summary, samples, plots, latest
+Logging threshold set at INFO for the EpiNow2 logger
+Writing EpiNow2 logs to: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-02-10.log
+Logging threshold set at INFO for the EpiNow2.epinow logger
+Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-02-10.log
+INFO [2021-02-11 06:14:14] Reporting estimates using data up to: 2021-02-10
+INFO [2021-02-11 06:14:14] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
+INFO [2021-02-11 06:14:14] Producing estimates for: Alleghany, Clay, Hyde, Pamlico, Avery, Gates, Graham, Jones, Perquimans, Swain, Chowan, Warren, Mitchell, Yancey, Bertie, Camden, Washington, Tyrrell
+INFO [2021-02-11 06:14:14] Regions excluded: none
+INFO [2021-02-11 06:14:14] Showing progress using progressr.
+INFO [2021-02-11 07:31:23] Completed regional estimates
+INFO [2021-02-11 07:31:23] Regions with estimates: 18
+INFO [2021-02-11 07:31:23] Regions with runtime errors: 0
+INFO [2021-02-11 07:31:23] Producing summary
+INFO [2021-02-11 07:31:23] No summary directory specified so returning summary output
+INFO [2021-02-11 07:31:24] Saving timings information to : /mnt/resource/refresh-restimates/rt-estimates-out
+> 
+> proc.time()
+      user     system    elapsed 
+225472.560    304.765  35642.154 
