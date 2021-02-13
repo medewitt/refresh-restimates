@@ -77,7 +77,7 @@ Using: cone as the data source
 + 								 weights = daily_tests)
 > start <- Sys.time()
 > cat(start)
-1613100712> # corrected cases for modelling -------------------------------------------
+1613196005> # corrected cases for modelling -------------------------------------------
 > 
 > dat$predicted_positive <- predict(mod, newdata = dat[,date_n:=as.numeric(date)], type = "response")
 > 
@@ -167,25 +167,25 @@ prep completed>
 + 		     stan = stan_opts(samples = 3000, control = list(adapt_delta = 0.95, max_treedepth = 15),
 +                      chains = 4, cores = 8,
 +                       max_execution_time = 60*60*5, future = FALSE), rt = rt_opts(prior = list(mean = 1.25, sd = 0.25))))
-INFO [2021-02-12 03:31:52] Producing following optional outputs: regions, summary, samples, plots, latest
+INFO [2021-02-13 06:00:06] Producing following optional outputs: regions, summary, samples, plots, latest
 Logging threshold set at INFO for the EpiNow2 logger
-Writing EpiNow2 logs to: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-02-11.log
+Writing EpiNow2 logs to: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-02-12.log
 Logging threshold set at INFO for the EpiNow2.epinow logger
-Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-02-11.log
-INFO [2021-02-12 03:31:52] Reporting estimates using data up to: 2021-02-11
-INFO [2021-02-12 03:31:52] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
-INFO [2021-02-12 03:31:52] Producing estimates for: Cone Health, North Carolina
-INFO [2021-02-12 03:31:52] Regions excluded: none
-INFO [2021-02-12 03:31:52] Showing progress using progressr.
-INFO [2021-02-12 03:38:46] Completed estimates for: Cone Health
-INFO [2021-02-12 03:47:58] Completed estimates for: North Carolina
-INFO [2021-02-12 03:47:58] Completed regional estimates
-INFO [2021-02-12 03:47:58] Regions with estimates: 2
-INFO [2021-02-12 03:47:58] Regions with runtime errors: 0
-INFO [2021-02-12 03:47:58] Producing summary
-INFO [2021-02-12 03:47:58] No summary directory specified so returning summary output
-INFO [2021-02-12 03:47:59] Saving timings information to : /mnt/resource/refresh-restimates/rt-estimates-out
+Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-02-12.log
+INFO [2021-02-13 06:00:06] Reporting estimates using data up to: 2021-02-12
+INFO [2021-02-13 06:00:06] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
+INFO [2021-02-13 06:00:06] Producing estimates for: Cone Health, North Carolina
+INFO [2021-02-13 06:00:06] Regions excluded: none
+INFO [2021-02-13 06:00:06] Showing progress using progressr.
+INFO [2021-02-13 06:06:39] Completed estimates for: Cone Health
+INFO [2021-02-13 06:15:29] Completed estimates for: North Carolina
+INFO [2021-02-13 06:15:29] Completed regional estimates
+INFO [2021-02-13 06:15:29] Regions with estimates: 2
+INFO [2021-02-13 06:15:29] Regions with runtime errors: 0
+INFO [2021-02-13 06:15:29] Producing summary
+INFO [2021-02-13 06:15:29] No summary directory specified so returning summary output
+INFO [2021-02-13 06:15:29] Saving timings information to : /mnt/resource/refresh-restimates/rt-estimates-out
 > 
 > proc.time()
     user   system  elapsed 
-3082.170   11.823  972.315 
+2909.494   11.229  928.984 
