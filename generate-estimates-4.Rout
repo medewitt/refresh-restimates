@@ -177,15 +177,15 @@ INFO [2021-03-02 08:16:56] Saving estimates to : /mnt/resource/refresh-restimate
 INFO [2021-03-02 08:16:56] Producing estimates for: Cone Health, North Carolina
 INFO [2021-03-02 08:16:56] Regions excluded: none
 INFO [2021-03-02 08:16:56] Showing progress using progressr.
-INFO [2021-03-02 08:23:07] Completed estimates for: Cone Health
-INFO [2021-03-02 08:36:45] Completed estimates for: North Carolina
-INFO [2021-03-02 08:36:45] Completed regional estimates
-INFO [2021-03-02 08:36:45] Regions with estimates: 2
-INFO [2021-03-02 08:36:45] Regions with runtime errors: 0
-INFO [2021-03-02 08:36:45] Producing summary
-INFO [2021-03-02 08:36:45] No summary directory specified so returning summary output
-INFO [2021-03-02 08:36:46] Saving timings information to : /mnt/resource/refresh-restimates/rt-estimates-out
+INFO [2021-03-02 08:27:04] Completed estimates for: Cone Health
+INFO [2021-03-02 08:38:28] Completed estimates for: North Carolina
+INFO [2021-03-02 08:38:28] Completed regional estimates
+INFO [2021-03-02 08:38:28] Regions with estimates: 2
+INFO [2021-03-02 08:38:28] Regions with runtime errors: 0
+INFO [2021-03-02 08:38:28] Producing summary
+INFO [2021-03-02 08:38:28] No summary directory specified so returning summary output
+INFO [2021-03-02 08:38:29] Saving timings information to : /mnt/resource/refresh-restimates/rt-estimates-out
 > 
 > proc.time()
     user   system  elapsed 
-5289.539   11.198 1564.393 
+4531.273    9.258 1297.874 
