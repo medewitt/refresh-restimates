@@ -77,7 +77,7 @@ Using: cone as the data source
 + 								 weights = daily_tests)
 > start <- Sys.time()
 > cat(start)
-1615838707> # corrected cases for modelling -------------------------------------------
+1615925107> # corrected cases for modelling -------------------------------------------
 > 
 > dat$predicted_positive <- predict(mod, newdata = dat[,date_n:=as.numeric(date)], type = "response")
 > 
@@ -156,7 +156,7 @@ prep completed>
 > # Load utils --------------------------------------------------------------
 > if (!exists("setup_future", mode = "function")) source(here::here("util.R"))
 > no_cores <- setup_future(reported_cases = reported_cases)
-INFO [2021-03-15 20:05:08] Using 4 workers with 4 cores per worker
+INFO [2021-03-16 20:05:08] Using 4 workers with 4 cores per worker
 > 
 > # run estimation ----------------------------------------------------------
 > #EpiNow2::setup_logging(file = "log.log")
@@ -197,34 +197,34 @@ INFO [2021-03-15 20:05:08] Using 4 workers with 4 cores per worker
 + 																	 								 future = FALSE),
 + 																	 rt = rt_opts(prior = list(mean = 1.25, sd = 0.25))))
 + }
-Running the full modelINFO [2021-03-15 20:05:08] Producing following optional outputs: regions, summary, samples, plots, latest
+Running the full modelINFO [2021-03-16 20:05:08] Producing following optional outputs: regions, summary, samples, plots, latest
 Logging threshold set at INFO for the EpiNow2 logger
-Writing EpiNow2 logs to: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-03-15.log
+Writing EpiNow2 logs to: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-03-16.log
 Logging threshold set at INFO for the EpiNow2.epinow logger
-Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-03-15.log
-INFO [2021-03-15 20:05:08] Reporting estimates using data up to: 2021-03-15
-INFO [2021-03-15 20:05:08] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
-INFO [2021-03-15 20:05:08] Producing estimates for: Buncombe, Cumberland, Durham, Forsyth, Gaston, Guilford, Mecklenburg, New Hanover, Union, Wake
-INFO [2021-03-15 20:05:08] Regions excluded: none
-INFO [2021-03-15 20:05:08] Showing progress using progressr.
-INFO [2021-03-15 20:14:48] Completed estimates for: Buncombe
-INFO [2021-03-15 20:21:03] Completed estimates for: Cumberland
-INFO [2021-03-15 20:28:59] Completed estimates for: Durham
-INFO [2021-03-15 20:20:59] Completed estimates for: Forsyth
-INFO [2021-03-15 20:30:34] Completed estimates for: Gaston
-INFO [2021-03-15 20:35:29] Completed estimates for: Guilford
-INFO [2021-03-15 20:52:50] Completed estimates for: Mecklenburg
-INFO [2021-03-15 20:39:32] Completed estimates for: New Hanover
-INFO [2021-03-15 20:44:33] Completed estimates for: Union
-INFO [2021-03-15 20:43:07] Completed estimates for: Wake
-INFO [2021-03-15 20:52:51] Completed regional estimates
-INFO [2021-03-15 20:52:51] Regions with estimates: 10
-INFO [2021-03-15 20:52:51] Regions with runtime errors: 0
-INFO [2021-03-15 20:52:51] Producing summary
-INFO [2021-03-15 20:52:51] No summary directory specified so returning summary output
-INFO [2021-03-15 20:52:52] Saving timings information to : /mnt/resource/refresh-restimates/rt-estimates-out
+Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-03-16.log
+INFO [2021-03-16 20:05:08] Reporting estimates using data up to: 2021-03-16
+INFO [2021-03-16 20:05:08] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
+INFO [2021-03-16 20:05:08] Producing estimates for: Buncombe, Cumberland, Durham, Forsyth, Gaston, Guilford, Mecklenburg, New Hanover, Union, Wake
+INFO [2021-03-16 20:05:08] Regions excluded: none
+INFO [2021-03-16 20:05:08] Showing progress using progressr.
+INFO [2021-03-16 20:13:57] Completed estimates for: Buncombe
+INFO [2021-03-16 20:20:10] Completed estimates for: Cumberland
+INFO [2021-03-16 20:20:32] Completed estimates for: Durham
+INFO [2021-03-16 20:20:23] Completed estimates for: Forsyth
+INFO [2021-03-16 20:36:51] Completed estimates for: Gaston
+INFO [2021-03-16 20:32:06] Completed estimates for: Guilford
+INFO [2021-03-16 20:40:31] Completed estimates for: Mecklenburg
+INFO [2021-03-16 20:32:27] Completed estimates for: New Hanover
+INFO [2021-03-16 20:44:00] Completed estimates for: Union
+INFO [2021-03-16 20:40:39] Completed estimates for: Wake
+INFO [2021-03-16 20:44:01] Completed regional estimates
+INFO [2021-03-16 20:44:01] Regions with estimates: 10
+INFO [2021-03-16 20:44:01] Regions with runtime errors: 0
+INFO [2021-03-16 20:44:02] Producing summary
+INFO [2021-03-16 20:44:02] No summary directory specified so returning summary output
+INFO [2021-03-16 20:44:03] Saving timings information to : /mnt/resource/refresh-restimates/rt-estimates-out
 > plan("sequential")
 > 
 > proc.time()
      user    system   elapsed 
-31521.910    32.949  2869.632 
+29294.655    30.601  2340.176 
