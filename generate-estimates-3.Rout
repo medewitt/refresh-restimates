@@ -240,29 +240,81 @@ INFO [2021-03-19 09:54:45] Saving estimates to : /mnt/resource/refresh-restimate
 INFO [2021-03-19 09:54:45] Producing estimates for: Currituck, Transylvania, Cherokee, Polk, Madison, Macon, Montgomery, Ashe, Hertford, Northampton, Anson, Caswell, Dare, Greene, Martin, Bladen, Scotland, Yadkin
 INFO [2021-03-19 09:54:45] Regions excluded: none
 INFO [2021-03-19 09:54:45] Showing progress using progressr.
-INFO [2021-03-19 08:21:48] Completed regional estimates
-INFO [2021-03-19 08:21:48] Regions with estimates: 18
-INFO [2021-03-19 08:21:48] Regions with runtime errors: 0
-INFO [2021-03-19 08:21:48] Producing summary
-INFO [2021-03-19 08:21:48] No summary directory specified so returning summary output
-INFO [2021-03-19 08:21:49] Saving timings information to : /mnt/resource/refresh-restimates/rt-estimates-out
-INFO [2021-03-19 08:21:49] Producing following optional outputs: regions, summary, samples, plots, latest
+INFO [2021-03-19 10:58:10] Completed regional estimates
+INFO [2021-03-19 10:58:10] Regions with estimates: 18
+INFO [2021-03-19 10:58:10] Regions with runtime errors: 0
+INFO [2021-03-19 10:58:10] Producing summary
+INFO [2021-03-19 10:58:10] No summary directory specified so returning summary output
+INFO [2021-03-19 10:58:11] Saving timings information to : /mnt/resource/refresh-restimates/rt-estimates-out
+INFO [2021-03-19 10:58:11] Producing following optional outputs: regions, summary, samples, plots, latest
 Logging threshold set at INFO for the EpiNow2 logger
 Writing EpiNow2 logs to: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-03-18.log
 Logging threshold set at INFO for the EpiNow2.epinow logger
 Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-03-18.log
-INFO [2021-03-19 08:21:49] Reporting estimates using data up to: 2021-03-18
-INFO [2021-03-19 08:21:49] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
-INFO [2021-03-19 08:21:50] Producing estimates for: Alleghany, Graham, Hyde, Perquimans, Camden, Washington, Gates, Jones, Pamlico, Mitchell, Swain, Bertie, Chowan, Yancey, Avery, Warren, Clay, Tyrrell
-INFO [2021-03-19 08:21:50] Regions excluded: none
-INFO [2021-03-19 08:21:50] Showing progress using progressr.
-INFO [2021-03-19 09:42:23] Completed regional estimates
-INFO [2021-03-19 09:42:23] Regions with estimates: 18
-INFO [2021-03-19 09:42:23] Regions with runtime errors: 0
-INFO [2021-03-19 09:42:23] Producing summary
-INFO [2021-03-19 09:42:23] No summary directory specified so returning summary output
-INFO [2021-03-19 09:42:25] Saving timings information to : /mnt/resource/refresh-restimates/rt-estimates-out
+INFO [2021-03-19 10:58:11] Reporting estimates using data up to: 2021-03-18
+INFO [2021-03-19 10:58:11] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
+INFO [2021-03-19 10:58:11] Producing estimates for: Alleghany, Graham, Hyde, Perquimans, Camden, Washington, Gates, Jones, Pamlico, Mitchell, Swain, Bertie, Chowan, Yancey, Avery, Warren, Clay, Tyrrell
+INFO [2021-03-19 10:58:11] Regions excluded: none
+INFO [2021-03-19 10:58:11] Showing progress using progressr.
+error occurred during calling the sampler; sampling not done
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+error occurred during calling the sampler; sampling not done
+INFO [2021-03-19 12:56:02] Completed regional estimates
+INFO [2021-03-19 12:56:02] Regions with estimates: 18
+INFO [2021-03-19 12:56:02] Regions with runtime errors: 0
+INFO [2021-03-19 12:56:02] Producing summary
+INFO [2021-03-19 12:56:02] No summary directory specified so returning summary output
+INFO [2021-03-19 12:56:03] Saving timings information to : /mnt/resource/refresh-restimates/rt-estimates-out
 > 
 > proc.time()
       user     system    elapsed 
-194039.648    379.698  25249.949 
+193552.352    361.534  27470.267 
