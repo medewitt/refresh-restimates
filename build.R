@@ -23,3 +23,4 @@ system("R CMD BATCH --vanilla combine-forecasts.R")
 cat("done with combination")
 
 system("R CMD BATCH --vanilla  correct-state.R")
+system("R CMD BATCH --vanilla  prob_spread.R")
