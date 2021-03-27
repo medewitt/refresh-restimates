@@ -23,10 +23,6 @@ Type 'q()' to quit R.
 + Sys.sleep(60*30)
 + }
 Using: cone as the data source
-Using: cone as the data source
-Using: cone as the data source
-Using: cone as the data source
-Using: cone as the data source
 > 
 > cat("starting")
 starting> cat("\nFirst Batch\n")
@@ -59,4 +55,4 @@ done with combination>
 > 
 > proc.time()
       user     system    elapsed 
-282255.469    559.978  37204.951 
+283102.208    536.278  29919.966 
