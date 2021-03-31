@@ -49,7 +49,7 @@ The following object is masked from ‘package:EpiNow2’:
 > 
 > dat <- nccovid::get_covid_state(data_source = "cone", reporting_adj = TRUE)
 Using: cone as the data source
-Last date available: 2021-03-29
+Last date available: 2021-03-30
 > 
 > # Wait Until 15 Confirmed cases by county cumulative and within last 16 weeks
 > 
@@ -80,7 +80,7 @@ Last date available: 2021-03-29
 +                  weights = daily_tests)
 > start <- Sys.time()
 > cat(start)
-1617050169> # corrected cases for modelling -------------------------------------------
+1617136655> # corrected cases for modelling -------------------------------------------
 > 
 > dat$predicted_positive <- predict(mod, newdata = dat[,date_n:=as.numeric(date)], type = "response")
 > 
@@ -159,7 +159,7 @@ prep completed>
 > # Load utils --------------------------------------------------------------
 > if (!exists("setup_future", mode = "function")) source(here::here("util.R"))
 > no_cores <- setup_future(reported_cases = reported_cases)
-INFO [2021-03-29 20:36:09] Using 4 workers with 4 cores per worker
+INFO [2021-03-30 20:37:35] Using 4 workers with 4 cores per worker
 > 
 > # run estimation ----------------------------------------------------------
 > #EpiNow2::setup_logging(file = "log.log")
@@ -201,22 +201,22 @@ INFO [2021-03-29 20:36:09] Using 4 workers with 4 cores per worker
 +                              rt = rt_opts(prior = list(mean = 1.25, sd = 0.25))))
 + 
 + }
-Running the full modelINFO [2021-03-29 20:36:09] Producing following optional outputs: regions, summary, samples, plots, latest
+Running the full modelINFO [2021-03-30 20:37:35] Producing following optional outputs: regions, summary, samples, plots, latest
 Logging threshold set at INFO for the EpiNow2 logger
-Writing EpiNow2 logs to: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-03-29.log
+Writing EpiNow2 logs to: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-03-30.log
 Logging threshold set at INFO for the EpiNow2.epinow logger
-Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-03-29.log
-INFO [2021-03-29 20:36:09] Reporting estimates using data up to: 2021-03-29
-INFO [2021-03-29 20:36:09] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
-INFO [2021-03-29 20:36:09] Producing estimates for: 40 regions
-INFO [2021-03-29 20:36:09] Regions excluded: 0 regions
-INFO [2021-03-29 20:36:09] Showing progress using progressr.
-INFO [2021-03-29 23:13:47] Completed regional estimates
-INFO [2021-03-29 23:13:47] Regions with estimates: 40
-INFO [2021-03-29 23:13:47] Regions with runtime errors: 0
-INFO [2021-03-29 23:13:47] Producing summary
-INFO [2021-03-29 23:13:47] No summary directory specified so returning summary output
-INFO [2021-03-29 23:13:49] Saving timings information to : /mnt/resource/refresh-restimates/rt-estimates-out
+Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-03-30.log
+INFO [2021-03-30 20:37:35] Reporting estimates using data up to: 2021-03-30
+INFO [2021-03-30 20:37:35] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
+INFO [2021-03-30 20:37:35] Producing estimates for: 40 regions
+INFO [2021-03-30 20:37:35] Regions excluded: 0 regions
+INFO [2021-03-30 20:37:35] Showing progress using progressr.
+INFO [2021-03-30 23:13:37] Completed regional estimates
+INFO [2021-03-30 23:13:37] Regions with estimates: 40
+INFO [2021-03-30 23:13:37] Regions with runtime errors: 0
+INFO [2021-03-30 23:13:37] Producing summary
+INFO [2021-03-30 23:13:37] No summary directory specified so returning summary output
+INFO [2021-03-30 23:13:39] Saving timings information to : /mnt/resource/refresh-restimates/rt-estimates-out
 > 
 > # Now run program to make synthesis
 > # Done
@@ -225,4 +225,4 @@ INFO [2021-03-29 23:13:49] Saving timings information to : /mnt/resource/refresh
 done with estimates> 
 > proc.time()
      user    system   elapsed 
-91471.033   158.504  9465.818 
+90341.802   161.335  9369.477 
