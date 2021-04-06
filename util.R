@@ -7,7 +7,7 @@ setup_future <- function(jobs, min_cores_per_worker = 4) {
 		## If running as a script enable this
 		options(future.fork.enable = TRUE)
 	}
-        ncores_used <- future::availableCores()-2	
+        ncores_used <- future::availableCores()-4	
 	workers <- min(ceiling(ncores_used / min_cores_per_worker), jobs)
 	cat(workers)
 	cores_per_worker <- max(1, round( ncores_used/ workers, 0))

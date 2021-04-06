@@ -4,4 +4,8 @@ R CMD BATCH --vanilla build.R
 git pull origin master
 git add .
 git commit -m 'auto-update'
-git push origin master
+Rscript -e 'gert::git_push()'
+
+echo 'Completed R Estimates'
+
+
