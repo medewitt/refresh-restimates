@@ -30,3 +30,11 @@ starting> cat("\nFirst Batch\n")
 
 First Batch
 > system("R CMD BATCH --vanilla generate-estimates-1.R")
+> cat("\nSecond Batch\n")
+
+Second Batch
+> system("R CMD BATCH --vanilla generate-estimates-2.R")
+> cat("\nSecond Batch\n")
+
+Second Batch
+> system("R CMD BATCH --vanilla generate-estimates-3.R")
