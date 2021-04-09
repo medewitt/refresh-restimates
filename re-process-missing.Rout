@@ -195,7 +195,55 @@ The following objects are masked from ‘package:base’:
 + 																	 rt = rt_opts(prior = list(mean = 1.25, sd = 0.1))))
 + plan("sequential")
 + }
+
+Attaching package: ‘data.table’
+
+The following objects are masked from ‘package:dplyr’:
+
+    between, first, last
+
+
+Attaching package: ‘purrr’
+
+The following object is masked from ‘package:data.table’:
+
+    transpose
+
+The following object is masked from ‘package:magrittr’:
+
+    set_names
+
+The following object is masked from ‘package:EpiNow2’:
+
+    update_list
+
+Using: cone as the data source
+Last date available: 2021-04-08
+1617937587prep completedRunning the full modelINFO [2021-04-09 03:06:28] Producing following optional outputs: regions, summary, samples, plots, latest
+Logging threshold set at INFO for the EpiNow2 logger
+Writing EpiNow2 logs to: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-04-08.log
+Logging threshold set at INFO for the EpiNow2.epinow logger
+Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-04-08.log
+INFO [2021-04-09 03:06:28] Reporting estimates using data up to: 2021-04-08
+INFO [2021-04-09 03:06:28] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
+INFO [2021-04-09 03:06:28] Producing estimates for: Tyrrell, Clay, Washington, Warren, Swain, Bertie, Yancey, Mitchell
+INFO [2021-04-09 03:06:28] Regions excluded: none
+INFO [2021-04-09 03:06:28] Showing progress using progressr.
+INFO [2021-04-09 03:10:17] Completed estimates for: Tyrrell
+INFO [2021-04-09 03:14:13] Completed estimates for: Clay
+INFO [2021-04-09 03:19:28] Completed estimates for: Washington
+INFO [2021-04-09 03:25:04] Completed estimates for: Warren
+INFO [2021-04-09 03:30:33] Completed estimates for: Swain
+INFO [2021-04-09 03:35:50] Completed estimates for: Bertie
+INFO [2021-04-09 03:40:33] Completed estimates for: Yancey
+INFO [2021-04-09 03:48:03] Completed estimates for: Mitchell
+INFO [2021-04-09 03:48:03] Completed regional estimates
+INFO [2021-04-09 03:48:03] Regions with estimates: 8
+INFO [2021-04-09 03:48:03] Regions with runtime errors: 0
+INFO [2021-04-09 03:48:03] Producing summary
+INFO [2021-04-09 03:48:03] No summary directory specified so returning summary output
+INFO [2021-04-09 03:48:04] Saving timings information to : /mnt/resource/refresh-restimates/rt-estimates-out
 > 
 > proc.time()
-   user  system elapsed 
-  4.093   3.342   7.803 
+    user   system  elapsed 
+7354.489   34.175 2509.723 

@@ -23,7 +23,7 @@ Type 'q()' to quit R.
 + Sys.sleep(60*30)
 + }
 Using: cone as the data source
-Last date available: 2021-04-07
+Last date available: 2021-04-08
 > 
 > cat("starting")
 starting> cat("\nFirst Batch\n")
@@ -38,6 +38,7 @@ Second Batch
 
 Second Batch
 > system("R CMD BATCH --vanilla generate-estimates-3.R")
+/opt/R/4.0.2/lib/R/bin/BATCH: line 60: 17008 Killed                  ${R_HOME}/bin/R -f ${in} ${opts} ${R_BATCH_OPTIONS} > ${out} 2>&1
 > cat("\nProcessing Failures\n")
 
 Processing Failures
@@ -56,4 +57,4 @@ done with combination>
 > 
 > proc.time()
       user     system    elapsed 
-300525.315    593.512  32592.371 
+230749.198    515.692  27981.569 
