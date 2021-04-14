@@ -19,6 +19,9 @@ dat <- dat[date>=Sys.Date()-lubridate::weeks(16)]
 
 dat <- dat[cases_confirmed_cum>15]
 
+# Handle Excess zeros that likely don't exist
+dat <- dat[,cases_daily:= ifelse(cases_daily==0, rpois(1,1), cases_daily)]
+
 # Fix State Data Dump
 dat <- dat[,cases_daily := fifelse(date==as.Date("2020-09-25"),
                                    dplyr::lag(cases_daily,1), cases_daily), by = "county"]
