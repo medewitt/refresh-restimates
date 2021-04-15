@@ -2,12 +2,20 @@
 #' From EpiForecasts Team See https://github.com/epiforecasts/covid-rt-estimates/blob/master/R/utils.R
 #' Purpose: Set up future package for EpiNow2
 #' 
-setup_future <- function(jobs, min_cores_per_worker = 4) {
+setup_future <- function(jobs, min_cores_per_worker = 4, cores_use = 8L) {
 	if (!interactive()) {
 		## If running as a script enable this
 		options(future.fork.enable = TRUE)
+		options(mc.cores = 8L)
 	}
-        ncores_used <- future::availableCores()-4	
+  
+	if(is.null(cores_use)){
+		ncores_used <- future::availableCores()-4	
+	} else {
+		ncores_used <- cores_use
+	}
+	
+	
 	workers <- min(ceiling(ncores_used / min_cores_per_worker), jobs)
 	cat(workers)
 	cores_per_worker <- max(1, round( ncores_used/ workers, 0))
