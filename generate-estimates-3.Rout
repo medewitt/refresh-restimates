@@ -43,12 +43,13 @@ The following object is masked from ‘package:EpiNow2’:
 > options(future.fork.multithreading.enable = FALSE)
 > RhpcBLASctl::omp_set_num_threads(1L)
 > data.table::setDTthreads(1)
+> options(mc.cores = 8L)
 > #options(future.globals.maxSize = 10000*1024^2)
 > 
 > #dat <- nccovid::get_covid_state(data_source = "cone")
 > dat <- nccovid::get_covid_state(data_source = "cone", reporting_adj = TRUE)
 Using: cone as the data source
-Last date available: 2021-04-14
+Last date available: 2021-04-15
 > # Wait Until 15 Confirmed cases by county cumulative and within last 16 weeks
 > 
 > dat <- dat[date>=Sys.Date()-lubridate::weeks(16)]
@@ -81,7 +82,7 @@ Last date available: 2021-04-14
 +                  weights = daily_tests)
 > start <- Sys.time()
 > cat(start)
-1618443875> # corrected cases for modelling -------------------------------------------
+1618533766> # corrected cases for modelling -------------------------------------------
 > 
 > dat$predicted_positive <- predict(mod, newdata = dat[,date_n:=as.numeric(date)], type = "response")
 > 
@@ -165,7 +166,7 @@ prep completed>
 > # Load utils --------------------------------------------------------------
 > if (!exists("setup_future", mode = "function")) source(here::here("util.R"))
 > no_cores <- setup_future(reported_cases = reported_cases)
-INFO [2021-04-14 23:44:36] Using 4 workers with 4 cores per worker
+INFO [2021-04-16 00:42:47] Using 2 workers with 4 cores per worker
 > 
 > # run estimation ----------------------------------------------------------
 > #EpiNow2::setup_logging(file = "log.log")
@@ -186,77 +187,77 @@ Running the full model>
 +                                                     future = FALSE),
 +                                    rt = rt_opts(prior = list(mean = 1.25, sd = 0.25))))
 + }
-INFO [2021-04-14 23:44:36] Producing following optional outputs: regions, summary, samples, plots, latest
+INFO [2021-04-16 00:42:47] Producing following optional outputs: regions, summary, samples, plots, latest
 Logging threshold set at INFO for the EpiNow2 logger
-Writing EpiNow2 logs to the console and: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-04-14.log
+Writing EpiNow2 logs to the console and: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-04-15.log
 Logging threshold set at INFO for the EpiNow2.epinow logger
-Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-04-14.log
-INFO [2021-04-14 23:44:37] Reporting estimates using data up to: 2021-04-14
-INFO [2021-04-14 23:44:37] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
-INFO [2021-04-14 23:44:37] Producing estimates for: Wayne, Orange, Brunswick, Moore, Harnett, Robeson, Henderson, Onslow, Catawba, Davidson, Pitt, Craven, Alamance, Randolph, Rowan, Johnston, Iredell, Cabarrus
-INFO [2021-04-14 23:44:37] Regions excluded: none
-INFO [2021-04-15 00:55:17] Completed regional estimates
-INFO [2021-04-15 00:55:17] Regions with estimates: 18
-INFO [2021-04-15 00:55:17] Regions with runtime errors: 0
-INFO [2021-04-15 00:55:17] Producing summary
-INFO [2021-04-15 00:55:17] No summary directory specified so returning summary output
-INFO [2021-04-15 00:55:18] Saving timings information to : /mnt/resource/refresh-restimates/rt-estimates-out
-INFO [2021-04-15 00:55:18] Producing following optional outputs: regions, summary, samples, plots, latest
+Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-04-15.log
+INFO [2021-04-16 00:42:47] Reporting estimates using data up to: 2021-04-15
+INFO [2021-04-16 00:42:47] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
+INFO [2021-04-16 00:42:47] Producing estimates for: Orange, Craven, Brunswick, Wayne, Moore, Harnett, Randolph, Henderson, Robeson, Onslow, Iredell, Rowan, Cabarrus, Davidson, Pitt, Alamance, Johnston, Catawba
+INFO [2021-04-16 00:42:47] Regions excluded: none
+INFO [2021-04-16 02:33:07] Completed regional estimates
+INFO [2021-04-16 02:33:07] Regions with estimates: 18
+INFO [2021-04-16 02:33:07] Regions with runtime errors: 0
+INFO [2021-04-16 02:33:07] Producing summary
+INFO [2021-04-16 02:33:07] No summary directory specified so returning summary output
+INFO [2021-04-16 02:33:08] Saving timings information to : /mnt/resource/refresh-restimates/rt-estimates-out
+INFO [2021-04-16 02:33:08] Producing following optional outputs: regions, summary, samples, plots, latest
 Logging threshold set at INFO for the EpiNow2 logger
-Writing EpiNow2 logs to the console and: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-04-14.log
+Writing EpiNow2 logs to the console and: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-04-15.log
 Logging threshold set at INFO for the EpiNow2.epinow logger
-Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-04-14.log
-INFO [2021-04-15 00:55:18] Reporting estimates using data up to: 2021-04-14
-INFO [2021-04-15 00:55:18] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
-INFO [2021-04-15 00:55:18] Producing estimates for: Pender, Chatham, Franklin, Sampson, Haywood, Rockingham, Carteret, Nash, Wilkes, Wilson, Lee, Lincoln, Caldwell, Stanly, Cleveland, Surry, Rutherford, Burke
-INFO [2021-04-15 00:55:18] Regions excluded: none
-INFO [2021-04-15 02:09:30] Completed regional estimates
-INFO [2021-04-15 02:09:30] Regions with estimates: 18
-INFO [2021-04-15 02:09:30] Regions with runtime errors: 0
-INFO [2021-04-15 02:09:30] Producing summary
-INFO [2021-04-15 02:09:30] No summary directory specified so returning summary output
-INFO [2021-04-15 02:09:32] Saving timings information to : /mnt/resource/refresh-restimates/rt-estimates-out
-INFO [2021-04-15 02:09:32] Producing following optional outputs: regions, summary, samples, plots, latest
+Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-04-15.log
+INFO [2021-04-16 02:33:08] Reporting estimates using data up to: 2021-04-15
+INFO [2021-04-16 02:33:08] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
+INFO [2021-04-16 02:33:08] Producing estimates for: Chatham, Franklin, Haywood, Carteret, Pender, Lee, Wilkes, Stanly, Nash, Surry, Rockingham, Wilson, Sampson, Rutherford, Lincoln, Cleveland, Burke, Caldwell
+INFO [2021-04-16 02:33:08] Regions excluded: none
+INFO [2021-04-16 04:25:19] Completed regional estimates
+INFO [2021-04-16 04:25:19] Regions with estimates: 18
+INFO [2021-04-16 04:25:19] Regions with runtime errors: 0
+INFO [2021-04-16 04:25:19] Producing summary
+INFO [2021-04-16 04:25:19] No summary directory specified so returning summary output
+INFO [2021-04-16 04:25:21] Saving timings information to : /mnt/resource/refresh-restimates/rt-estimates-out
+INFO [2021-04-16 04:25:21] Producing following optional outputs: regions, summary, samples, plots, latest
 Logging threshold set at INFO for the EpiNow2 logger
-Writing EpiNow2 logs to the console and: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-04-14.log
+Writing EpiNow2 logs to the console and: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-04-15.log
 Logging threshold set at INFO for the EpiNow2.epinow logger
-Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-04-14.log
-INFO [2021-04-15 02:09:32] Reporting estimates using data up to: 2021-04-14
-INFO [2021-04-15 02:09:32] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
-INFO [2021-04-15 02:09:32] Producing estimates for: Edgecombe, Richmond, Pasquotank, Beaufort, Person, Duplin, Jackson, McDowell, Hoke, Davie, Halifax, Watauga, Alexander, Granville, Columbus, Stokes, Lenoir, Vance
-INFO [2021-04-15 02:09:32] Regions excluded: none
-INFO [2021-04-15 03:11:19] Completed regional estimates
-INFO [2021-04-15 03:11:19] Regions with estimates: 17
-INFO [2021-04-15 03:11:19] Regions with runtime errors: 1
-INFO [2021-04-15 03:11:19] Producing summary
-INFO [2021-04-15 03:11:19] No summary directory specified so returning summary output
-INFO [2021-04-15 03:11:20] Saving timings information to : /mnt/resource/refresh-restimates/rt-estimates-out
-INFO [2021-04-15 03:11:20] Producing following optional outputs: regions, summary, samples, plots, latest
+Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-04-15.log
+INFO [2021-04-16 04:25:21] Reporting estimates using data up to: 2021-04-15
+INFO [2021-04-16 04:25:21] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
+INFO [2021-04-16 04:25:21] Producing estimates for: Person, Edgecombe, Granville, Richmond, Watauga, Hoke, Stokes, Vance, Davie, Alexander, Beaufort, Jackson, Lenoir, Halifax, Duplin, Pasquotank, McDowell, Columbus
+INFO [2021-04-16 04:25:21] Regions excluded: none
+INFO [2021-04-16 06:01:12] Completed regional estimates
+INFO [2021-04-16 06:01:12] Regions with estimates: 17
+INFO [2021-04-16 06:01:12] Regions with runtime errors: 1
+INFO [2021-04-16 06:01:12] Producing summary
+INFO [2021-04-16 06:01:12] No summary directory specified so returning summary output
+INFO [2021-04-16 06:01:13] Saving timings information to : /mnt/resource/refresh-restimates/rt-estimates-out
+INFO [2021-04-16 06:01:13] Producing following optional outputs: regions, summary, samples, plots, latest
 Logging threshold set at INFO for the EpiNow2 logger
-Writing EpiNow2 logs to the console and: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-04-14.log
+Writing EpiNow2 logs to the console and: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-04-15.log
 Logging threshold set at INFO for the EpiNow2.epinow logger
-Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-04-14.log
-INFO [2021-04-15 03:11:20] Reporting estimates using data up to: 2021-04-14
-INFO [2021-04-15 03:11:20] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
-INFO [2021-04-15 03:11:20] Producing estimates for: Currituck, Madison, Anson, Northampton, Polk, Caswell, Dare, Ashe, Cherokee, Hertford, Martin, Bladen, Greene, Scotland, Montgomery, Transylvania, Macon, Yadkin
-INFO [2021-04-15 03:11:20] Regions excluded: none
+Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-04-15.log
+INFO [2021-04-16 06:01:13] Reporting estimates using data up to: 2021-04-15
+INFO [2021-04-16 06:01:13] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
+INFO [2021-04-16 06:01:13] Producing estimates for: Currituck, Greene, Northampton, Polk, Madison, Hertford, Transylvania, Anson, Martin, Scotland, Caswell, Dare, Montgomery, Ashe, Cherokee, Bladen, Macon, Yadkin
+INFO [2021-04-16 06:01:13] Regions excluded: none
 Error in mcfork(detached) : 
   unable to fork, possible reason: Cannot allocate memory
-INFO [2021-04-15 03:48:16] Producing following optional outputs: regions, summary, samples, plots, latest
+INFO [2021-04-16 06:46:57] Producing following optional outputs: regions, summary, samples, plots, latest
 Logging threshold set at INFO for the EpiNow2 logger
-Writing EpiNow2 logs to the console and: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-04-14.log
+Writing EpiNow2 logs to the console and: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-04-15.log
 Logging threshold set at INFO for the EpiNow2.epinow logger
-Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-04-14.log
-INFO [2021-04-15 03:48:16] Reporting estimates using data up to: 2021-04-14
-INFO [2021-04-15 03:48:16] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
-INFO [2021-04-15 03:48:16] Producing estimates for: Jones, Hyde, Pamlico, Graham, Washington, Camden, Mitchell, Warren, Chowan, Alleghany, Perquimans, Bertie, Gates, Swain, Yancey, Avery, Clay, Tyrrell
-INFO [2021-04-15 03:48:16] Regions excluded: none
+Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-04-15.log
+INFO [2021-04-16 06:46:57] Reporting estimates using data up to: 2021-04-15
+INFO [2021-04-16 06:46:57] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
+INFO [2021-04-16 06:46:57] Producing estimates for: Tyrrell, Gates, Camden, Pamlico, Bertie, Clay, Jones, Warren, Perquimans, Washington, Chowan, Graham, Swain, Avery, Mitchell, Hyde, Alleghany, Yancey
+INFO [2021-04-16 06:46:57] Regions excluded: none
 Error in mcfork(detached) : 
   unable to fork, possible reason: Cannot allocate memory
 > 
 > proc.time()
       user     system    elapsed 
-140631.007    291.918  18037.161 
+109738.307    274.388  22060.653 
 Error while shutting down parallel: unable to terminate some child processes
 Warning message:
 system call failed: Cannot allocate memory 
