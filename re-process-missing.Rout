@@ -195,50 +195,7 @@ The following objects are masked from ‘package:base’:
 + 																	 rt = rt_opts(prior = list(mean = 1.25, sd = 0.1))))
 + plan("sequential")
 + }
-
-Attaching package: ‘data.table’
-
-The following objects are masked from ‘package:dplyr’:
-
-    between, first, last
-
-
-Attaching package: ‘purrr’
-
-The following object is masked from ‘package:data.table’:
-
-    transpose
-
-The following object is masked from ‘package:magrittr’:
-
-    set_names
-
-The following object is masked from ‘package:EpiNow2’:
-
-    update_list
-
-Using: cone as the data source
-Last date available: 2021-04-15
-1618557217prep completedRunning the full modelINFO [2021-04-16 07:13:38] Producing following optional outputs: regions, summary, samples, plots, latest
-Logging threshold set at INFO for the EpiNow2 logger
-Writing EpiNow2 logs to the console and: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-04-15.log
-Logging threshold set at INFO for the EpiNow2.epinow logger
-Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-04-15.log
-INFO [2021-04-16 07:13:38] Reporting estimates using data up to: 2021-04-15
-INFO [2021-04-16 07:13:38] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
-INFO [2021-04-16 07:13:38] Producing estimates for: Montgomery, Macon, Yadkin, Tyrrell
-INFO [2021-04-16 07:13:38] Regions excluded: none
-INFO [2021-04-16 07:20:53] Completed estimates for: Montgomery
-INFO [2021-04-16 07:27:13] Completed estimates for: Macon
-INFO [2021-04-16 07:35:35] Completed estimates for: Yadkin
-INFO [2021-04-16 07:38:13] Completed estimates for: Tyrrell
-INFO [2021-04-16 07:38:13] Completed regional estimates
-INFO [2021-04-16 07:38:13] Regions with estimates: 4
-INFO [2021-04-16 07:38:13] Regions with runtime errors: 0
-INFO [2021-04-16 07:38:13] Producing summary
-INFO [2021-04-16 07:38:13] No summary directory specified so returning summary output
-INFO [2021-04-16 07:38:14] Saving timings information to : /mnt/resource/refresh-restimates/rt-estimates-out
 > 
 > proc.time()
-    user   system  elapsed 
-4975.579   18.093 1489.865 
+   user  system elapsed 
+  4.080   3.593   8.366 
