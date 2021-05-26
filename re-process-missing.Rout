@@ -195,7 +195,52 @@ The following objects are masked from ‘package:base’:
 + 																	 rt = rt_opts(prior = list(mean = 1.25, sd = 0.1))))
 + plan("sequential")
 + }
+
+Attaching package: ‘data.table’
+
+The following objects are masked from ‘package:dplyr’:
+
+    between, first, last
+
+
+Attaching package: ‘purrr’
+
+The following object is masked from ‘package:data.table’:
+
+    transpose
+
+The following object is masked from ‘package:magrittr’:
+
+    set_names
+
+The following object is masked from ‘package:EpiNow2’:
+
+    update_list
+
+Using: cone as the data source
+Last date available: 2021-05-25
+1622027228prep completedRunning the full modelINFO [2021-05-26 11:07:09] Producing following optional outputs: regions, summary, samples, plots, latest
+Logging threshold set at INFO for the EpiNow2 logger
+Writing EpiNow2 logs to the console and: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-05-25.log
+Logging threshold set at INFO for the EpiNow2.epinow logger
+Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-05-25.log
+INFO [2021-05-26 11:07:09] Reporting estimates using data up to: 2021-05-25
+INFO [2021-05-26 11:07:09] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
+INFO [2021-05-26 11:07:09] Producing estimates for: Greene, Polk, Bladen, Scotland, Anson, Northampton
+INFO [2021-05-26 11:07:09] Regions excluded: none
+INFO [2021-05-26 11:14:14] Completed estimates for: Greene
+INFO [2021-05-26 11:20:26] Completed estimates for: Polk
+INFO [2021-05-26 11:32:52] Completed estimates for: Bladen
+INFO [2021-05-26 11:43:04] Completed estimates for: Scotland
+INFO [2021-05-26 11:49:11] Completed estimates for: Anson
+INFO [2021-05-26 11:54:36] Completed estimates for: Northampton
+INFO [2021-05-26 11:54:36] Completed regional estimates
+INFO [2021-05-26 11:54:36] Regions with estimates: 6
+INFO [2021-05-26 11:54:36] Regions with runtime errors: 0
+INFO [2021-05-26 11:54:36] Producing summary
+INFO [2021-05-26 11:54:36] No summary directory specified so returning summary output
+INFO [2021-05-26 11:54:37] Saving timings information to : /mnt/resource/refresh-restimates/rt-estimates-out
 > 
 > proc.time()
-   user  system elapsed 
-  4.487   3.973   9.517 
+    user   system  elapsed 
+9673.132   23.108 2864.682 
