@@ -49,7 +49,7 @@ The following object is masked from ‘package:EpiNow2’:
 > #dat <- nccovid::get_covid_state(data_source = "cone")
 > dat <- nccovid::get_covid_state(data_source = "cone", reporting_adj = TRUE)
 Using: cone as the data source
-Last date available: 2021-06-04
+Last date available: 2021-06-07
 > # Wait Until 15 Confirmed cases by county cumulative and within last 16 weeks
 > 
 > dat <- dat[date>=Sys.Date()-lubridate::weeks(16)]
@@ -82,7 +82,7 @@ Last date available: 2021-06-04
 + 								 weights = daily_tests)
 > start <- Sys.time()
 > cat(start)
-1622905588> # corrected cases for modelling -------------------------------------------
+1623152610> # corrected cases for modelling -------------------------------------------
 > 
 > dat$predicted_positive <- predict(mod, newdata = dat[,date_n:=as.numeric(date)], type = "response")
 > 
@@ -172,24 +172,24 @@ prep completed>
 + 		     stan = stan_opts(samples = 3000, control = list(adapt_delta = 0.95, max_treedepth = 15),
 +                      chains = 4, cores = 8,
 +                       max_execution_time = 60*60*5, future = FALSE), rt = rt_opts(prior = list(mean = 1.25, sd = 0.25))))
-INFO [2021-06-05 15:06:28] Producing following optional outputs: regions, summary, samples, plots, latest
+INFO [2021-06-08 11:43:30] Producing following optional outputs: regions, summary, samples, plots, latest
 Logging threshold set at INFO for the EpiNow2 logger
-Writing EpiNow2 logs to the console and: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-06-04.log
+Writing EpiNow2 logs to the console and: /mnt/resource/refresh-restimates/epinow-logs/regional-epinow/2021-06-07.log
 Logging threshold set at INFO for the EpiNow2.epinow logger
-Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-06-04.log
-INFO [2021-06-05 15:06:28] Reporting estimates using data up to: 2021-06-04
-INFO [2021-06-05 15:06:28] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
-INFO [2021-06-05 15:06:28] Producing estimates for: Cone Health, North Carolina
-INFO [2021-06-05 15:06:28] Regions excluded: none
-INFO [2021-06-05 15:13:56] Completed estimates for: Cone Health
-INFO [2021-06-05 15:26:23] Completed estimates for: North Carolina
-INFO [2021-06-05 15:26:23] Completed regional estimates
-INFO [2021-06-05 15:26:23] Regions with estimates: 2
-INFO [2021-06-05 15:26:23] Regions with runtime errors: 0
-INFO [2021-06-05 15:26:23] Producing summary
-INFO [2021-06-05 15:26:23] No summary directory specified so returning summary output
-INFO [2021-06-05 15:26:23] Saving timings information to : /mnt/resource/refresh-restimates/rt-estimates-out
+Writing EpiNow2.epinow logs to: /mnt/resource/refresh-restimates/epinow-logs/epinow/2021-06-07.log
+INFO [2021-06-08 11:43:30] Reporting estimates using data up to: 2021-06-07
+INFO [2021-06-08 11:43:30] Saving estimates to : /mnt/resource/refresh-restimates/rt-estimates-out
+INFO [2021-06-08 11:43:30] Producing estimates for: Cone Health, North Carolina
+INFO [2021-06-08 11:43:30] Regions excluded: none
+INFO [2021-06-08 11:56:25] Completed estimates for: Cone Health
+INFO [2021-06-08 12:12:54] Completed estimates for: North Carolina
+INFO [2021-06-08 12:12:54] Completed regional estimates
+INFO [2021-06-08 12:12:54] Regions with estimates: 2
+INFO [2021-06-08 12:12:54] Regions with runtime errors: 0
+INFO [2021-06-08 12:12:54] Producing summary
+INFO [2021-06-08 12:12:54] No summary directory specified so returning summary output
+INFO [2021-06-08 12:12:55] Saving timings information to : /mnt/resource/refresh-restimates/rt-estimates-out
 > 
 > proc.time()
     user   system  elapsed 
-4181.890   13.475 1201.472 
+6038.614   13.410 1770.964 
