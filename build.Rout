@@ -23,7 +23,7 @@ Type 'q()' to quit R.
 + Sys.sleep(60*30)
 + }
 Using: cone as the data source
-Last date available: 2021-06-15
+Last date available: 2021-06-16
 > 
 > cat("starting")
 starting> cat("\nFirst Batch\n")
@@ -55,5 +55,5 @@ done with combination>
 > system("R CMD BATCH --vanilla  prob_spread.R")
 > 
 > proc.time()
-     user    system   elapsed 
-275806.82    583.08  54515.32 
+      user     system    elapsed 
+274613.024    593.504  53151.387 
