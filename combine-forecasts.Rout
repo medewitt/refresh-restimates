@@ -189,7 +189,7 @@ $type
 [1] NA
 
 $median
-[1] 449371.7
+[1] 5e+05
 
 $mean
 [1] 5e+05
@@ -198,13 +198,13 @@ $sd
 [1] NA
 
 $bottom
-[1] 4997
+[1] 5e+05
 
 $lower
-[1] 5263
+[1] 5e+05
 
 $central_lower
-[1] 57662.91
+[1] 5e+05
 
 $central_upper
 [1] 5e+05
@@ -222,4 +222,4 @@ $top
 > 
 > proc.time()
    user  system elapsed 
- 42.240   5.952  31.706 
+ 35.221   5.320  25.964 
