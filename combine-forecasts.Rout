@@ -198,13 +198,13 @@ $sd
 [1] NA
 
 $bottom
-[1] 5e+05
+[1] 4985
 
 $lower
-[1] 5e+05
+[1] 22432.77
 
 $central_lower
-[1] 5e+05
+[1] 272585.1
 
 $central_upper
 [1] 5e+05
@@ -222,4 +222,4 @@ $top
 > 
 > proc.time()
    user  system elapsed 
- 40.225   5.670  30.369 
+ 36.371   5.471  27.189 
