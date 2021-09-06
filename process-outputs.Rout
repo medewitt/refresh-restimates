@@ -64,19 +64,38 @@ The following objects are masked from ‘package:base’:
 + 	filter(birth_time == max(birth_time)) %>%	
 + 	ungroup() %>%	
 + 	select(-birth_time)	
-> 
-> combined_out <- purrr::map(b$path, readr::read_rds)	
-> 
-> names(combined_out) <- pull(b, county)	
-> 
-> combined_summary <- combined_out %>%	
-+ 	dplyr::bind_rows(.id = "county")	
-> 
-> 
-> estimates_out <- list(sum_table = combined_summary, regional_estimates = combined_results)	
-> 
-> readr::write_rds(estimates_out, here::here("data", paste0(Sys.Date(),"-all-counties.rds")))
-> 
-> proc.time()
-   user  system elapsed 
-  1.496   0.883   1.279 
+Error: Can't subset columns that don't exist.
+✖ Column `county` doesn't exist.
+Backtrace:
+     █
+  1. └─`%>%`(...)
+  2.   ├─base::withVisible(eval(quote(`_fseq`(`_lhs`)), env, env))
+  3.   └─base::eval(quote(`_fseq`(`_lhs`)), env, env)
+  4.     └─base::eval(quote(`_fseq`(`_lhs`)), env, env)
+  5.       └─`_fseq`(`_lhs`)
+  6.         └─magrittr::freduce(value, `_function_list`)
+  7.           └─function_list[[i]](value)
+  8.             ├─dplyr::select(., path, county, birth_time)
+  9.             └─dplyr:::select.data.frame(., path, county, birth_time)
+ 10.               └─tidyselect::eval_select(expr(c(...)), .data)
+ 11.                 └─tidyselect:::eval_select_impl(...)
+ 12.                   ├─tidyselect:::with_subscript_errors(...)
+ 13.                   │ ├─base::tryCatch(...)
+ 14.                   │ │ └─base:::tryCatchList(expr, classes, parentenv, handlers)
+ 15.                   │ │   └─base:::tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 16.                   │ │     └─base:::doTryCatch(return(expr), name, parentenv, handler)
+ 17.                   │ └─tidyselect:::instrument_base_errors(expr)
+ 18.                   │   └─base::withCallingHandlers(...)
+ 19.                   └─tidyselect:::vars_select_eval(...)
+ 20.                     └─tidyselect:::walk_data_tree(expr, data_mask, context_mask)
+ 21.                       └─tidyselect:::eval_c(expr, data_mask, context_mask)
+ 22.                         └─tidyselect:::reduce_sels(node, data_mask, context_mask, init = init)
+ 23.                           └─tidyselect:::walk_data_tree(new, data_mask, context_mask)
+ 24.                             └─tidyselect:::as_indices_sel_impl(...)
+ 25.                               └─tidyselect:::as_indices_impl(x, vars, strict = strict)
+ 26.                                 └─tidyselect:::chr_as_locations(x, vars)
+ 27.                                   └─vctrs::vec_as_location(x, n = length(vars), names = vars)
+ 28.                                     └─(function () ...
+ 29.                                       └─vctrs:::stop_subscript_oob(...)
+ 30.                                         └─vctrs:::stop_subscript(...)
+Execution halted

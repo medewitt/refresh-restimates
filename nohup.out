@@ -8817,3 +8817,12 @@ Already up-to-date.
  rewrite rt-estimates-out/Wilson/latest/summary_plot.png (93%)
 To https://github.com/medewitt/refresh-restimates.git
    e5ede4f..3af1c52  master -> master
+From https://github.com/medewitt/refresh-restimates
+ * branch            master     -> FETCH_HEAD
+Already up-to-date.
+From https://github.com/medewitt/refresh-restimates
+ * branch            master     -> FETCH_HEAD
+fatal: Unable to create '/mnt/resource/refresh-restimates/.git/ORIG_HEAD.lock': No space left on device
+fatal: Unable to create '/mnt/resource/refresh-restimates/.git/index.lock': No space left on device
+fatal: Unable to create '/mnt/resource/refresh-restimates/.git/index.lock': No space left on device
+fatal: could not read Username for 'https://github.com': No such file or directory

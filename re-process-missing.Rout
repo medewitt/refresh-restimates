@@ -65,8 +65,8 @@ The following objects are masked from ‘package:base’:
 + 
 + #options(future.globals.maxSize = 10000*1024^2)
 + 
-+ dat <- nccovid::get_covid_state(data_source = "cone")
-+ 
++ #dat <- nccovid::get_covid_state(data_source = "cone")
++ dat <- nccovid::get_covid_state(data_source = "cone", reporting_adj = TRUE)
 + # Wait Until 15 Confirmed cases by county cumulative and within last 16 weeks
 + 
 + dat <- dat[date>=Sys.Date()-lubridate::weeks(16)]
@@ -195,7 +195,31 @@ The following objects are masked from ‘package:base’:
 + 																	 rt = rt_opts(prior = list(mean = 1.25, sd = 0.1))))
 + plan("sequential")
 + }
-> 
-> proc.time()
-   user  system elapsed 
-  1.208   0.973   1.630 
+
+Attaching package: ‘data.table’
+
+The following objects are masked from ‘package:dplyr’:
+
+    between, first, last
+
+
+Attaching package: ‘purrr’
+
+The following object is masked from ‘package:data.table’:
+
+    transpose
+
+The following object is masked from ‘package:magrittr’:
+
+    set_names
+
+The following object is masked from ‘package:EpiNow2’:
+
+    update_list
+
+Using: cone as the data source
+Last date available: 2021-09-03
+Error in as.Date.default(date) : 
+  do not know how to convert 'date' to class “Date”
+Calls: %>% ... [.data.table -> eval -> eval -> as.Date -> as.Date.default
+Execution halted
