@@ -1,0 +1,45 @@
+# Population Weight Cone and North Carolina
+
+dat <- data.table::fread(here::here("output", "latest_r_coviddata.csv"))
+
+dat <- dat[!county %in% c("North Carolina", "Cone Health")]												 												 
+dat <- dat[!is.na(county)]
+
+dat <- dat[last_update>Sys.Date()-5]
+
+
+nc_population <- nccovid::nc_population[,1:2]
+
+names(nc_population) <- c("county", "pop")
+
+dat_pop <- merge(dat, nc_population, by = "county", all.x = TRUE)
+
+dat_pop <- dat_pop[!is.na(pop)]
+
+target_cols <- names(dat)
+
+target_cols <- target_cols[!target_cols%in%c("county", "date", 
+																						 "last_update", 
+																						 "variable", "strat", 
+																						 "type", "sd")]
+
+# state wide --------------------------------------------------------------
+
+nc_overall <- dat_pop[, lapply(.SD, weighted.mean, w = pop, na.rm = TRUE), by = c("date", "variable", "strat", "type"), .SDcols = target_cols]
+
+nc_overall <- nc_overall[ , .SD[1],by = c("date", "variable", "strat")]
+
+nc_overall[,county:="North Carolina"]
+# region ------------------------------------------------------------------
+
+cone_overall <- dat_pop[county %in% nccovid::cone_region, lapply(.SD, weighted.mean, w = pop, na.rm = TRUE), by = c("date", "variable", "strat", "type"), .SDcols = target_cols]
+
+cone_overall <- nc_overall[ , .SD[1],by = c("date", "variable", "strat")]
+
+cone_overall[,county:="Cone Health"]
+
+# combine again -----------------------------------------------------------
+
+out <- data.table::rbindlist(list(dat,nc_overall,cone_overall), fill = TRUE )
+
+data.table::fwrite(out, here::here("output", "latest_r_coviddata.csv"))

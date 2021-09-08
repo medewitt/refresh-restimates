@@ -137,6 +137,7 @@ The following objects are masked from ‘package:base’:
 > 
 > (update_dates <- most_current_information[,.(unique(last_update)), by = "county"][order(V1)])
         county         V1
+<<<<<<< HEAD
   1:  Alamance 2020-12-21
   2: Alexander 2020-12-21
   3: Alleghany 2020-12-21
@@ -148,6 +149,19 @@ The following objects are masked from ‘package:base’:
 100:    Wilson 2020-12-21
 101:    Yadkin 2020-12-21
 102:    Yancey 2020-12-21
+=======
+  1:  Alamance 2021-08-28
+  2: Alexander 2021-08-28
+  3: Alleghany 2021-08-28
+  4:     Anson 2021-08-28
+  5:      Ashe 2021-08-28
+ ---                     
+ 98:     Wayne 2021-08-28
+ 99:    Wilkes 2021-08-28
+100:    Wilson 2021-08-28
+101:    Yadkin 2021-08-28
+102:    Yancey 2021-08-28
+>>>>>>> 559a5392466683d1a75f587b3b09d51c60d0f999
 > # Run validation Scripts
 > library(dcmodify)
 
@@ -177,7 +191,11 @@ $date
 [1] NA
 
 $last_update
+<<<<<<< HEAD
 [1] "2020-12-21"
+=======
+[1] "2021-08-28"
+>>>>>>> 559a5392466683d1a75f587b3b09d51c60d0f999
 
 $variable
 [1] "reporting_overdispersion"
@@ -189,7 +207,11 @@ $type
 [1] NA
 
 $median
+<<<<<<< HEAD
 [1] 29513.3
+=======
+[1] 7174.5
+>>>>>>> 559a5392466683d1a75f587b3b09d51c60d0f999
 
 $mean
 [1] 5e+05
@@ -198,6 +220,7 @@ $sd
 [1] NA
 
 $bottom
+<<<<<<< HEAD
 [1] 22065.02
 
 $lower
@@ -211,6 +234,21 @@ $central_upper
 
 $upper
 [1] 59914.57
+=======
+[1] 5661.75
+
+$lower
+[1] 6317
+
+$central_lower
+[1] 6712.6
+
+$central_upper
+[1] 8037.846
+
+$upper
+[1] 11879.58
+>>>>>>> 559a5392466683d1a75f587b3b09d51c60d0f999
 
 $top
 [1] 5e+05
@@ -222,4 +260,8 @@ $top
 > 
 > proc.time()
    user  system elapsed 
+<<<<<<< HEAD
   2.885   0.819   1.994 
+=======
+ 39.961   5.890  30.380 
+>>>>>>> 559a5392466683d1a75f587b3b09d51c60d0f999

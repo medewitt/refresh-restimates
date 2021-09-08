@@ -8822,7 +8822,61 @@ From https://github.com/medewitt/refresh-restimates
 Already up-to-date.
 From https://github.com/medewitt/refresh-restimates
  * branch            master     -> FETCH_HEAD
+<<<<<<< HEAD
 fatal: Unable to create '/mnt/resource/refresh-restimates/.git/ORIG_HEAD.lock': No space left on device
 fatal: Unable to create '/mnt/resource/refresh-restimates/.git/index.lock': No space left on device
 fatal: Unable to create '/mnt/resource/refresh-restimates/.git/index.lock': No space left on device
 fatal: could not read Username for 'https://github.com': No such file or directory
+=======
+Already up-to-date.
+[master da2fe44] auto-update
+ 14 files changed, 72030 insertions(+), 69677 deletions(-)
+ create mode 100644 data/2020-12-30-all-counties.rds
+ create mode 100644 epinow-logs/epinow/2020-12-29.log
+To https://github.com/medewitt/refresh-restimates.git
+   07ead3f..da2fe44  master -> master
+From https://github.com/medewitt/refresh-restimates
+ * branch            master     -> FETCH_HEAD
+Already up-to-date.
+From https://github.com/medewitt/refresh-restimates
+ * branch            master     -> FETCH_HEAD
+Already up-to-date.
+[master 390e4fa] auto-update
+ 17 files changed, 70066 insertions(+), 69949 deletions(-)
+ create mode 100644 data/2020-12-31-all-counties.rds
+ create mode 100644 epinow-logs/regional-epinow/2020-12-30.log
+To https://github.com/medewitt/refresh-restimates.git
+   829f3ac..390e4fa  master -> master
+From https://github.com/medewitt/refresh-restimates
+ * branch            master     -> FETCH_HEAD
+Already up-to-date.
+From https://github.com/medewitt/refresh-restimates
+ * branch            master     -> FETCH_HEAD
+Already up-to-date.
+[master 871f58e] auto-update
+ 14 files changed, 70740 insertions(+), 70193 deletions(-)
+ create mode 100644 data/2021-01-01-all-counties.rds
+To https://github.com/medewitt/refresh-restimates.git
+   87d1a30..871f58e  master -> master
+From https://github.com/medewitt/refresh-restimates
+ * branch            master     -> FETCH_HEAD
+Already up-to-date.
+From https://github.com/medewitt/refresh-restimates
+ * branch            master     -> FETCH_HEAD
+Already up-to-date.
+[master 9132fee] auto-update
+ 12 files changed, 18840 insertions(+), 18272 deletions(-)
+To https://github.com/medewitt/refresh-restimates.git
+   d6edcb7..9132fee  master -> master
+From https://github.com/medewitt/refresh-restimates
+ * branch            master     -> FETCH_HEAD
+Already up-to-date.
+From https://github.com/medewitt/refresh-restimates
+ * branch            master     -> FETCH_HEAD
+Already up-to-date.
+[master 1020494] auto-update
+ 13 files changed, 70665 insertions(+), 70234 deletions(-)
+ create mode 100644 data/2021-01-04-all-counties.rds
+To https://github.com/medewitt/refresh-restimates.git
+   47b95af..1020494  master -> master
+>>>>>>> 559a5392466683d1a75f587b3b09d51c60d0f999

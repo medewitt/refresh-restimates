@@ -64,6 +64,7 @@ The following objects are masked from ‘package:base’:
 + 	filter(birth_time == max(birth_time)) %>%	
 + 	ungroup() %>%	
 + 	select(-birth_time)	
+<<<<<<< HEAD
 Error: Can't subset columns that don't exist.
 ✖ Column `county` doesn't exist.
 Backtrace:
@@ -99,3 +100,21 @@ Backtrace:
  29.                                       └─vctrs:::stop_subscript_oob(...)
  30.                                         └─vctrs:::stop_subscript(...)
 Execution halted
+=======
+> 
+> combined_out <- purrr::map(b$path, readr::read_rds)	
+> 
+> names(combined_out) <- pull(b, county)	
+> 
+> combined_summary <- combined_out %>%	
++ 	dplyr::bind_rows(.id = "county")	
+> 
+> 
+> estimates_out <- list(sum_table = combined_summary, regional_estimates = combined_results)	
+> 
+> readr::write_rds(estimates_out, here::here("data", paste0(Sys.Date(),"-all-counties.rds")))
+> 
+> proc.time()
+   user  system elapsed 
+  9.116   9.220  38.320 
+>>>>>>> 559a5392466683d1a75f587b3b09d51c60d0f999

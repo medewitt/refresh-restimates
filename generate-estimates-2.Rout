@@ -40,38 +40,189 @@ The following object is masked from ‘package:EpiNow2’:
 
     update_list
 
-> 
+> options(future.fork.multithreading.enable = FALSE)
+> RhpcBLASctl::omp_set_num_threads(1L)
+> data.table::setDTthreads(1)
+> options(mc.cores = 8L)
 > #options(future.globals.maxSize = 10000*1024^2)
 > 
-> #dat <- nccovid::get_covid_state(data_source = "cone")
-> 
-> dat <- nccovid::get_covid_state(data_source = "cone", reporting_adj = TRUE)
+> dat <- nccovid::get_covid_county_plus()
 Using: cone as the data source
-Last date available: 2021-09-03
+Last date available: 2021-09-07
 > 
 > # Wait Until 15 Confirmed cases by county cumulative and within last 16 weeks
 > 
-> dat <- dat[date>=Sys.Date()-lubridate::weeks(16)]
+> dat <- dat[date>=Sys.Date()-lubridate::weeks(12)]
 > 
 > dat <- dat[cases_confirmed_cum>15]
 > 
+> # Handle Excess zeros that likely don't exist
+> dat <- dat[,cases_daily:= ifelse(cases_daily==0, rpois(1,1), cases_daily)]
+> 
 > # Fix State Data Dump
 > dat <- dat[,cases_daily := fifelse(date==as.Date("2020-09-25"),
-+                               dplyr::lag(cases_daily,1), cases_daily), by = "county"]
++                                    dplyr::lag(cases_daily,1), cases_daily), by = "county"]
+> 
+> dat[, n_tests_estimated := cases_daily/(percent_test_results_reported_positive_last_7_days/100) ]
+> 
+> dat[,n_tests_estimated:=round(n_tests_estimated)]
 > 
 > reported_cases <- dat[,`:=` (region=county,
-+            confirm = cases_daily)][,.(date,confirm, region)][date>as.Date("2020-03-10")]
++                              confirm = cases_daily)][,.(date,confirm, region, 
++                                                         percent_test_results_reported_positive_last_7_days,n_tests_estimated)][date>as.Date("2020-03-10")]
 > 
+> names(reported_cases) <- c("date", "confirm", "region", "pct_positive", "daily_test")
 > 
+> reported_cases <- tidyr::fill(reported_cases,c(pct_positive, daily_test),.direction = "down")
+> 
+> setDT(reported_cases)
 > # correct for testing -----------------------------------------------------
 > 
-> nc_testing <- "https://raw.githubusercontent.com/conedatascience/covid-data/master/data/timeseries/nc-summary-stats.csv"
+> first_case_dat <- dat[cases_daily>0, .SD[which.min(date)], by = county]
 > 
-> nc_testing <- data.table::fread(nc_testing)
 > 
-> dat_positivity_rate<- nc_testing[,date_n := as.numeric(as.Date(date))] %>%
-+   .[date>as.Date("2020-03-15")]
-Error in as.Date.default(date) : 
-  do not know how to convert 'date' to class “Date”
-Calls: %>% ... [.data.table -> eval -> eval -> as.Date -> as.Date.default
-Execution halted
+> first_case_dat <- first_case_dat[,.(county,date)] %>%
++   setnames(old = "date", new = "first_case_date")
+> 
+> # Set Keys for Joining
+> setkey(first_case_dat, "county")
+> setkey(dat, "county")
+> 
+> 
+> dat <- dat[first_case_dat, nomatch = 0]
+> 
+> dat <- dat[date>=first_case_date]
+> 
+> increase_cases <- function (observed_cases, pos_rate, m = 2.5, k = 0) {
++   y <- observed_cases * pos_rate^k * m
++   return(y)
++ }
+> 
+> reported_cases$confirm <- increase_cases(observed_cases = reported_cases$confirm,
++                                          pos_rate = reported_cases$pct_positive)
+> 
+> reported_cases <- dat[,`:=` (region=county,
++                              confirm = round(confirm))] %>%
++   .[,.(date,confirm, region)] %>%
++   .[date>as.Date("2020-05-18")]
+> 
+> # pull low population density counties ------------------------------------
+> 
+> county_info <- nccovid::nc_population[ ,1:2][order(july_2020, decreasing = TRUE)][county!="STATE"]
+> 
+> county_single <- c(head(county_info$county,10), "North Carolina", "Cone Health")
+> county_cumulative <- setdiff(county_info$county,county_single)
+> 
+> 
+> 
+> # Smooth on Regions for R estimation only.
+> cone_region <- reported_cases[region %chin% nccovid::cone_region,
++                               .(confirm = sum(confirm)), by = "date"] %>%
++   .[,region:="Cone Health"] %>% 
++   .[,confirm:=data.table::frollmean(confirm, n = 3)] %>% 
++   .[,confirm :=round(confirm)]%>% 
++   .[!is.na(confirm)]
+> 
+> nc_overall <- reported_cases[,.(confirm = sum(confirm)), by = "date"] %>%
++   .[,region:="North Carolina"]%>% 
++   .[,confirm:=data.table::frollmean(confirm, n = 3)] %>% 
++   .[,confirm :=round(confirm)] %>% 
++   .[!is.na(confirm)]
+> 
+> reported_cases <-reported_cases %>%
++   merge(cone_region, all = TRUE) %>%
++   merge(nc_overall, all=TRUE)
+> 
+> # Correct for State Data Dump
+> reported_cases <- reported_cases[ ,confirm:= fifelse(date==as.Date("2020-09-25"),
++                                    shift(confirm,1),confirm), by = "region"]
+> 
+> 
+> # pull low population density counties ------------------------------------
+> 
+> county_info <- nccovid::nc_population[ ,1:2][order(july_2020, decreasing = TRUE)][county!="STATE"]
+> 
+> county_single <- c(tail(county_info$county,60), "North Carolina", "Cone Health")
+> county_cumulative <- setdiff(county_info$county,county_single)
+> 
+> 
+> # setup -------------------------------------------------------------------
+> 
+> # NCDHHS Reporting Data Starting 2020-10-29
+> 
+> reporting_delay <- nccovid::nc_delay
+> 
+> generation_time <- EpiNow2::get_generation_time(disease = "SARS-CoV-2", source = "ganyani")
+> incubation_period <- EpiNow2::get_incubation_period(disease = "SARS-CoV-2", source = "lauer")
+> 
+> cat("prep completed")
+prep completed> 
+> # Load utils --------------------------------------------------------------
+> if (!exists("setup_future", mode = "function")) source(here::here("util.R"))
+> no_cores <- setup_future(reported_cases = reported_cases)
+INFO [2021-09-07 20:24:54] Using 2 workers with 4 cores per worker
+> 
+> # run estimation ----------------------------------------------------------
+> #EpiNow2::setup_logging(file = "log.log")
+> debug <- FALSE
+> if(debug){
++   #reported_cases <- reported_cases[region%chin%nccovid::cone_region]
++   reported_cases <- reported_cases[region%chin%c("Guilford", "Alamance")]
++   reported_cases_single <- reported_cases[region%chin%c("Alamance")]
++ 
++   estimates <- regional_epinow(reported_cases = reported_cases[region=="Mecklenburg"],
++                              generation_time = generation_time,
++                              target_folder = here::here("rt-estimates-out"),
++                              logs = here::here("epinow-logs"),
++                              non_zero_points = 14, horizon = 14, 
++                              delays = delay_opts(incubation_period,
++                                                  reporting_delay),
++                              stan = stan_opts(cores = 8, chains = 4,
++                                               max_execution_time = 60*60*4),
++                              rt = rt_opts(prior = list(mean = 1.25, sd = 0.25)))
++ } else {
++ if(file.exists(here::here("info.log"))){
++   unlink(here::here("info.log"))
++ }
++ cat('Running the full model')
++ 
++ reported_cases_low_density <- reported_cases[region%in%county_cumulative]
++ 
++ estimates <- try(regional_epinow(reported_cases = reported_cases_low_density,
++                              generation_time = generation_time,
++                              target_folder = here::here("rt-estimates-out"),
++                              logs = here::here("epinow-logs"),
++                              delays = delay_opts(incubation_period,
++                                            reporting_delay),
++                              non_zero_points = 14, horizon = 14, 
++                              stan = stan_opts(init_fit = "cumulative",samples = 4000,
++                                               chains = 4, cores = no_cores, control = list(adapt_delta = 0.95, max_treedepth = 15),
++                                               max_execution_time = 60*60*6,
++                                               future = FALSE),
++                              rt = rt_opts(prior = list(mean = 1.25, sd = 0.25))))
++ 
++ }
+Running the full modelINFO [2021-09-07 20:24:54] Producing following optional outputs: regions, summary, samples, plots, latest
+Logging threshold set at INFO for the EpiNow2 logger
+Writing EpiNow2 logs to the console and: /datadisk/refresh-restimates/epinow-logs/regional-epinow/2021-09-07.log
+Logging threshold set at INFO for the EpiNow2.epinow logger
+Writing EpiNow2.epinow logs to: /datadisk/refresh-restimates/epinow-logs/epinow/2021-09-07.log
+INFO [2021-09-07 20:24:54] Reporting estimates using data up to: 2021-09-07
+INFO [2021-09-07 20:24:54] Saving estimates to : /datadisk/refresh-restimates/rt-estimates-out
+INFO [2021-09-07 20:24:54] Producing estimates for: 40 regions
+INFO [2021-09-07 20:24:54] Regions excluded: 0 regions
+INFO [2021-09-08 00:45:13] Completed regional estimates
+INFO [2021-09-08 00:45:13] Regions with estimates: 40
+INFO [2021-09-08 00:45:13] Regions with runtime errors: 0
+INFO [2021-09-08 00:45:13] Producing summary
+INFO [2021-09-08 00:45:13] No summary directory specified so returning summary output
+INFO [2021-09-08 00:45:14] Saving timings information to : /datadisk/refresh-restimates/rt-estimates-out
+> 
+> # Now run program to make synthesis
+> # Done
+> plan("sequential")
+> cat("done with estimates")
+done with estimates> 
+> proc.time()
+     user    system   elapsed 
+55586.438   276.342 15627.708 

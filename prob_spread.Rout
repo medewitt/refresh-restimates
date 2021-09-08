@@ -1,0 +1,63 @@
+
+R version 4.0.2 (2020-06-22) -- "Taking Off Again"
+Copyright (C) 2020 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> library(tidyverse)
+── Attaching packages ─────────────────────────────────────── tidyverse 1.3.0 ──
+✔ ggplot2 3.3.5     ✔ purrr   0.3.4
+✔ tibble  3.0.4     ✔ dplyr   1.0.7
+✔ tidyr   1.1.2     ✔ stringr 1.4.0
+✔ readr   1.4.0     ✔ forcats 0.5.0
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+> library(data.table)
+
+Attaching package: ‘data.table’
+
+The following objects are masked from ‘package:dplyr’:
+
+    between, first, last
+
+The following object is masked from ‘package:purrr’:
+
+    transpose
+
+> 
+> target_files <- basename(fs::dir_ls("rt-estimates-out"))
+> 
+> target_files <- target_files[!grepl("csv", target_files)]
+> 
+> out <- list()
+> for(i in seq_along(target_files)){
++ 
++ input_file <- readRDS(here::here("rt-estimates-out", target_files[i], "latest", "estimate_samples.rds"))
++ 
++ out[[i]] = input_file[variable=="R"] %>% 
++ .[, .(spreading_prob = mean(value>1)), by = "date"]
++ }
+> 
+> names(out) <- target_files
+> 
+> out_total <- rbindlist(out,    idcol = "county")
+> 
+> fwrite(out_total, here::here("output", "prob_spread.csv"))
+> 
+> proc.time()
+   user  system elapsed 
+138.724   2.112 122.848 

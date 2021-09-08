@@ -1,0 +1,2231 @@
+INFO [2021-08-23 20:05:11] Initialising estimates for: Buncombe
+INFO [2021-08-23 20:05:12] Initialising estimates for: Cumberland
+WARN [2021-08-23 20:16:12] Cumberland (chain: 1): There were 14 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-23 20:16:12] Cumberland (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-23 20:16:32] Initialising estimates for: Durham
+WARN [2021-08-23 20:20:06] Buncombe (chain: 1): There were 416 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-23 20:20:06] Buncombe (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-23 20:20:09] Buncombe (chain: 1): The largest R-hat is 1.28, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-23 20:20:12] Buncombe (chain: 1): Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-23 20:20:15] Buncombe (chain: 1): Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+INFO [2021-08-23 20:20:26] Initialising estimates for: Forsyth
+WARN [2021-08-23 20:26:06] Forsyth (chain: 1): There were 36 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-23 20:26:06] Forsyth (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-23 20:26:24] Initialising estimates for: Gaston
+WARN [2021-08-23 20:32:46] Durham (chain: 1): There were 16 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-23 20:32:46] Durham (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-23 20:33:03] Initialising estimates for: Guilford
+WARN [2021-08-23 20:38:32] Guilford (chain: 1): There were 66 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-23 20:38:32] Guilford (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-23 20:38:47] Initialising estimates for: Mecklenburg
+INFO [2021-08-23 20:44:24] Initialising estimates for: New Hanover
+WARN [2021-08-23 20:49:24] Mecklenburg (chain: 1): There were 18 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-23 20:49:24] Mecklenburg (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-23 20:49:42] Initialising estimates for: Union
+WARN [2021-08-23 21:00:00] New Hanover (chain: 1): There were 604 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-23 21:00:00] New Hanover (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-23 21:00:02] New Hanover (chain: 1): The largest R-hat is 1.38, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-23 21:00:05] New Hanover (chain: 1): Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-23 21:00:07] New Hanover (chain: 1): Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-23 21:00:15] Union (chain: 1): There were 26 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-23 21:00:15] Union (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-23 21:00:21] Initialising estimates for: Wake
+WARN [2021-08-23 21:08:52] Wake (chain: 1): There were 4 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-23 21:08:52] Wake (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-23 21:09:16] Initialising estimates for: Carteret
+INFO [2021-08-23 21:09:16] Initialising estimates for: Caldwell
+WARN [2021-08-23 21:14:09] Caldwell: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-23 21:14:09] Caldwell: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-23 21:14:09] Caldwell: The largest R-hat is 1.29, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-23 21:14:09] Caldwell: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-23 21:14:10] Caldwell: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-23 21:25:25] Caldwell (chain: 1): There were 7 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-23 21:25:25] Caldwell (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-23 21:25:43] Completed estimates for: Caldwell
+INFO [2021-08-23 21:25:45] Initialising estimates for: Craven
+WARN [2021-08-23 21:29:31] Craven: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-23 21:29:31] Craven: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-23 21:29:32] Craven: The largest R-hat is 1.33, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-23 21:29:32] Craven: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-23 21:29:33] Craven: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-23 21:40:51] Craven (chain: 1): There were 4 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-23 21:40:51] Craven (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-23 21:41:10] Completed estimates for: Craven
+INFO [2021-08-23 21:41:18] Initialising estimates for: Henderson
+WARN [2021-08-23 21:45:54] Henderson: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-23 21:45:54] Henderson: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-23 21:45:54] Henderson: The largest R-hat is 1.33, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-23 21:45:55] Henderson: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-23 21:45:55] Henderson: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-23 22:06:00] Henderson (chain: 1): There were 39 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-23 22:06:00] Henderson (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-23 22:06:09] Henderson (chain: 1): Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+INFO [2021-08-23 22:06:19] Completed estimates for: Henderson
+INFO [2021-08-23 22:06:28] Initialising estimates for: Moore
+WARN [2021-08-23 22:10:52] Moore: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-23 22:10:52] Moore: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-23 22:10:53] Moore: The largest R-hat is 1.34, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-23 22:10:53] Moore: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-23 22:10:54] Moore: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-23 22:22:14] Moore (chain: 1): There were 5 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-23 22:22:14] Moore (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-23 22:22:30] Completed estimates for: Moore
+INFO [2021-08-23 22:22:37] Initialising estimates for: Orange
+WARN [2021-08-23 22:26:07] Orange: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-23 22:26:07] Orange: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-23 22:26:07] Orange: The largest R-hat is 1.38, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-23 22:26:08] Orange: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-23 22:26:08] Orange: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-23 22:37:37] Orange (chain: 1): There were 878 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-23 22:37:37] Orange (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-23 22:37:40] Orange (chain: 1): The largest R-hat is 1.44, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-23 22:37:43] Orange (chain: 1): Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-23 22:37:46] Orange (chain: 1): Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+INFO [2021-08-23 22:37:55] Completed estimates for: Orange
+INFO [2021-08-23 22:38:02] Initialising estimates for: Brunswick
+WARN [2021-08-23 22:41:51] Brunswick: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-23 22:41:51] Brunswick: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-23 22:41:51] Brunswick: The largest R-hat is 2.07, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-23 22:41:52] Brunswick: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-23 22:41:52] Brunswick: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-23 23:04:33] Brunswick (chain: 1): There were 2 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-23 23:04:33] Brunswick (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-23 23:04:50] Completed estimates for: Brunswick
+INFO [2021-08-23 23:05:02] Initialising estimates for: Chatham
+WARN [2021-08-23 23:08:57] Chatham: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-23 23:08:57] Chatham: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-23 23:08:57] Chatham: The largest R-hat is 1.22, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-23 23:08:58] Chatham: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-23 23:08:58] Chatham: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-23 23:21:07] Chatham (chain: 1): There were 5 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-23 23:21:07] Chatham (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-23 23:21:23] Completed estimates for: Chatham
+INFO [2021-08-23 23:21:31] Initialising estimates for: Lincoln
+WARN [2021-08-23 23:25:03] Lincoln: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-23 23:25:03] Lincoln: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-23 23:25:03] Lincoln: The largest R-hat is 1.21, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-23 23:25:03] Lincoln: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-23 23:25:04] Lincoln: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-23 23:37:27] Lincoln (chain: 1): There were 10 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-23 23:37:27] Lincoln (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-23 23:37:43] Completed estimates for: Lincoln
+INFO [2021-08-23 23:37:51] Initialising estimates for: Burke
+WARN [2021-08-23 23:41:21] Burke: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-23 23:41:21] Burke: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-23 23:41:22] Burke: The largest R-hat is 1.59, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-23 23:41:22] Burke: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-23 23:41:23] Burke: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-23 23:53:30] Burke (chain: 1): There were 5 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-23 23:53:30] Burke (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-23 23:53:47] Completed estimates for: Burke
+INFO [2021-08-23 23:53:50] Initialising estimates for: Cleveland
+WARN [2021-08-23 23:57:41] Cleveland: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-23 23:57:41] Cleveland: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-23 23:57:41] Cleveland: The largest R-hat is 1.72, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-23 23:57:42] Cleveland: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-23 23:57:43] Cleveland: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 00:17:30] Cleveland (chain: 1): There were 28 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 00:17:30] Cleveland (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 00:17:47] Completed estimates for: Cleveland
+INFO [2021-08-24 00:17:51] Initialising estimates for: Franklin
+WARN [2021-08-24 00:21:11] Franklin: There were 48 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 00:21:11] Franklin: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 00:21:11] Franklin: The largest R-hat is 1.23, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 00:21:12] Franklin: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 00:21:12] Franklin: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 00:27:43] Franklin (chain: 1): There were 102 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 00:27:43] Franklin (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 00:27:48] Franklin (chain: 1): Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 00:27:51] Franklin (chain: 1): Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+INFO [2021-08-24 00:28:00] Completed estimates for: Franklin
+INFO [2021-08-24 00:28:04] Initialising estimates for: Nash
+WARN [2021-08-24 00:31:41] Nash: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 00:31:41] Nash: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 00:31:42] Nash: The largest R-hat is 1.46, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 00:31:42] Nash: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 00:31:43] Nash: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+INFO [2021-08-24 00:45:17] Completed estimates for: Nash
+INFO [2021-08-24 00:45:22] Initialising estimates for: Randolph
+WARN [2021-08-24 00:49:20] Randolph: There were 49 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 00:49:20] Randolph: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 00:49:21] Randolph: The largest R-hat is 1.81, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 00:49:21] Randolph: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 00:49:22] Randolph: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 01:02:09] Randolph (chain: 1): There were 6 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 01:02:09] Randolph (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 01:02:27] Completed estimates for: Randolph
+INFO [2021-08-24 01:02:34] Initialising estimates for: Rockingham
+WARN [2021-08-24 01:03:33] Rockingham: There were 43 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 01:03:33] Rockingham: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 01:03:33] Rockingham: The largest R-hat is 2.26, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 01:03:33] Rockingham: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 01:03:34] Rockingham: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 01:14:17] Rockingham (chain: 1): There were 72 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 01:14:17] Rockingham (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 01:14:33] Completed estimates for: Rockingham
+INFO [2021-08-24 01:14:38] Initialising estimates for: Wayne
+WARN [2021-08-24 01:18:09] Wayne: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 01:18:09] Wayne: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 01:18:09] Wayne: The largest R-hat is 1.67, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 01:18:10] Wayne: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 01:18:11] Wayne: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 01:26:31] Wayne (chain: 1): There were 24 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 01:26:31] Wayne (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 01:26:47] Completed estimates for: Wayne
+INFO [2021-08-24 01:26:51] Initialising estimates for: Wilson
+WARN [2021-08-24 01:30:22] Wilson: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 01:30:22] Wilson: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 01:30:23] Wilson: The largest R-hat is 1.34, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 01:30:23] Wilson: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 01:30:24] Wilson: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 01:37:58] Wilson (chain: 1): There were 7 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 01:37:58] Wilson (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 01:38:14] Completed estimates for: Wilson
+INFO [2021-08-24 01:38:20] Initialising estimates for: Surry
+WARN [2021-08-24 01:41:26] Surry: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 01:41:26] Surry: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 01:41:26] Surry: The largest R-hat is 1.24, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 01:41:26] Surry: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 01:41:27] Surry: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 01:51:31] Surry (chain: 1): There were 13 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 01:51:31] Surry (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 01:51:47] Completed estimates for: Surry
+INFO [2021-08-24 01:51:54] Initialising estimates for: Buncombe
+WARN [2021-08-24 01:55:19] Buncombe: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 01:55:19] Buncombe: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 01:55:19] Buncombe: The largest R-hat is 2.04, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 01:55:19] Buncombe: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 01:55:20] Buncombe: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 02:09:45] Buncombe (chain: 1): There were 13 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 02:09:45] Buncombe (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 02:10:01] Completed estimates for: Buncombe
+INFO [2021-08-24 02:10:06] Initialising estimates for: Catawba
+WARN [2021-08-24 02:13:00] Catawba: There were 15 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 02:13:00] Catawba: There were 32 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 02:13:00] Catawba: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 02:13:00] Catawba: The largest R-hat is 1.34, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 02:13:01] Catawba: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 02:13:02] Catawba: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+ERROR [2021-08-24 02:16:02] Carteret: model fitting was timed out or failed - 
+INFO [2021-08-24 02:16:04] Initialising estimates for: Durham
+WARN [2021-08-24 02:19:23] Durham: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 02:19:23] Durham: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 02:19:23] Durham: The largest R-hat is 1.72, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 02:19:23] Durham: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 02:19:25] Durham: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 02:23:29] Catawba (chain: 1): There were 14 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 02:23:29] Catawba (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 02:23:45] Completed estimates for: Catawba
+INFO [2021-08-24 02:23:48] Initialising estimates for: Rowan
+WARN [2021-08-24 02:27:09] Rowan: There were 49 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 02:27:09] Rowan: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 02:27:10] Rowan: The largest R-hat is 1.72, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 02:27:11] Rowan: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 02:27:11] Rowan: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 02:35:39] Rowan (chain: 1): There were 81 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 02:35:39] Rowan (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 02:35:54] Completed estimates for: Rowan
+INFO [2021-08-24 02:35:56] Initialising estimates for: Union
+WARN [2021-08-24 02:38:32] Union: There were 14 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 02:38:32] Union: There were 34 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 02:38:32] Union: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 02:38:33] Union: The largest R-hat is 1.76, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 02:38:33] Union: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 02:38:34] Union: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 02:39:38] Durham (chain: 1): There were 10 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 02:39:38] Durham (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 02:39:54] Completed estimates for: Durham
+INFO [2021-08-24 02:39:57] Initialising estimates for: Harnett
+WARN [2021-08-24 02:43:24] Harnett: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 02:43:24] Harnett: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 02:43:24] Harnett: The largest R-hat is 1.82, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 02:43:24] Harnett: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 02:43:25] Harnett: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 02:49:53] Union (chain: 1): There were 128 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 02:49:53] Union (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 02:49:58] Union (chain: 1): Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 02:50:02] Union (chain: 1): Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+INFO [2021-08-24 02:50:11] Completed estimates for: Union
+INFO [2021-08-24 02:50:14] Initialising estimates for: Onslow
+WARN [2021-08-24 02:54:06] Onslow: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 02:54:06] Onslow: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 02:54:07] Onslow: The largest R-hat is 1.97, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 02:54:07] Onslow: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 02:54:08] Onslow: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 03:02:01] Harnett (chain: 1): There were 3 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 03:02:01] Harnett (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 03:02:17] Completed estimates for: Harnett
+INFO [2021-08-24 03:02:21] Initialising estimates for: Robeson
+WARN [2021-08-24 03:03:49] Onslow (chain: 1): There were 51 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 03:03:49] Onslow (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 03:04:05] Completed estimates for: Onslow
+INFO [2021-08-24 03:04:07] Initialising estimates for: Cabarrus
+WARN [2021-08-24 03:05:29] Robeson: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 03:05:29] Robeson: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 03:05:29] Robeson: The largest R-hat is 2.07, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 03:05:29] Robeson: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 03:05:31] Robeson: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 03:07:31] Cabarrus: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 03:07:31] Cabarrus: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 03:07:31] Cabarrus: The largest R-hat is 1.38, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 03:07:32] Cabarrus: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 03:07:33] Cabarrus: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 03:15:03] Robeson (chain: 1): There were 30 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 03:15:03] Robeson (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 03:15:19] Completed estimates for: Robeson
+INFO [2021-08-24 03:15:21] Initialising estimates for: Davidson
+WARN [2021-08-24 03:16:38] Cabarrus (chain: 1): There were 19 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 03:16:38] Cabarrus (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 03:16:54] Completed estimates for: Cabarrus
+INFO [2021-08-24 03:16:58] Initialising estimates for: Iredell
+WARN [2021-08-24 03:18:47] Davidson: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 03:18:47] Davidson: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 03:18:48] Davidson: The largest R-hat is 1.54, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 03:18:49] Davidson: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 03:18:49] Davidson: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 03:20:16] Iredell: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 03:20:16] Iredell: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 03:20:16] Iredell: The largest R-hat is 2.11, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 03:20:17] Iredell: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 03:20:18] Iredell: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 03:33:30] Davidson (chain: 1): There were 8 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 03:33:30] Davidson (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 03:33:47] Completed estimates for: Davidson
+INFO [2021-08-24 03:33:53] Initialising estimates for: Johnston
+WARN [2021-08-24 03:34:46] Iredell (chain: 1): There were 13 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 03:34:46] Iredell (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 03:35:01] Completed estimates for: Iredell
+INFO [2021-08-24 03:35:03] Initialising estimates for: New Hanover
+WARN [2021-08-24 03:36:31] Johnston: There were 44 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 03:36:31] Johnston: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 03:36:31] Johnston: The largest R-hat is 1.4, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 03:36:32] Johnston: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 03:36:33] Johnston: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 03:38:02] New Hanover: There were 1 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 03:38:02] New Hanover: There were 48 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 03:38:02] New Hanover: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 03:38:02] New Hanover: The largest R-hat is 1.28, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 03:38:02] New Hanover: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 03:38:04] New Hanover: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 03:53:17] Johnston (chain: 1): There were 41 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 03:53:17] Johnston (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 03:53:33] Completed estimates for: Johnston
+INFO [2021-08-24 03:53:40] Initialising estimates for: Gaston
+WARN [2021-08-24 03:54:19] New Hanover (chain: 1): There were 39 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 03:54:19] New Hanover (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 03:54:35] Completed estimates for: New Hanover
+INFO [2021-08-24 03:54:37] Initialising estimates for: Wilkes
+WARN [2021-08-24 03:57:09] Gaston: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 03:57:09] Gaston: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 03:57:09] Gaston: The largest R-hat is 1.79, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 03:57:10] Gaston: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 03:57:11] Gaston: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 03:58:03] Wilkes: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 03:58:03] Wilkes: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 03:58:05] Wilkes: The largest R-hat is 1.81, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 03:58:05] Wilkes: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 03:58:06] Wilkes: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 04:13:11] Wilkes (chain: 1): There were 6 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 04:13:11] Wilkes (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 04:13:27] Completed estimates for: Wilkes
+INFO [2021-08-24 04:13:31] Initialising estimates for: Pitt
+WARN [2021-08-24 04:16:48] Pitt: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 04:16:48] Pitt: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 04:16:49] Pitt: The largest R-hat is 1.98, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 04:16:49] Pitt: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 04:16:49] Pitt: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 04:19:02] Gaston (chain: 1): There were 17 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 04:19:02] Gaston (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 04:19:19] Completed estimates for: Gaston
+INFO [2021-08-24 04:19:21] Initialising estimates for: Cumberland
+WARN [2021-08-24 04:22:53] Cumberland: There were 1 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 04:22:53] Cumberland: There were 48 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 04:22:53] Cumberland: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 04:22:54] Cumberland: The largest R-hat is 2, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 04:22:54] Cumberland: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 04:22:55] Cumberland: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 04:35:10] Cumberland (chain: 1): There were 11 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 04:35:10] Cumberland (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 04:35:25] Completed estimates for: Cumberland
+INFO [2021-08-24 04:35:27] Initialising estimates for: Alamance
+WARN [2021-08-24 04:35:47] Pitt (chain: 1): There were 4 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 04:35:47] Pitt (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 04:36:04] Completed estimates for: Pitt
+INFO [2021-08-24 04:36:06] Initialising estimates for: Guilford
+WARN [2021-08-24 04:38:26] Alamance: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 04:38:27] Alamance: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 04:38:27] Alamance: The largest R-hat is 1.31, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 04:38:27] Alamance: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 04:38:28] Alamance: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 04:39:35] Guilford: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 04:39:35] Guilford: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 04:39:35] Guilford: The largest R-hat is 1.97, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 04:39:35] Guilford: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 04:39:36] Guilford: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 04:46:58] Guilford (chain: 1): There were 84 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 04:46:58] Guilford (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 04:47:05] Alamance (chain: 1): There were 11 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 04:47:05] Alamance (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 04:47:15] Completed estimates for: Guilford
+INFO [2021-08-24 04:47:20] Completed estimates for: Alamance
+INFO [2021-08-24 04:47:21] Initialising estimates for: Forsyth
+INFO [2021-08-24 04:47:22] Initialising estimates for: Wake
+WARN [2021-08-24 04:50:02] Forsyth: There were 2 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 04:50:02] Forsyth: There were 44 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 04:50:02] Forsyth: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 04:50:02] Forsyth: The largest R-hat is 1.81, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 04:50:04] Forsyth: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 04:50:04] Forsyth: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 04:50:23] Wake: There were 21 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 04:50:23] Wake: There were 27 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 04:50:23] Wake: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 04:50:23] Wake: The largest R-hat is 1.61, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 04:50:25] Wake: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 04:50:25] Wake: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 04:58:55] Forsyth (chain: 1): There were 100 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 04:58:55] Forsyth (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 04:59:13] Completed estimates for: Forsyth
+INFO [2021-08-24 04:59:16] Initialising estimates for: Mecklenburg
+WARN [2021-08-24 05:02:47] Mecklenburg: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 05:02:47] Mecklenburg: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 05:02:48] Mecklenburg: The largest R-hat is 1.93, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 05:02:48] Mecklenburg: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 05:02:49] Mecklenburg: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 05:04:50] Wake (chain: 1): There were 16 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 05:04:50] Wake (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 05:05:09] Completed estimates for: Wake
+WARN [2021-08-24 05:13:37] Mecklenburg (chain: 1): There were 16 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 05:13:37] Mecklenburg (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 05:13:53] Completed estimates for: Mecklenburg
+INFO [2021-08-24 05:13:55] Runtime error in Carteret : Carteret: model fitting was timed out or failed - 
+INFO [2021-08-24 05:14:32] Initialising estimates for: Craven
+INFO [2021-08-24 05:14:33] Initialising estimates for: Moore
+WARN [2021-08-24 05:17:52] Moore: There were 1 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 05:17:52] Moore: There were 49 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 05:17:52] Moore: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 05:17:53] Moore: The largest R-hat is 1.24, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 05:17:53] Moore: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 05:17:53] Moore: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 05:18:04] Craven: There were 49 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 05:18:04] Craven: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 05:18:04] Craven: The largest R-hat is 1.3, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 05:18:04] Craven: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 05:18:05] Craven: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 05:27:13] Craven (chain: 1): There were 7 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 05:27:13] Craven (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 05:27:27] Completed estimates for: Craven
+INFO [2021-08-24 05:27:33] Initialising estimates for: Brunswick
+INFO [2021-08-24 05:29:24] Completed estimates for: Moore
+INFO [2021-08-24 05:29:27] Initialising estimates for: Randolph
+WARN [2021-08-24 05:31:11] Brunswick: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 05:31:11] Brunswick: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 05:31:11] Brunswick: The largest R-hat is 1.29, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 05:31:11] Brunswick: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 05:31:12] Brunswick: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 05:32:43] Randolph: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 05:32:43] Randolph: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 05:32:43] Randolph: The largest R-hat is 1.44, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 05:32:44] Randolph: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 05:32:44] Randolph: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 05:41:51] Randolph (chain: 1): There were 18 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 05:41:51] Randolph (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 05:42:05] Completed estimates for: Randolph
+INFO [2021-08-24 05:42:11] Initialising estimates for: Wayne
+WARN [2021-08-24 05:45:44] Wayne: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 05:45:44] Wayne: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 05:45:45] Wayne: The largest R-hat is 1.37, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 05:45:45] Wayne: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 05:45:45] Wayne: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 05:49:25] Brunswick (chain: 1): There were 4 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 05:49:25] Brunswick (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 05:49:39] Completed estimates for: Brunswick
+INFO [2021-08-24 05:49:43] Initialising estimates for: Catawba
+WARN [2021-08-24 05:51:57] Wayne (chain: 1): There were 11 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 05:51:57] Wayne (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 05:52:09] Completed estimates for: Wayne
+INFO [2021-08-24 05:52:11] Initialising estimates for: Rowan
+WARN [2021-08-24 05:53:24] Catawba: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 05:53:24] Catawba: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 05:53:24] Catawba: The largest R-hat is 1.37, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 05:53:24] Catawba: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 05:53:25] Catawba: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 05:55:14] Rowan: There were 1 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 05:55:14] Rowan: There were 44 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 05:55:14] Rowan: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 05:55:14] Rowan: The largest R-hat is 2.04, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 05:55:15] Rowan: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 05:55:15] Rowan: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 06:00:36] Catawba (chain: 1): There were 17 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 06:00:36] Catawba (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 06:00:50] Completed estimates for: Catawba
+INFO [2021-08-24 06:00:54] Initialising estimates for: Harnett
+WARN [2021-08-24 06:02:38] Rowan (chain: 1): There were 31 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 06:02:38] Rowan (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 06:02:51] Completed estimates for: Rowan
+INFO [2021-08-24 06:02:54] Initialising estimates for: Onslow
+WARN [2021-08-24 06:03:52] Harnett: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 06:03:52] Harnett: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 06:03:52] Harnett: The largest R-hat is 1.86, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 06:03:52] Harnett: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 06:03:53] Harnett: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 06:06:32] Onslow: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 06:06:32] Onslow: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 06:06:32] Onslow: The largest R-hat is 1.91, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 06:06:32] Onslow: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 06:06:33] Onslow: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 06:14:11] Harnett (chain: 1): There were 5 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 06:14:12] Harnett (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 06:14:24] Completed estimates for: Harnett
+INFO [2021-08-24 06:14:28] Initialising estimates for: Robeson
+WARN [2021-08-24 06:15:36] Robeson: There were 50 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 06:15:36] Robeson: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 06:15:36] Robeson: The largest R-hat is 2.16, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 06:15:36] Robeson: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 06:15:37] Robeson: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 06:15:54] Onslow (chain: 1): There were 14 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 06:15:54] Onslow (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 06:16:07] Completed estimates for: Onslow
+INFO [2021-08-24 06:16:09] Initialising estimates for: Cabarrus
+WARN [2021-08-24 06:19:44] Cabarrus: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 06:19:44] Cabarrus: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 06:19:45] Cabarrus: The largest R-hat is 1.68, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 06:19:45] Cabarrus: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 06:19:45] Cabarrus: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 06:21:22] Robeson (chain: 1): There were 23 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 06:21:22] Robeson (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 06:21:36] Completed estimates for: Robeson
+INFO [2021-08-24 06:21:38] Initialising estimates for: Davidson
+WARN [2021-08-24 06:24:21] Cabarrus (chain: 1): There were 29 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 06:24:21] Cabarrus (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 06:24:33] Completed estimates for: Cabarrus
+INFO [2021-08-24 06:24:36] Initialising estimates for: Iredell
+WARN [2021-08-24 06:25:03] Davidson: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 06:25:03] Davidson: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 06:25:04] Davidson: The largest R-hat is 1.68, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 06:25:04] Davidson: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 06:25:05] Davidson: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 06:27:38] Iredell: There were 3 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 06:27:38] Iredell: There were 41 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 06:27:38] Iredell: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 06:27:38] Iredell: The largest R-hat is 1.58, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 06:27:38] Iredell: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 06:27:39] Iredell: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 06:34:39] Davidson (chain: 1): There were 3 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 06:34:39] Davidson (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 06:34:53] Completed estimates for: Davidson
+INFO [2021-08-24 06:34:56] Initialising estimates for: Johnston
+WARN [2021-08-24 06:37:52] Johnston: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 06:37:52] Johnston: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 06:37:53] Johnston: The largest R-hat is 1.56, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 06:37:53] Johnston: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 06:37:54] Johnston: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 06:42:00] Iredell (chain: 1): There were 31 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 06:42:00] Iredell (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 06:42:14] Completed estimates for: Iredell
+INFO [2021-08-24 06:42:18] Initialising estimates for: Pitt
+WARN [2021-08-24 06:45:23] Johnston (chain: 1): There were 84 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 06:45:23] Johnston (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 06:45:36] Completed estimates for: Johnston
+INFO [2021-08-24 06:45:39] Initialising estimates for: Alamance
+WARN [2021-08-24 06:45:49] Pitt: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 06:45:49] Pitt: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 06:45:49] Pitt: The largest R-hat is 1.95, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 06:45:49] Pitt: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 06:45:50] Pitt: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 06:49:23] Alamance: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 06:49:23] Alamance: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 06:49:24] Alamance: The largest R-hat is 1.18, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 06:49:24] Alamance: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 06:49:25] Alamance: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 06:59:01] Alamance (chain: 1): There were 7 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 06:59:01] Alamance (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 06:59:05] Pitt (chain: 1): There were 1 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 06:59:05] Pitt (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 06:59:14] Completed estimates for: Alamance
+INFO [2021-08-24 06:59:18] Completed estimates for: Pitt
+INFO [2021-08-24 06:59:19] Initialising estimates for: Orange
+INFO [2021-08-24 06:59:19] Initialising estimates for: Henderson
+WARN [2021-08-24 07:02:49] Henderson: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 07:02:49] Henderson: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 07:02:49] Henderson: The largest R-hat is 1.39, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 07:02:49] Henderson: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 07:02:50] Orange: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 07:02:50] Orange: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 07:02:50] Orange: The largest R-hat is 1.2, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 07:02:50] Orange: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 07:02:50] Henderson: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 07:02:51] Orange: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 07:13:10] Orange (chain: 1): There were 27 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 07:13:10] Orange (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 07:13:23] Completed estimates for: Orange
+WARN [2021-08-24 07:14:08] Henderson (chain: 1): There were 25 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 07:14:08] Henderson (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 07:14:20] Completed estimates for: Henderson
+INFO [2021-08-24 07:14:23] Initialising estimates for: Carteret
+INFO [2021-08-24 07:14:23] Initialising estimates for: Rutherford
+WARN [2021-08-24 07:17:27] Carteret: There were 1 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 07:17:27] Carteret: There were 43 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 07:17:27] Carteret: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 07:17:27] Carteret: The largest R-hat is 1.23, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 07:17:28] Carteret: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 07:17:28] Carteret: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 07:17:56] Rutherford: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 07:17:56] Rutherford: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 07:17:56] Rutherford: The largest R-hat is 1.27, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 07:17:56] Rutherford: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 07:17:57] Rutherford: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 07:20:57] Carteret (chain: 1): There were 61 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 07:20:57] Carteret (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 07:21:10] Completed estimates for: Carteret
+INFO [2021-08-24 07:21:12] Initialising estimates for: Caldwell
+WARN [2021-08-24 07:24:37] Caldwell: There were 49 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 07:24:37] Caldwell: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 07:24:37] Caldwell: The largest R-hat is 1.39, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 07:24:37] Caldwell: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 07:24:38] Caldwell: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 07:27:35] Rutherford (chain: 1): There were 6 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 07:27:35] Rutherford (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 07:27:48] Completed estimates for: Rutherford
+INFO [2021-08-24 07:27:50] Initialising estimates for: Haywood
+WARN [2021-08-24 07:31:21] Haywood: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 07:31:21] Haywood: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 07:31:21] Haywood: The largest R-hat is 1.49, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 07:31:22] Haywood: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 07:31:23] Haywood: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+INFO [2021-08-24 07:33:17] Completed estimates for: Caldwell
+INFO [2021-08-24 07:33:20] Initialising estimates for: Chatham
+WARN [2021-08-24 07:36:50] Chatham: There were 49 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 07:36:50] Chatham: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 07:36:50] Chatham: The largest R-hat is 1.34, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 07:36:51] Chatham: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 07:36:52] Chatham: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 07:42:22] Haywood (chain: 1): There were 11 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 07:42:22] Haywood (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 07:42:36] Completed estimates for: Haywood
+INFO [2021-08-24 07:42:39] Initialising estimates for: Lincoln
+WARN [2021-08-24 07:46:31] Lincoln: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 07:46:31] Lincoln: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 07:46:32] Lincoln: The largest R-hat is 1.17, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 07:46:32] Lincoln: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 07:46:33] Lincoln: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 07:51:42] Chatham (chain: 1): There were 24 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 07:51:42] Chatham (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 07:51:55] Completed estimates for: Chatham
+INFO [2021-08-24 07:52:00] Initialising estimates for: Pender
+WARN [2021-08-24 07:55:35] Pender: There were 49 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 07:55:35] Pender: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 07:55:36] Pender: The largest R-hat is 1.43, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 07:55:36] Pender: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 07:55:37] Pender: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 07:55:49] Lincoln (chain: 1): There were 19 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 07:55:49] Lincoln (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 07:55:56] Lincoln (chain: 1): Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+INFO [2021-08-24 07:56:03] Completed estimates for: Lincoln
+INFO [2021-08-24 07:56:06] Initialising estimates for: Burke
+WARN [2021-08-24 08:00:19] Burke: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 08:00:19] Burke: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 08:00:19] Burke: The largest R-hat is 1.41, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 08:00:20] Burke: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 08:00:20] Burke: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 08:02:43] Pender (chain: 1): There were 13 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 08:02:43] Pender (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 08:02:58] Completed estimates for: Pender
+INFO [2021-08-24 08:03:01] Initialising estimates for: Cleveland
+WARN [2021-08-24 08:06:45] Cleveland: There were 2 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 08:06:45] Cleveland: There were 48 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 08:06:45] Cleveland: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 08:06:46] Cleveland: The largest R-hat is 1.3, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 08:06:46] Cleveland: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 08:06:47] Cleveland: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+INFO [2021-08-24 08:10:52] Completed estimates for: Burke
+INFO [2021-08-24 08:10:54] Initialising estimates for: Franklin
+WARN [2021-08-24 08:14:37] Franklin: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 08:14:37] Franklin: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 08:14:38] Franklin: The largest R-hat is 1.27, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 08:14:38] Franklin: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 08:14:39] Franklin: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 08:22:17] Franklin (chain: 1): There were 20 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 08:22:17] Franklin (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 08:22:29] Completed estimates for: Franklin
+INFO [2021-08-24 08:22:32] Initialising estimates for: Nash
+WARN [2021-08-24 08:22:54] Cleveland (chain: 1): There were 27 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 08:22:54] Cleveland (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 08:23:07] Completed estimates for: Cleveland
+INFO [2021-08-24 08:23:10] Initialising estimates for: Rockingham
+WARN [2021-08-24 08:25:43] Nash: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 08:25:43] Nash: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 08:25:43] Nash: The largest R-hat is 1.34, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 08:25:44] Nash: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 08:25:45] Nash: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 08:26:09] Rockingham: There were 1 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 08:26:09] Rockingham: There were 46 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 08:26:09] Rockingham: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 08:26:10] Rockingham: The largest R-hat is 1.37, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 08:26:10] Rockingham: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 08:26:10] Rockingham: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 08:33:10] Rockingham (chain: 1): There were 131 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 08:33:10] Rockingham (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 08:33:23] Completed estimates for: Rockingham
+INFO [2021-08-24 08:33:26] Initialising estimates for: Sampson
+WARN [2021-08-24 08:34:40] Nash (chain: 1): There were 5 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 08:34:40] Nash (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 08:34:53] Completed estimates for: Nash
+INFO [2021-08-24 08:34:55] Initialising estimates for: Stanly
+WARN [2021-08-24 08:36:33] Sampson: There were 1 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 08:36:33] Sampson: There were 49 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 08:36:33] Sampson: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 08:36:33] Sampson: The largest R-hat is 1.3, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 08:36:33] Sampson: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 08:36:34] Sampson: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 08:38:22] Stanly: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 08:38:22] Stanly: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 08:38:22] Stanly: The largest R-hat is 1.35, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 08:38:22] Stanly: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 08:38:24] Stanly: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 08:45:17] Sampson (chain: 1): There were 6 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 08:45:17] Sampson (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 08:45:31] Completed estimates for: Sampson
+INFO [2021-08-24 08:45:33] Initialising estimates for: Wilson
+WARN [2021-08-24 08:48:04] Stanly (chain: 1): There were 19 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 08:48:04] Stanly (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 08:48:17] Completed estimates for: Stanly
+INFO [2021-08-24 08:48:19] Initialising estimates for: Lee
+WARN [2021-08-24 08:49:27] Wilson: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 08:49:27] Wilson: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 08:49:28] Wilson: The largest R-hat is 1.24, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 08:49:28] Wilson: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 08:49:29] Wilson: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 08:52:14] Lee: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 08:52:14] Lee: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 08:52:15] Lee: The largest R-hat is 1.25, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 08:52:15] Lee: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 08:52:16] Lee: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 08:55:32] Wilson (chain: 1): There were 7 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 08:55:32] Wilson (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 08:55:46] Completed estimates for: Wilson
+INFO [2021-08-24 08:55:51] Initialising estimates for: Surry
+WARN [2021-08-24 08:59:24] Surry: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 08:59:24] Surry: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 08:59:26] Surry: The largest R-hat is 1.18, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 08:59:26] Surry: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 08:59:26] Surry: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 09:03:42] Lee (chain: 1): There were 2 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 09:03:42] Lee (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 09:03:55] Completed estimates for: Lee
+INFO [2021-08-24 09:03:59] Initialising estimates for: Wilkes
+WARN [2021-08-24 09:07:58] Wilkes: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 09:07:58] Wilkes: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 09:07:58] Wilkes: The largest R-hat is 1.97, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 09:07:58] Wilkes: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 09:07:59] Wilkes: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 09:09:44] Surry (chain: 1): There were 3 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 09:09:44] Surry (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 09:09:59] Completed estimates for: Surry
+WARN [2021-08-24 09:17:01] Wilkes (chain: 1): There were 4 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 09:17:01] Wilkes (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 09:17:15] Completed estimates for: Wilkes
+INFO [2021-08-24 09:17:17] Initialising estimates for: Halifax
+INFO [2021-08-24 09:17:17] Initialising estimates for: Jackson
+WARN [2021-08-24 09:20:55] Halifax: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 09:20:55] Halifax: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 09:20:56] Halifax: The largest R-hat is 1.27, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 09:20:56] Halifax: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 09:20:58] Halifax: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 09:20:59] Jackson: There were 49 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 09:20:59] Jackson: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 09:20:59] Jackson: The largest R-hat is 1.27, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 09:21:00] Jackson: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 09:21:01] Jackson: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 09:28:30] Halifax (chain: 1): There were 3 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 09:28:30] Halifax (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 09:28:43] Completed estimates for: Halifax
+INFO [2021-08-24 09:28:45] Initialising estimates for: McDowell
+WARN [2021-08-24 09:30:06] Jackson (chain: 1): There were 2 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 09:30:06] Jackson (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 09:30:19] Completed estimates for: Jackson
+INFO [2021-08-24 09:30:21] Initialising estimates for: Alexander
+WARN [2021-08-24 09:32:33] McDowell: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 09:32:33] McDowell: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 09:32:33] McDowell: The largest R-hat is 1.38, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 09:32:33] McDowell: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 09:32:35] McDowell: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 09:34:08] Alexander: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 09:34:08] Alexander: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 09:34:08] Alexander: The largest R-hat is 1.27, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 09:34:09] Alexander: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 09:34:10] Alexander: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 09:39:30] Alexander (chain: 1): There were 4 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 09:39:30] Alexander (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 09:39:43] Completed estimates for: Alexander
+INFO [2021-08-24 09:39:45] Initialising estimates for: Beaufort
+WARN [2021-08-24 09:42:03] McDowell (chain: 1): There were 6 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 09:42:03] McDowell (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 09:42:16] Completed estimates for: McDowell
+INFO [2021-08-24 09:42:18] Initialising estimates for: Columbus
+WARN [2021-08-24 09:43:19] Beaufort: There were 49 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 09:43:19] Beaufort: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 09:43:19] Beaufort: The largest R-hat is 1.23, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 09:43:20] Beaufort: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 09:43:21] Beaufort: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 09:46:13] Columbus: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 09:46:13] Columbus: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 09:46:13] Columbus: The largest R-hat is 1.43, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 09:46:14] Columbus: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 09:46:14] Columbus: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 09:47:45] Beaufort (chain: 1): There were 14 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 09:47:45] Beaufort (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 09:47:59] Completed estimates for: Beaufort
+INFO [2021-08-24 09:48:01] Initialising estimates for: Davie
+WARN [2021-08-24 09:52:17] Davie: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 09:52:17] Davie: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 09:52:17] Davie: The largest R-hat is 1.28, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 09:52:18] Davie: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 09:52:18] Davie: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 09:56:59] Columbus (chain: 1): There were 5 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 09:56:59] Columbus (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 09:57:13] Completed estimates for: Columbus
+INFO [2021-08-24 09:57:17] Initialising estimates for: Duplin
+WARN [2021-08-24 10:00:56] Duplin: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 10:00:56] Duplin: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 10:00:56] Duplin: The largest R-hat is 2.04, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 10:00:57] Duplin: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 10:00:57] Duplin: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 10:09:21] Duplin (chain: 1): There were 22 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 10:09:21] Duplin (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 10:09:34] Completed estimates for: Duplin
+INFO [2021-08-24 10:09:36] Initialising estimates for: Edgecombe
+WARN [2021-08-24 10:09:37] Davie (chain: 1): There were 9 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 10:09:37] Davie (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 10:09:50] Completed estimates for: Davie
+INFO [2021-08-24 10:09:52] Initialising estimates for: Person
+WARN [2021-08-24 10:13:13] Edgecombe: There were 49 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 10:13:13] Edgecombe: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 10:13:13] Edgecombe: The largest R-hat is 1.19, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 10:13:13] Edgecombe: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 10:13:14] Edgecombe: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 10:13:18] Person: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 10:13:18] Person: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 10:13:18] Person: The largest R-hat is 1.56, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 10:13:18] Person: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 10:13:19] Person: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 10:20:29] Edgecombe (chain: 1): There were 5 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 10:20:29] Edgecombe (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 10:20:41] Completed estimates for: Edgecombe
+INFO [2021-08-24 10:20:43] Initialising estimates for: Stokes
+WARN [2021-08-24 10:21:43] Person (chain: 1): There were 25 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 10:21:43] Person (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 10:21:56] Completed estimates for: Person
+INFO [2021-08-24 10:21:57] Initialising estimates for: Lenoir
+WARN [2021-08-24 10:24:14] Stokes: There were 49 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 10:24:14] Stokes: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 10:24:14] Stokes: The largest R-hat is 1.56, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 10:24:15] Stokes: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 10:24:15] Stokes: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 10:25:34] Lenoir: There were 49 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 10:25:34] Lenoir: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 10:25:35] Lenoir: The largest R-hat is 1.34, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 10:25:35] Lenoir: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 10:25:36] Lenoir: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 10:36:39] Stokes (chain: 1): There were 39 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 10:36:39] Stokes (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 10:36:52] Completed estimates for: Stokes
+INFO [2021-08-24 10:36:56] Initialising estimates for: Pasquotank
+WARN [2021-08-24 10:37:32] Lenoir (chain: 1): There were 3 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 10:37:32] Lenoir (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 10:37:44] Completed estimates for: Lenoir
+INFO [2021-08-24 10:37:46] Initialising estimates for: Richmond
+WARN [2021-08-24 10:40:24] Pasquotank: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 10:40:24] Pasquotank: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 10:40:25] Pasquotank: The largest R-hat is 1.32, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 10:40:25] Pasquotank: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 10:40:25] Pasquotank: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 10:41:34] Richmond: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 10:41:34] Richmond: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 10:41:35] Richmond: The largest R-hat is 1.39, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 10:41:35] Richmond: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 10:41:36] Richmond: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 10:44:11] Pasquotank (chain: 1): There were 15 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 10:44:11] Pasquotank (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 10:44:24] Completed estimates for: Pasquotank
+INFO [2021-08-24 10:44:27] Initialising estimates for: Hoke
+WARN [2021-08-24 10:48:36] Hoke: There were 50 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 10:48:36] Hoke: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 10:48:36] Hoke: The largest R-hat is 1.27, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 10:48:37] Hoke: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 10:48:37] Hoke: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 10:52:18] Richmond (chain: 1): There were 2 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 10:52:18] Richmond (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 10:52:32] Completed estimates for: Richmond
+INFO [2021-08-24 10:52:35] Initialising estimates for: Watauga
+WARN [2021-08-24 10:56:12] Hoke (chain: 1): There were 3 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 10:56:12] Hoke (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 10:56:23] Watauga: There were 49 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 10:56:23] Watauga: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 10:56:23] Watauga: The largest R-hat is 1.31, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 10:56:24] Watauga: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 10:56:24] Watauga: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+INFO [2021-08-24 10:56:25] Completed estimates for: Hoke
+INFO [2021-08-24 10:56:27] Initialising estimates for: Vance
+WARN [2021-08-24 11:00:32] Vance: There were 45 transitions after warmup that exceeded the maximum treedepth. Increase max_treedepth above 13. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded - 
+WARN [2021-08-24 11:00:32] Vance: Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 11:00:33] Vance: The largest R-hat is 1.23, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 11:00:33] Vance: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 11:00:34] Vance: Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+WARN [2021-08-24 11:07:47] Vance (chain: 1): There were 9 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 11:07:47] Vance (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 11:08:04] Completed estimates for: Vance
+INFO [2021-08-24 11:08:10] Initialising estimates for: Granville
+INFO [2021-08-24 07:44:47] Initialising estimates for: Anson
+WARN [2021-08-24 07:49:58] Anson (chain: 1): There were 161 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 07:49:58] Anson (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 07:50:01] Anson (chain: 1): The largest R-hat is 1.06, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-08-24 07:50:04] Anson (chain: 1): Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 07:50:07] Anson (chain: 1): Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+INFO [2021-08-24 07:50:18] Completed estimates for: Anson
+INFO [2021-08-24 07:50:18] Initialising estimates for: Bertie
+WARN [2021-08-24 07:58:17] Bertie (chain: 1): There were 43 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 07:58:17] Bertie (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 07:58:34] Completed estimates for: Bertie
+INFO [2021-08-24 07:58:34] Initialising estimates for: Bladen
+WARN [2021-08-24 08:05:33] Bladen (chain: 1): There were 1 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 08:05:33] Bladen (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 08:05:49] Completed estimates for: Bladen
+INFO [2021-08-24 08:05:49] Initialising estimates for: Camden
+WARN [2021-08-24 08:08:33] Camden (chain: 1): There were 25 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 08:08:33] Camden (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 08:08:49] Completed estimates for: Camden
+INFO [2021-08-24 08:08:49] Initialising estimates for: Carteret
+WARN [2021-08-24 08:14:46] Carteret (chain: 1): There were 238 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 08:14:46] Carteret (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 08:14:51] Carteret (chain: 1): Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 08:14:54] Carteret (chain: 1): Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+INFO [2021-08-24 08:15:02] Completed estimates for: Carteret
+INFO [2021-08-24 08:15:02] Initialising estimates for: Chowan
+WARN [2021-08-24 08:19:47] Chowan (chain: 1): There were 25 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 08:19:47] Chowan (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 08:20:03] Completed estimates for: Chowan
+INFO [2021-08-24 08:20:03] Initialising estimates for: Gates
+WARN [2021-08-24 08:22:29] Gates (chain: 1): There were 43 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 08:22:29] Gates (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 08:22:45] Completed estimates for: Gates
+INFO [2021-08-24 08:22:45] Initialising estimates for: Halifax
+WARN [2021-08-24 08:27:04] Halifax (chain: 1): There were 14 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 08:27:04] Halifax (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 08:27:19] Completed estimates for: Halifax
+INFO [2021-08-24 08:27:19] Initialising estimates for: Hyde
+WARN [2021-08-24 08:29:46] Hyde (chain: 1): There were 25 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 08:29:46] Hyde (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 08:30:01] Completed estimates for: Hyde
+INFO [2021-08-24 08:30:01] Initialising estimates for: Jackson
+WARN [2021-08-24 08:36:55] Jackson (chain: 1): There were 4 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 08:36:55] Jackson (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 08:37:10] Completed estimates for: Jackson
+INFO [2021-08-24 08:37:10] Initialising estimates for: McDowell
+WARN [2021-08-24 08:45:36] McDowell (chain: 1): There were 26 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 08:45:36] McDowell (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 08:45:52] Completed estimates for: McDowell
+INFO [2021-08-24 08:45:52] Initialising estimates for: Rutherford
+WARN [2021-08-24 08:54:27] Rutherford (chain: 1): There were 28 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 08:54:27] Rutherford (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 08:54:43] Completed estimates for: Rutherford
+INFO [2021-08-24 08:54:43] Initialising estimates for: Warren
+WARN [2021-08-24 08:57:29] Warren (chain: 1): There were 41 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 08:57:29] Warren (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 08:57:44] Completed estimates for: Warren
+INFO [2021-08-24 08:57:44] Initialising estimates for: Alexander
+WARN [2021-08-24 09:03:03] Alexander (chain: 1): There were 4 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 09:03:03] Alexander (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 09:03:18] Completed estimates for: Alexander
+INFO [2021-08-24 09:03:18] Initialising estimates for: Alleghany
+WARN [2021-08-24 09:06:24] Alleghany (chain: 1): There were 78 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 09:06:24] Alleghany (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 09:06:40] Completed estimates for: Alleghany
+INFO [2021-08-24 09:06:40] Initialising estimates for: Avery
+WARN [2021-08-24 09:09:48] Avery (chain: 1): There were 28 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 09:09:48] Avery (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 09:10:03] Completed estimates for: Avery
+INFO [2021-08-24 09:10:03] Initialising estimates for: Beaufort
+WARN [2021-08-24 09:15:27] Beaufort (chain: 1): There were 9 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 09:15:27] Beaufort (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 09:15:43] Completed estimates for: Beaufort
+INFO [2021-08-24 09:15:43] Initialising estimates for: Caldwell
+WARN [2021-08-24 09:22:38] Caldwell (chain: 1): There were 4 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 09:22:38] Caldwell (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 09:22:53] Completed estimates for: Caldwell
+INFO [2021-08-24 09:22:53] Initialising estimates for: Caswell
+WARN [2021-08-24 09:26:10] Caswell (chain: 1): There were 48 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 09:26:10] Caswell (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 09:26:25] Completed estimates for: Caswell
+INFO [2021-08-24 09:26:25] Initialising estimates for: Cherokee
+WARN [2021-08-24 09:31:30] Cherokee (chain: 1): There were 26 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 09:31:30] Cherokee (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 09:31:45] Completed estimates for: Cherokee
+INFO [2021-08-24 09:31:45] Initialising estimates for: Clay
+INFO [2021-08-24 09:34:55] Completed estimates for: Clay
+INFO [2021-08-24 09:34:55] Initialising estimates for: Columbus
+WARN [2021-08-24 09:44:41] Columbus (chain: 1): There were 3 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 09:44:41] Columbus (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 09:44:57] Completed estimates for: Columbus
+INFO [2021-08-24 09:44:57] Initialising estimates for: Craven
+WARN [2021-08-24 09:52:35] Craven (chain: 1): There were 56 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 09:52:35] Craven (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 09:52:39] Craven (chain: 1): Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-08-24 09:52:43] Craven (chain: 1): Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+INFO [2021-08-24 09:52:51] Completed estimates for: Craven
+INFO [2021-08-24 09:52:51] Initialising estimates for: Currituck
+WARN [2021-08-24 09:57:49] Currituck (chain: 1): There were 29 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 09:57:49] Currituck (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 09:58:05] Completed estimates for: Currituck
+INFO [2021-08-24 09:58:05] Initialising estimates for: Dare
+WARN [2021-08-24 10:03:51] Dare (chain: 1): There were 29 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 10:03:51] Dare (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-08-24 10:04:00] Dare (chain: 1): Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+INFO [2021-08-24 10:04:08] Completed estimates for: Dare
+INFO [2021-08-24 10:04:08] Initialising estimates for: Davie
+WARN [2021-08-24 10:13:39] Davie (chain: 1): There were 14 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 10:13:39] Davie (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 10:13:54] Completed estimates for: Davie
+INFO [2021-08-24 10:13:54] Initialising estimates for: Duplin
+WARN [2021-08-24 10:23:09] Duplin (chain: 1): There were 6 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 10:23:09] Duplin (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 10:23:24] Completed estimates for: Duplin
+INFO [2021-08-24 10:23:24] Initialising estimates for: Edgecombe
+WARN [2021-08-24 10:32:24] Edgecombe (chain: 1): There were 11 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 10:32:25] Edgecombe (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 10:32:39] Completed estimates for: Edgecombe
+INFO [2021-08-24 10:32:39] Initialising estimates for: Graham
+WARN [2021-08-24 10:37:15] Graham (chain: 1): There were 22 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 10:37:15] Graham (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 10:37:30] Completed estimates for: Graham
+INFO [2021-08-24 10:37:30] Initialising estimates for: Granville
+WARN [2021-08-24 10:42:53] Granville (chain: 1): There were 12 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 10:42:53] Granville (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 10:43:08] Completed estimates for: Granville
+INFO [2021-08-24 10:43:08] Initialising estimates for: Greene
+WARN [2021-08-24 10:48:44] Greene (chain: 1): There were 6 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 10:48:44] Greene (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 10:48:59] Completed estimates for: Greene
+INFO [2021-08-24 10:48:59] Initialising estimates for: Haywood
+WARN [2021-08-24 10:57:22] Haywood (chain: 1): There were 5 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 10:57:22] Haywood (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 10:57:38] Completed estimates for: Haywood
+INFO [2021-08-24 10:57:38] Initialising estimates for: Henderson
+WARN [2021-08-24 11:09:27] Henderson (chain: 1): There were 16 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 11:09:27] Henderson (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 11:09:42] Completed estimates for: Henderson
+INFO [2021-08-24 11:09:42] Initialising estimates for: Hertford
+WARN [2021-08-24 11:14:23] Hertford (chain: 1): There were 32 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 11:14:23] Hertford (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 11:14:38] Completed estimates for: Hertford
+INFO [2021-08-24 11:14:38] Initialising estimates for: Jones
+WARN [2021-08-24 11:18:54] Jones (chain: 1): There were 36 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 11:18:54] Jones (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 11:19:09] Completed estimates for: Jones
+INFO [2021-08-24 11:19:09] Initialising estimates for: Macon
+WARN [2021-08-24 11:28:52] Macon (chain: 1): There were 9 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-08-24 11:28:52] Macon (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-08-24 11:29:07] Completed estimates for: Macon
+INFO [2021-08-24 11:29:07] Initialising estimates for: Madison
