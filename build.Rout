@@ -23,4 +23,37 @@ Type 'q()' to quit R.
 + Sys.sleep(60*30)
 + }
 Using: cone as the data source
-Last date available: 2021-09-07
+Last date available: 2021-09-08
+> 
+> cat("starting")
+starting> cat("\nFirst Batch\n")
+
+First Batch
+> system("R CMD BATCH --vanilla generate-estimates-1.R")
+> cat("\nSecond Batch\n")
+
+Second Batch
+> system("R CMD BATCH --vanilla generate-estimates-2.R")
+> cat("\nSecond Batch\n")
+
+Second Batch
+> system("R CMD BATCH --vanilla generate-estimates-3.R")
+> cat("\nProcessing Failures\n")
+
+Processing Failures
+> system("R CMD BATCH --vanilla generate-estimates-4.R")
+> cat("did state and loca again")
+did state and loca again> system("R CMD BATCH --vanilla re-process-missing.R")
+> cat("done with estimates")
+done with estimates> system("R CMD BATCH --vanilla process-outputs.R")
+> cat("done with processing")
+done with processing> system("R CMD BATCH --vanilla combine-forecasts.R")
+> 
+> cat("done with combination")
+done with combination> 
+> system("R CMD BATCH --vanilla  correct-state.R")
+> system("R CMD BATCH --vanilla  prob_spread.R")
+> 
+> proc.time()
+      user     system    elapsed 
+192896.288    822.368  52389.858 
