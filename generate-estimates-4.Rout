@@ -48,7 +48,7 @@ The following object is masked from ‘package:EpiNow2’:
 > 
 > dat <- nccovid::get_covid_county_plus()
 Using: cone as the data source
-Last date available: 2021-09-23
+Last date available: 2021-09-24
 > 
 > # Wait Until 15 Confirmed cases by county cumulative and within last 16 weeks
 > 
@@ -172,22 +172,26 @@ prep completed>
 + 		     stan = stan_opts(samples = 3000, control = list(adapt_delta = 0.95, max_treedepth = 15),
 +                      chains = 4, cores = 8,
 +                       max_execution_time = 60*60*5, future = FALSE), rt = rt_opts(prior = list(mean = 1.25, sd = 0.25))))
-INFO [2021-09-24 04:24:40] Producing following optional outputs: regions, summary, samples, plots, latest
+INFO [2021-09-25 03:57:46] Producing following optional outputs: regions, summary, samples, plots, latest
 Logging threshold set at INFO for the EpiNow2 logger
-Writing EpiNow2 logs to the console and: /datadisk/refresh-restimates/epinow-logs/regional-epinow/2021-09-23.log
+Writing EpiNow2 logs to the console and: /datadisk/refresh-restimates/epinow-logs/regional-epinow/2021-09-24.log
 Logging threshold set at INFO for the EpiNow2.epinow logger
-Writing EpiNow2.epinow logs to: /datadisk/refresh-restimates/epinow-logs/epinow/2021-09-23.log
-INFO [2021-09-24 04:24:40] Reporting estimates using data up to: 2021-09-23
-INFO [2021-09-24 04:24:40] Saving estimates to : /datadisk/refresh-restimates/rt-estimates-out
-INFO [2021-09-24 04:24:40] Producing estimates for: 102 regions
-INFO [2021-09-24 04:24:40] Regions excluded: 0 regions
-INFO [2021-09-24 10:42:40] Completed regional estimates
-INFO [2021-09-24 10:42:40] Regions with estimates: 102
-INFO [2021-09-24 10:42:40] Regions with runtime errors: 0
-INFO [2021-09-24 10:42:40] Producing summary
-INFO [2021-09-24 10:42:40] No summary directory specified so returning summary output
-INFO [2021-09-24 10:42:41] Saving timings information to : /datadisk/refresh-restimates/rt-estimates-out
+Writing EpiNow2.epinow logs to: /datadisk/refresh-restimates/epinow-logs/epinow/2021-09-24.log
+INFO [2021-09-25 03:57:46] Reporting estimates using data up to: 2021-09-24
+INFO [2021-09-25 03:57:46] Saving estimates to : /datadisk/refresh-restimates/rt-estimates-out
+INFO [2021-09-25 03:57:46] Producing estimates for: 102 regions
+INFO [2021-09-25 03:57:46] Regions excluded: 0 regions
+[[1]]
+Stan model 'estimate_infections' does not contain samples.
+
+here are whatever error messages were returned
+INFO [2021-09-25 09:42:12] Completed regional estimates
+INFO [2021-09-25 09:42:12] Regions with estimates: 102
+INFO [2021-09-25 09:42:12] Regions with runtime errors: 0
+INFO [2021-09-25 09:42:12] Producing summary
+INFO [2021-09-25 09:42:12] No summary directory specified so returning summary output
+INFO [2021-09-25 09:42:14] Saving timings information to : /datadisk/refresh-restimates/rt-estimates-out
 > 
 > proc.time()
      user    system   elapsed 
-72865.021   246.063 22689.248 
+65369.399   247.474 20675.823 
