@@ -23,7 +23,7 @@ Type 'q()' to quit R.
 + Sys.sleep(60*30)
 + }
 Using: cone as the data source
-Last date available: 2021-10-05
+Last date available: 2021-10-06
 > 
 > cat("starting")
 starting> cat("\nFirst Batch\n")
@@ -56,4 +56,4 @@ done with combination>
 > 
 > proc.time()
       user     system    elapsed 
-195810.503    682.699  50226.012 
+200807.777    675.093  50513.176 
