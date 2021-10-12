@@ -48,7 +48,7 @@ The following object is masked from ‘package:EpiNow2’:
 > 
 > dat <- nccovid::get_covid_county_plus()
 Using: cone as the data source
-Last date available: 2021-10-08
+Last date available: 2021-10-11
 > 
 > # Wait Until 15 Confirmed cases by county cumulative and within last 16 weeks
 > 
@@ -172,26 +172,26 @@ prep completed>
 + 		     stan = stan_opts(samples = 3000, control = list(adapt_delta = 0.95, max_treedepth = 15),
 +                      chains = 4, cores = 8,
 +                       max_execution_time = 60*60*5, future = FALSE), rt = rt_opts(prior = list(mean = 1.25, sd = 0.25))))
-INFO [2021-10-09 04:22:47] Producing following optional outputs: regions, summary, samples, plots, latest
+INFO [2021-10-12 04:33:05] Producing following optional outputs: regions, summary, samples, plots, latest
 Logging threshold set at INFO for the EpiNow2 logger
-Writing EpiNow2 logs to the console and: /datadisk/refresh-restimates/epinow-logs/regional-epinow/2021-10-08.log
+Writing EpiNow2 logs to the console and: /datadisk/refresh-restimates/epinow-logs/regional-epinow/2021-10-11.log
 Logging threshold set at INFO for the EpiNow2.epinow logger
-Writing EpiNow2.epinow logs to: /datadisk/refresh-restimates/epinow-logs/epinow/2021-10-08.log
-INFO [2021-10-09 04:22:47] Reporting estimates using data up to: 2021-10-08
-INFO [2021-10-09 04:22:47] Saving estimates to : /datadisk/refresh-restimates/rt-estimates-out
-INFO [2021-10-09 04:22:47] Producing estimates for: 102 regions
-INFO [2021-10-09 04:22:47] Regions excluded: 0 regions
+Writing EpiNow2.epinow logs to: /datadisk/refresh-restimates/epinow-logs/epinow/2021-10-11.log
+INFO [2021-10-12 04:33:05] Reporting estimates using data up to: 2021-10-11
+INFO [2021-10-12 04:33:05] Saving estimates to : /datadisk/refresh-restimates/rt-estimates-out
+INFO [2021-10-12 04:33:05] Producing estimates for: 102 regions
+INFO [2021-10-12 04:33:05] Regions excluded: 0 regions
 [[1]]
 Stan model 'estimate_infections' does not contain samples.
 
 here are whatever error messages were returned
-INFO [2021-10-09 09:59:37] Completed regional estimates
-INFO [2021-10-09 09:59:37] Regions with estimates: 102
-INFO [2021-10-09 09:59:37] Regions with runtime errors: 0
-INFO [2021-10-09 09:59:37] Producing summary
-INFO [2021-10-09 09:59:37] No summary directory specified so returning summary output
-INFO [2021-10-09 09:59:39] Saving timings information to : /datadisk/refresh-restimates/rt-estimates-out
+INFO [2021-10-12 10:24:02] Completed regional estimates
+INFO [2021-10-12 10:24:02] Regions with estimates: 102
+INFO [2021-10-12 10:24:02] Regions with runtime errors: 0
+INFO [2021-10-12 10:24:02] Producing summary
+INFO [2021-10-12 10:24:02] No summary directory specified so returning summary output
+INFO [2021-10-12 10:24:04] Saving timings information to : /datadisk/refresh-restimates/rt-estimates-out
 > 
 > proc.time()
      user    system   elapsed 
-64378.510   249.337 20219.817 
+67936.034   254.552 21067.324 
