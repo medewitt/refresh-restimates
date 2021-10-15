@@ -48,7 +48,7 @@ The following object is masked from ‘package:EpiNow2’:
 > 
 > dat <- nccovid::get_covid_county_plus()
 Using: cone as the data source
-Last date available: 2021-10-13
+Last date available: 2021-10-14
 > 
 > # Wait Until 15 Confirmed cases by county cumulative and within last 16 weeks
 > 
@@ -172,15 +172,15 @@ prep completed>
 + 		     stan = stan_opts(samples = 3000, control = list(adapt_delta = 0.95, max_treedepth = 15),
 +                      chains = 4, cores = 8,
 +                       max_execution_time = 60*60*5, future = FALSE), rt = rt_opts(prior = list(mean = 1.25, sd = 0.25))))
-INFO [2021-10-14 05:09:05] Producing following optional outputs: regions, summary, samples, plots, latest
+INFO [2021-10-15 04:34:02] Producing following optional outputs: regions, summary, samples, plots, latest
 Logging threshold set at INFO for the EpiNow2 logger
-Writing EpiNow2 logs to the console and: /datadisk/refresh-restimates/epinow-logs/regional-epinow/2021-10-13.log
+Writing EpiNow2 logs to the console and: /datadisk/refresh-restimates/epinow-logs/regional-epinow/2021-10-14.log
 Logging threshold set at INFO for the EpiNow2.epinow logger
-Writing EpiNow2.epinow logs to: /datadisk/refresh-restimates/epinow-logs/epinow/2021-10-13.log
-INFO [2021-10-14 05:09:05] Reporting estimates using data up to: 2021-10-13
-INFO [2021-10-14 05:09:05] Saving estimates to : /datadisk/refresh-restimates/rt-estimates-out
-INFO [2021-10-14 05:09:05] Producing estimates for: 102 regions
-INFO [2021-10-14 05:09:05] Regions excluded: 0 regions
+Writing EpiNow2.epinow logs to: /datadisk/refresh-restimates/epinow-logs/epinow/2021-10-14.log
+INFO [2021-10-15 04:34:02] Reporting estimates using data up to: 2021-10-14
+INFO [2021-10-15 04:34:02] Saving estimates to : /datadisk/refresh-restimates/rt-estimates-out
+INFO [2021-10-15 04:34:02] Producing estimates for: 102 regions
+INFO [2021-10-15 04:34:02] Regions excluded: 0 regions
 [[1]]
 Stan model 'estimate_infections' does not contain samples.
 
@@ -189,13 +189,13 @@ here are whatever error messages were returned
 Stan model 'estimate_infections' does not contain samples.
 
 here are whatever error messages were returned
-INFO [2021-10-14 11:25:26] Completed regional estimates
-INFO [2021-10-14 11:25:26] Regions with estimates: 102
-INFO [2021-10-14 11:25:26] Regions with runtime errors: 0
-INFO [2021-10-14 11:25:26] Producing summary
-INFO [2021-10-14 11:25:26] No summary directory specified so returning summary output
-INFO [2021-10-14 11:25:28] Saving timings information to : /datadisk/refresh-restimates/rt-estimates-out
+INFO [2021-10-15 10:35:04] Completed regional estimates
+INFO [2021-10-15 10:35:04] Regions with estimates: 102
+INFO [2021-10-15 10:35:04] Regions with runtime errors: 0
+INFO [2021-10-15 10:35:04] Producing summary
+INFO [2021-10-15 10:35:04] No summary directory specified so returning summary output
+INFO [2021-10-15 10:35:06] Saving timings information to : /datadisk/refresh-restimates/rt-estimates-out
 > 
 > proc.time()
-    user   system  elapsed 
-71052.47   254.42 22591.22 
+     user    system   elapsed 
+69261.100   242.909 21672.736 
