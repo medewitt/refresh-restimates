@@ -1,6 +1,6 @@
-cd /mnt/resource/refresh-restimates;
+cd /datadisk/refresh-restimates;
 #git pull origin master
-echo 'pull lates'
+echo 'pull latest'
 Rscript -e 'gert::git_pull()'
 
 echo 'begin the build'

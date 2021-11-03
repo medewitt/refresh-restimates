@@ -105,7 +105,7 @@ if(debug){
 															 generation_time = generation_time,
 															 target_folder = here::here("rt-estimates-out"),
 															 logs = here::here("epinow-logs"),
-															 non_zero_points = 14, horizon = 14, 
+															 non_zero_points = 14, horizon = 28, 
 															 delays = delay_opts(incubation_period,
 															 										reporting_delay),
 															 stan = stan_opts(cores = 8, chains = 4,control = list(adapt_delta = 0.95, max_treedepth = 14),
