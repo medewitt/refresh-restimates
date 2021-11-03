@@ -205,7 +205,65 @@ The following objects are masked from ‘package:base’:
 + 																	 rt = rt_opts(prior = list(mean = 1.25, sd = 0.1))))
 + plan("sequential")
 + }
+
+Attaching package: ‘data.table’
+
+The following objects are masked from ‘package:dplyr’:
+
+    between, first, last
+
+
+Attaching package: ‘purrr’
+
+The following object is masked from ‘package:data.table’:
+
+    transpose
+
+The following object is masked from ‘package:magrittr’:
+
+    set_names
+
+The following object is masked from ‘package:EpiNow2’:
+
+    update_list
+
+Using: cone as the data source
+Last date available: 2021-11-02
+prep completedRunning the full modelINFO [2021-11-03 06:29:22] Producing following optional outputs: regions, summary, samples, plots, latest
+Logging threshold set at INFO for the EpiNow2 logger
+Writing EpiNow2 logs to the console and: /datadisk/refresh-restimates/epinow-logs/regional-epinow/2021-11-02.log
+Logging threshold set at INFO for the EpiNow2.epinow logger
+Writing EpiNow2.epinow logs to: /datadisk/refresh-restimates/epinow-logs/epinow/2021-11-02.log
+INFO [2021-11-03 06:29:22] Reporting estimates using data up to: 2021-11-02
+INFO [2021-11-03 06:29:22] Saving estimates to : /datadisk/refresh-restimates/rt-estimates-out
+INFO [2021-11-03 06:29:22] Producing estimates for: 102 regions
+INFO [2021-11-03 06:29:22] Regions excluded: 0 regions
+INFO [2021-11-03 10:45:41] Completed regional estimates
+INFO [2021-11-03 10:45:41] Regions with estimates: 55
+INFO [2021-11-03 10:45:41] Regions with runtime errors: 47
+INFO [2021-11-03 10:45:41] Producing summary
+INFO [2021-11-03 10:45:41] No summary directory specified so returning summary output
+INFO [2021-11-03 10:45:42] Saving timings information to : /datadisk/refresh-restimates/rt-estimates-out
+Warning messages:
+1: In min.default(numeric(0), na.rm = TRUE) :
+  no non-missing arguments to min; returning Inf
+2: In max.default(numeric(0), na.rm = TRUE) :
+  no non-missing arguments to max; returning -Inf
+3: In max.default(numeric(0), na.rm = FALSE) :
+  no non-missing arguments to max; returning -Inf
+4: In min.default(numeric(0), na.rm = TRUE) :
+  no non-missing arguments to min; returning Inf
+5: In max.default(numeric(0), na.rm = TRUE) :
+  no non-missing arguments to max; returning -Inf
+6: In max.default(numeric(0), na.rm = FALSE) :
+  no non-missing arguments to max; returning -Inf
+7: In max.default(numeric(0), na.rm = FALSE) :
+  no non-missing arguments to max; returning -Inf
+8: In max.default(numeric(0), na.rm = FALSE) :
+  no non-missing arguments to max; returning -Inf
 > 
 > proc.time()
-   user  system elapsed 
-  2.905   1.944  12.535 
+     user    system   elapsed 
+49132.760   127.287 15402.307 
+Warning message:
+system call failed: Cannot allocate memory 
