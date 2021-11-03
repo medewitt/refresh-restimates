@@ -55,3 +55,12 @@ starting> ptm <- proc.time()
 
 First Batch
 > system("R CMD BATCH --vanilla generate-estimates-1.R")
+> proc.time() - ptm
+     user    system   elapsed 
+20174.747    23.683  3070.057 
+> 
+> cat("\nSecond Batch\n")
+
+Second Batch
+> ptm <- proc.time()
+> system("R CMD BATCH --vanilla generate-estimates-2.R")
