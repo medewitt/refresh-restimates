@@ -10,6 +10,7 @@ options(future.fork.multithreading.enable = FALSE)
 RhpcBLASctl::omp_set_num_threads(1L)
 data.table::setDTthreads(1)
 options(mc.cores = 8L)
+projection_window <- 28
 #options(future.globals.maxSize = 10000*1024^2)
 
 dat <- nccovid::get_covid_county_plus()
@@ -57,7 +58,7 @@ dat <- dat[first_case_dat, nomatch = 0]
 
 dat <- dat[date>=first_case_date]
 
-increase_cases <- function (observed_cases, pos_rate, m = 2.5, k = 0) {
+increase_cases <- function (observed_cases, pos_rate, m = 1, k = 0) {
   y <- observed_cases * pos_rate^k * m
   return(y)
 }
@@ -137,7 +138,7 @@ if(debug){
                              generation_time = generation_time,
                              target_folder = here::here("rt-estimates-out"),
                              logs = here::here("epinow-logs"),
-                             non_zero_points = 14, horizon = 14, 
+                             non_zero_points = 14, horizon = projection_window, 
                              delays = delay_opts(incubation_period,
                                                  reporting_delay),
                              stan = stan_opts(cores = 8, chains = 4,
@@ -157,7 +158,7 @@ estimates <- try(regional_epinow(reported_cases = reported_cases_low_density,
                              logs = here::here("epinow-logs"),
                              delays = delay_opts(incubation_period,
                                            reporting_delay),
-                             non_zero_points = 14, horizon = 14, 
+                             non_zero_points = 14, horizon = projection_window, 
                              stan = stan_opts(init_fit = "cumulative",samples = 4000,
                                               chains = 4, cores = no_cores, control = list(adapt_delta = 0.95, max_treedepth = 15),
                                               max_execution_time = 60*60*6,
