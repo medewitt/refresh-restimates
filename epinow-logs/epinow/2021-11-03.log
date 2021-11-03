@@ -1,0 +1,41 @@
+INFO [2021-11-03 17:31:34] Initialising estimates for: Buncombe
+INFO [2021-11-03 17:31:35] Initialising estimates for: Cumberland
+WARN [2021-11-03 17:43:08] Buncombe (chain: 1): There were 17 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-11-03 17:43:08] Buncombe (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-11-03 17:43:28] Initialising estimates for: Durham
+WARN [2021-11-03 17:50:50] Cumberland (chain: 1): There were 115 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-11-03 17:50:50] Cumberland (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+WARN [2021-11-03 17:50:52] Cumberland (chain: 1): The largest R-hat is 1.06, indicating chains have not mixed.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#r-hat - 
+WARN [2021-11-03 17:50:55] Cumberland (chain: 1): Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#bulk-ess - 
+WARN [2021-11-03 17:50:57] Cumberland (chain: 1): Tail Effective Samples Size (ESS) is too low, indicating posterior variances and tail quantiles may be unreliable.
+Running the chains for more iterations may help. See
+http://mc-stan.org/misc/warnings.html#tail-ess - 
+INFO [2021-11-03 17:51:10] Initialising estimates for: Forsyth
+WARN [2021-11-03 17:52:52] Durham (chain: 1): There were 7 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-11-03 17:52:52] Durham (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-11-03 17:53:13] Initialising estimates for: Gaston
+WARN [2021-11-03 18:00:08] Forsyth (chain: 1): There were 15 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-11-03 18:00:08] Forsyth (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-11-03 18:00:30] Initialising estimates for: Guilford
+WARN [2021-11-03 18:03:25] Gaston (chain: 1): There were 12 divergent transitions after warmup. See
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+to find out why this is a problem and how to eliminate them. - 
+WARN [2021-11-03 18:03:25] Gaston (chain: 1): Examine the pairs() plot to diagnose sampling problems
+ - 
+INFO [2021-11-03 18:03:45] Initialising estimates for: Mecklenburg
