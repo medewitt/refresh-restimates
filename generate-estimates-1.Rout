@@ -129,7 +129,7 @@ prep completed>
 > # Load utils --------------------------------------------------------------
 > if (!exists("setup_future", mode = "function")) source(here::here("util.R"))
 > no_cores <- setup_future(reported_cases = reported_cases)
-INFO [2021-11-03 17:31:34] Using 2 workers with 4 cores per worker
+INFO [2021-11-03 20:05:12] Using 2 workers with 4 cores per worker
 > 
 > # run estimation ----------------------------------------------------------
 > #EpiNow2::setup_logging(file = "log.log")
@@ -170,33 +170,33 @@ INFO [2021-11-03 17:31:34] Using 2 workers with 4 cores per worker
 + 																	 								 future = FALSE),
 + 																	 rt = rt_opts(prior = list(mean = 1.25, sd = 0.25))))
 + }
-Running the full modelINFO [2021-11-03 17:31:34] Producing following optional outputs: regions, summary, samples, plots, latest
+Running the full modelINFO [2021-11-03 20:05:12] Producing following optional outputs: regions, summary, samples, plots, latest
 Logging threshold set at INFO for the EpiNow2 logger
 Writing EpiNow2 logs to the console and: /datadisk/refresh-restimates/epinow-logs/regional-epinow/2021-11-03.log
 Logging threshold set at INFO for the EpiNow2.epinow logger
 Writing EpiNow2.epinow logs to: /datadisk/refresh-restimates/epinow-logs/epinow/2021-11-03.log
-INFO [2021-11-03 17:31:34] Reporting estimates using data up to: 2021-11-03
-INFO [2021-11-03 17:31:34] Saving estimates to : /datadisk/refresh-restimates/rt-estimates-out
-INFO [2021-11-03 17:31:34] Producing estimates for: Buncombe, Cumberland, Durham, Forsyth, Gaston, Guilford, Mecklenburg, New Hanover, Union, Wake
-INFO [2021-11-03 17:31:34] Regions excluded: none
-INFO [2021-11-03 17:43:24] Completed estimates for: Buncombe
-INFO [2021-11-03 17:51:07] Completed estimates for: Cumberland
-INFO [2021-11-03 17:53:10] Completed estimates for: Durham
-INFO [2021-11-03 18:00:26] Completed estimates for: Forsyth
-INFO [2021-11-03 18:03:42] Completed estimates for: Gaston
-INFO [2021-11-03 18:10:24] Completed estimates for: Guilford
-INFO [2021-11-03 18:11:31] Completed estimates for: Mecklenburg
-INFO [2021-11-03 18:17:53] Completed estimates for: New Hanover
-INFO [2021-11-03 18:19:19] Completed estimates for: Union
-INFO [2021-11-03 18:22:33] Completed estimates for: Wake
-INFO [2021-11-03 18:22:34] Completed regional estimates
-INFO [2021-11-03 18:22:34] Regions with estimates: 10
-INFO [2021-11-03 18:22:34] Regions with runtime errors: 0
-INFO [2021-11-03 18:22:34] Producing summary
-INFO [2021-11-03 18:22:34] No summary directory specified so returning summary output
-INFO [2021-11-03 18:22:35] Saving timings information to : /datadisk/refresh-restimates/rt-estimates-out
+INFO [2021-11-03 20:05:12] Reporting estimates using data up to: 2021-11-03
+INFO [2021-11-03 20:05:12] Saving estimates to : /datadisk/refresh-restimates/rt-estimates-out
+INFO [2021-11-03 20:05:12] Producing estimates for: Buncombe, Cumberland, Durham, Forsyth, Gaston, Guilford, Mecklenburg, New Hanover, Union, Wake
+INFO [2021-11-03 20:05:12] Regions excluded: none
+INFO [2021-11-03 20:14:31] Completed estimates for: Buncombe
+INFO [2021-11-03 20:24:49] Completed estimates for: Cumberland
+INFO [2021-11-03 20:23:04] Completed estimates for: Durham
+INFO [2021-11-03 20:31:32] Completed estimates for: Forsyth
+INFO [2021-11-03 20:33:39] Completed estimates for: Gaston
+INFO [2021-11-03 20:41:11] Completed estimates for: Guilford
+INFO [2021-11-03 20:42:39] Completed estimates for: Mecklenburg
+INFO [2021-11-03 20:49:40] Completed estimates for: New Hanover
+INFO [2021-11-03 20:51:58] Completed estimates for: Union
+INFO [2021-11-03 20:54:31] Completed estimates for: Wake
+INFO [2021-11-03 20:54:33] Completed regional estimates
+INFO [2021-11-03 20:54:33] Regions with estimates: 10
+INFO [2021-11-03 20:54:33] Regions with runtime errors: 0
+INFO [2021-11-03 20:54:33] Producing summary
+INFO [2021-11-03 20:54:33] No summary directory specified so returning summary output
+INFO [2021-11-03 20:54:34] Saving timings information to : /datadisk/refresh-restimates/rt-estimates-out
 > plan("sequential")
 > 
 > proc.time()
      user    system   elapsed 
-20174.734    23.454  3069.809 
+20499.050    24.892  2970.748 

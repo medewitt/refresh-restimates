@@ -161,7 +161,7 @@ prep completed>
 > # Load utils --------------------------------------------------------------
 > if (!exists("setup_future", mode = "function")) source(here::here("util.R"))
 > no_cores <- setup_future(reported_cases = reported_cases)
-INFO [2021-11-03 18:22:44] Using 2 workers with 4 cores per worker
+INFO [2021-11-03 20:54:43] Using 2 workers with 4 cores per worker
 > 
 > # run estimation ----------------------------------------------------------
 > #EpiNow2::setup_logging(file = "log.log")
@@ -203,12 +203,79 @@ INFO [2021-11-03 18:22:44] Using 2 workers with 4 cores per worker
 +                              rt = rt_opts(prior = list(mean = 1.25, sd = 0.25))))
 + 
 + }
-Running the full modelINFO [2021-11-03 18:22:44] Producing following optional outputs: regions, summary, samples, plots, latest
+Running the full modelINFO [2021-11-03 20:54:43] Producing following optional outputs: regions, summary, samples, plots, latest
 Logging threshold set at INFO for the EpiNow2 logger
 Writing EpiNow2 logs to the console and: /datadisk/refresh-restimates/epinow-logs/regional-epinow/2021-11-03.log
 Logging threshold set at INFO for the EpiNow2.epinow logger
 Writing EpiNow2.epinow logs to: /datadisk/refresh-restimates/epinow-logs/epinow/2021-11-03.log
-INFO [2021-11-03 18:22:44] Reporting estimates using data up to: 2021-11-03
-INFO [2021-11-03 18:22:44] Saving estimates to : /datadisk/refresh-restimates/rt-estimates-out
-INFO [2021-11-03 18:22:44] Producing estimates for: 40 regions
-INFO [2021-11-03 18:22:44] Regions excluded: 0 regions
+INFO [2021-11-03 20:54:43] Reporting estimates using data up to: 2021-11-03
+INFO [2021-11-03 20:54:43] Saving estimates to : /datadisk/refresh-restimates/rt-estimates-out
+INFO [2021-11-03 20:54:43] Producing estimates for: 40 regions
+INFO [2021-11-03 20:54:43] Regions excluded: 0 regions
+error occurred during calling the sampler; sampling not done
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+error occurred during calling the sampler; sampling not done
+INFO [2021-11-04 04:09:19] Completed regional estimates
+INFO [2021-11-04 04:09:19] Regions with estimates: 39
+INFO [2021-11-04 04:09:19] Regions with runtime errors: 1
+INFO [2021-11-04 04:09:19] Producing summary
+INFO [2021-11-04 04:09:19] No summary directory specified so returning summary output
+INFO [2021-11-04 04:09:21] Saving timings information to : /datadisk/refresh-restimates/rt-estimates-out
+> 
+> # Now run program to make synthesis
+> # Done
+> plan("sequential")
+> cat("done with estimates")
+done with estimates> 
+> proc.time()
+      user     system    elapsed 
+125620.734    167.394  26087.204 
