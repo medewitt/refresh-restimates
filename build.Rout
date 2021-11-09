@@ -58,3 +58,6 @@ Second Batch
 > cat("did state and loca again")
 did state and loca again> ptm <- proc.time()
 > system("R CMD BATCH --vanilla re-process-missing.R")
+> proc.time() - ptm\
+Error: unexpected input in "proc.time() - ptm\"
+Execution halted
