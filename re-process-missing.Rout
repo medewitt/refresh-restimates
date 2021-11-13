@@ -206,7 +206,54 @@ The following objects are masked from ‘package:base’:
 + 																	 rt = rt_opts(prior = list(mean = 1.25, sd = 0.1))))
 + plan("sequential")
 + }
+
+Attaching package: ‘data.table’
+
+The following objects are masked from ‘package:dplyr’:
+
+    between, first, last
+
+
+Attaching package: ‘purrr’
+
+The following object is masked from ‘package:data.table’:
+
+    transpose
+
+The following object is masked from ‘package:magrittr’:
+
+    set_names
+
+The following object is masked from ‘package:EpiNow2’:
+
+    update_list
+
+Using: cone as the data source
+Last date available: 2021-11-12
+prep completedRunning the full modelINFO [2021-11-13 06:41:51] Producing following optional outputs: regions, summary, samples, plots, latest
+Logging threshold set at INFO for the EpiNow2 logger
+Writing EpiNow2 logs to the console and: /datadisk/refresh-restimates/epinow-logs/regional-epinow/2021-11-12.log
+Logging threshold set at INFO for the EpiNow2.epinow logger
+Writing EpiNow2.epinow logs to: /datadisk/refresh-restimates/epinow-logs/epinow/2021-11-12.log
+INFO [2021-11-13 06:41:51] Reporting estimates using data up to: 2021-11-12
+INFO [2021-11-13 06:41:51] Saving estimates to : /datadisk/refresh-restimates/rt-estimates-out
+INFO [2021-11-13 06:41:51] Producing estimates for: 102 regions
+INFO [2021-11-13 06:41:51] Regions excluded: 0 regions
+[[1]]
+Stan model 'estimate_infections' does not contain samples.
+
+here are whatever error messages were returned
+[[1]]
+Stan model 'estimate_infections' does not contain samples.
+
+here are whatever error messages were returned
+INFO [2021-11-13 16:38:12] Completed regional estimates
+INFO [2021-11-13 16:38:12] Regions with estimates: 102
+INFO [2021-11-13 16:38:12] Regions with runtime errors: 0
+INFO [2021-11-13 16:38:12] Producing summary
+INFO [2021-11-13 16:38:12] No summary directory specified so returning summary output
+INFO [2021-11-13 16:38:14] Saving timings information to : /datadisk/refresh-restimates/rt-estimates-out
 > 
 > proc.time()
-   user  system elapsed 
-  3.591   2.470  16.331 
+      user     system    elapsed 
+114249.261    316.055  35808.132 
