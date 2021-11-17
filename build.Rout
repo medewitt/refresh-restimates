@@ -23,7 +23,7 @@ Type 'q()' to quit R.
 + Sys.sleep(60*30)
 + }
 Using: cone as the data source
-Last date available: 2021-11-15
+Last date available: 2021-11-16
 > 
 > cat("starting")
 starting> ptm <- proc.time()
@@ -33,7 +33,7 @@ First Batch
 > system("R CMD BATCH --vanilla generate-estimates-1.R")
 > proc.time() - ptm
      user    system   elapsed 
-13592.720    23.355  1979.614 
+14337.791    22.607  2183.487 
 > 
 > cat("\nSecond Batch\n")
 
@@ -42,7 +42,7 @@ Second Batch
 > system("R CMD BATCH --vanilla generate-estimates-2.R")
 > proc.time() - ptm
      user    system   elapsed 
-67494.031   140.825 13237.288 
+69399.808   138.521 13344.258 
 > 
 > cat("\nSecond Batch\n")
 
@@ -51,7 +51,7 @@ Second Batch
 > system("R CMD BATCH --vanilla generate-estimates-3.R")
 > proc.time() - ptm
       user     system    elapsed 
-102287.555    278.592  22426.106 
+104784.759    276.539  22228.626 
 > 
 > #cat("\nProcessing Failures\n")
 > #system("R CMD BATCH --vanilla generate-estimates-4.R")
