@@ -49,7 +49,7 @@ The following object is masked from ‘package:EpiNow2’:
 > 
 > dat <- nccovid::get_covid_county_plus()
 Using: cone as the data source
-Last date available: 2021-11-16
+Last date available: 2021-11-17
 > 
 > # Wait Until 15 Confirmed cases by county cumulative and within last 16 weeks
 > 
@@ -161,7 +161,7 @@ prep completed>
 > # Load utils --------------------------------------------------------------
 > if (!exists("setup_future", mode = "function")) source(here::here("util.R"))
 > no_cores <- setup_future(reported_cases = reported_cases)
-INFO [2021-11-17 00:23:59] Using 2 workers with 4 cores per worker
+INFO [2021-11-18 00:18:23] Using 2 workers with 4 cores per worker
 > 
 > # run estimation ----------------------------------------------------------
 > #EpiNow2::setup_logging(file = "log.log")
@@ -188,82 +188,82 @@ Running the full model>
 +                                                     future = FALSE),
 +                                    rt = rt_opts(prior = list(mean = 1.25, sd = 0.25))))
 + }
-INFO [2021-11-17 00:23:59] Producing following optional outputs: regions, summary, samples, plots, latest
+INFO [2021-11-18 00:18:23] Producing following optional outputs: regions, summary, samples, plots, latest
 Logging threshold set at INFO for the EpiNow2 logger
-Writing EpiNow2 logs to the console and: /datadisk/refresh-restimates/epinow-logs/regional-epinow/2021-11-16.log
+Writing EpiNow2 logs to the console and: /datadisk/refresh-restimates/epinow-logs/regional-epinow/2021-11-17.log
 Logging threshold set at INFO for the EpiNow2.epinow logger
-Writing EpiNow2.epinow logs to: /datadisk/refresh-restimates/epinow-logs/epinow/2021-11-16.log
-INFO [2021-11-17 00:23:59] Reporting estimates using data up to: 2021-11-16
-INFO [2021-11-17 00:23:59] Saving estimates to : /datadisk/refresh-restimates/rt-estimates-out
-INFO [2021-11-17 00:23:59] Producing estimates for: Moore, Orange, Randolph, Craven, Wayne, Alamance, Onslow, Brunswick, Harnett, Catawba, Pitt, Davidson, Henderson, Cabarrus, Iredell, Rowan, Robeson, Johnston
-INFO [2021-11-17 00:23:59] Regions excluded: none
-INFO [2021-11-17 01:39:17] Completed regional estimates
-INFO [2021-11-17 01:39:17] Regions with estimates: 18
-INFO [2021-11-17 01:39:17] Regions with runtime errors: 0
-INFO [2021-11-17 01:39:17] Producing summary
-INFO [2021-11-17 01:39:17] No summary directory specified so returning summary output
-INFO [2021-11-17 01:39:19] Saving timings information to : /datadisk/refresh-restimates/rt-estimates-out
-INFO [2021-11-17 01:39:19] Producing following optional outputs: regions, summary, samples, plots, latest
+Writing EpiNow2.epinow logs to: /datadisk/refresh-restimates/epinow-logs/epinow/2021-11-17.log
+INFO [2021-11-18 00:18:23] Reporting estimates using data up to: 2021-11-17
+INFO [2021-11-18 00:18:23] Saving estimates to : /datadisk/refresh-restimates/rt-estimates-out
+INFO [2021-11-18 00:18:23] Producing estimates for: Orange, Wayne, Moore, Henderson, Randolph, Harnett, Craven, Pitt, Alamance, Brunswick, Onslow, Catawba, Davidson, Robeson, Cabarrus, Iredell, Johnston, Rowan
+INFO [2021-11-18 00:18:23] Regions excluded: none
+INFO [2021-11-18 01:30:17] Completed regional estimates
+INFO [2021-11-18 01:30:17] Regions with estimates: 18
+INFO [2021-11-18 01:30:17] Regions with runtime errors: 0
+INFO [2021-11-18 01:30:17] Producing summary
+INFO [2021-11-18 01:30:17] No summary directory specified so returning summary output
+INFO [2021-11-18 01:30:18] Saving timings information to : /datadisk/refresh-restimates/rt-estimates-out
+INFO [2021-11-18 01:30:18] Producing following optional outputs: regions, summary, samples, plots, latest
 Logging threshold set at INFO for the EpiNow2 logger
-Writing EpiNow2 logs to the console and: /datadisk/refresh-restimates/epinow-logs/regional-epinow/2021-11-16.log
+Writing EpiNow2 logs to the console and: /datadisk/refresh-restimates/epinow-logs/regional-epinow/2021-11-17.log
 Logging threshold set at INFO for the EpiNow2.epinow logger
-Writing EpiNow2.epinow logs to: /datadisk/refresh-restimates/epinow-logs/epinow/2021-11-16.log
-INFO [2021-11-17 01:39:19] Reporting estimates using data up to: 2021-11-16
-INFO [2021-11-17 01:39:19] Saving estimates to : /datadisk/refresh-restimates/rt-estimates-out
-INFO [2021-11-17 01:39:19] Producing estimates for: Surry, Carteret, Pender, Nash, Chatham, Caldwell, Rutherford, Haywood, Rockingham, Lincoln, Lee, Franklin, Wilson, Stanly, Wilkes, Sampson, Burke, Cleveland
-INFO [2021-11-17 01:39:19] Regions excluded: none
-INFO [2021-11-17 02:55:48] Completed regional estimates
-INFO [2021-11-17 02:55:48] Regions with estimates: 18
-INFO [2021-11-17 02:55:48] Regions with runtime errors: 0
-INFO [2021-11-17 02:55:48] Producing summary
-INFO [2021-11-17 02:55:48] No summary directory specified so returning summary output
-INFO [2021-11-17 02:55:49] Saving timings information to : /datadisk/refresh-restimates/rt-estimates-out
-INFO [2021-11-17 02:55:49] Producing following optional outputs: regions, summary, samples, plots, latest
+Writing EpiNow2.epinow logs to: /datadisk/refresh-restimates/epinow-logs/epinow/2021-11-17.log
+INFO [2021-11-18 01:30:18] Reporting estimates using data up to: 2021-11-17
+INFO [2021-11-18 01:30:18] Saving estimates to : /datadisk/refresh-restimates/rt-estimates-out
+INFO [2021-11-18 01:30:18] Producing estimates for: Franklin, Wilson, Rockingham, Chatham, Wilkes, Pender, Haywood, Caldwell, Nash, Stanly, Lee, Lincoln, Carteret, Surry, Rutherford, Sampson, Cleveland, Burke
+INFO [2021-11-18 01:30:18] Regions excluded: none
+INFO [2021-11-18 02:43:03] Completed regional estimates
+INFO [2021-11-18 02:43:03] Regions with estimates: 18
+INFO [2021-11-18 02:43:03] Regions with runtime errors: 0
+INFO [2021-11-18 02:43:03] Producing summary
+INFO [2021-11-18 02:43:03] No summary directory specified so returning summary output
+INFO [2021-11-18 02:43:04] Saving timings information to : /datadisk/refresh-restimates/rt-estimates-out
+INFO [2021-11-18 02:43:04] Producing following optional outputs: regions, summary, samples, plots, latest
 Logging threshold set at INFO for the EpiNow2 logger
-Writing EpiNow2 logs to the console and: /datadisk/refresh-restimates/epinow-logs/regional-epinow/2021-11-16.log
+Writing EpiNow2 logs to the console and: /datadisk/refresh-restimates/epinow-logs/regional-epinow/2021-11-17.log
 Logging threshold set at INFO for the EpiNow2.epinow logger
-Writing EpiNow2.epinow logs to: /datadisk/refresh-restimates/epinow-logs/epinow/2021-11-16.log
-INFO [2021-11-17 02:55:49] Reporting estimates using data up to: 2021-11-16
-INFO [2021-11-17 02:55:49] Saving estimates to : /datadisk/refresh-restimates/rt-estimates-out
-INFO [2021-11-17 02:55:49] Producing estimates for: Person, Pasquotank, Alexander, Beaufort, Jackson, Stokes, Vance, Richmond, Watauga, Davie, Edgecombe, Halifax, McDowell, Hoke, Granville, Columbus, Duplin, Lenoir
-INFO [2021-11-17 02:55:49] Regions excluded: none
-INFO [2021-11-17 04:09:26] Completed regional estimates
-INFO [2021-11-17 04:09:26] Regions with estimates: 18
-INFO [2021-11-17 04:09:26] Regions with runtime errors: 0
-INFO [2021-11-17 04:09:26] Producing summary
-INFO [2021-11-17 04:09:26] No summary directory specified so returning summary output
-INFO [2021-11-17 04:09:27] Saving timings information to : /datadisk/refresh-restimates/rt-estimates-out
-INFO [2021-11-17 04:09:27] Producing following optional outputs: regions, summary, samples, plots, latest
+Writing EpiNow2.epinow logs to: /datadisk/refresh-restimates/epinow-logs/epinow/2021-11-17.log
+INFO [2021-11-18 02:43:04] Reporting estimates using data up to: 2021-11-17
+INFO [2021-11-18 02:43:04] Saving estimates to : /datadisk/refresh-restimates/rt-estimates-out
+INFO [2021-11-18 02:43:04] Producing estimates for: Pasquotank, Jackson, Granville, Vance, Watauga, Stokes, Person, Richmond, Davie, Hoke, Halifax, Beaufort, Alexander, Edgecombe, Lenoir, McDowell, Duplin, Columbus
+INFO [2021-11-18 02:43:04] Regions excluded: none
+INFO [2021-11-18 03:58:24] Completed regional estimates
+INFO [2021-11-18 03:58:24] Regions with estimates: 18
+INFO [2021-11-18 03:58:24] Regions with runtime errors: 0
+INFO [2021-11-18 03:58:24] Producing summary
+INFO [2021-11-18 03:58:24] No summary directory specified so returning summary output
+INFO [2021-11-18 03:58:25] Saving timings information to : /datadisk/refresh-restimates/rt-estimates-out
+INFO [2021-11-18 03:58:25] Producing following optional outputs: regions, summary, samples, plots, latest
 Logging threshold set at INFO for the EpiNow2 logger
-Writing EpiNow2 logs to the console and: /datadisk/refresh-restimates/epinow-logs/regional-epinow/2021-11-16.log
+Writing EpiNow2 logs to the console and: /datadisk/refresh-restimates/epinow-logs/regional-epinow/2021-11-17.log
 Logging threshold set at INFO for the EpiNow2.epinow logger
-Writing EpiNow2.epinow logs to: /datadisk/refresh-restimates/epinow-logs/epinow/2021-11-16.log
-INFO [2021-11-17 04:09:27] Reporting estimates using data up to: 2021-11-16
-INFO [2021-11-17 04:09:27] Saving estimates to : /datadisk/refresh-restimates/rt-estimates-out
-INFO [2021-11-17 04:09:27] Producing estimates for: Northampton, Hertford, Ashe, Macon, Caswell, Currituck, Polk, Madison, Anson, Martin, Dare, Montgomery, Greene, Bladen, Transylvania, Scotland, Yadkin, Cherokee
-INFO [2021-11-17 04:09:27] Regions excluded: none
-INFO [2021-11-17 05:25:56] Completed regional estimates
-INFO [2021-11-17 05:25:56] Regions with estimates: 18
-INFO [2021-11-17 05:25:56] Regions with runtime errors: 0
-INFO [2021-11-17 05:25:56] Producing summary
-INFO [2021-11-17 05:25:56] No summary directory specified so returning summary output
-INFO [2021-11-17 05:25:57] Saving timings information to : /datadisk/refresh-restimates/rt-estimates-out
-INFO [2021-11-17 05:25:57] Producing following optional outputs: regions, summary, samples, plots, latest
+Writing EpiNow2.epinow logs to: /datadisk/refresh-restimates/epinow-logs/epinow/2021-11-17.log
+INFO [2021-11-18 03:58:25] Reporting estimates using data up to: 2021-11-17
+INFO [2021-11-18 03:58:25] Saving estimates to : /datadisk/refresh-restimates/rt-estimates-out
+INFO [2021-11-18 03:58:25] Producing estimates for: Ashe, Northampton, Anson, Martin, Montgomery, Caswell, Currituck, Dare, Polk, Hertford, Transylvania, Yadkin, Madison, Macon, Scotland, Greene, Cherokee, Bladen
+INFO [2021-11-18 03:58:25] Regions excluded: none
+INFO [2021-11-18 05:15:53] Completed regional estimates
+INFO [2021-11-18 05:15:53] Regions with estimates: 18
+INFO [2021-11-18 05:15:53] Regions with runtime errors: 0
+INFO [2021-11-18 05:15:53] Producing summary
+INFO [2021-11-18 05:15:53] No summary directory specified so returning summary output
+INFO [2021-11-18 05:15:54] Saving timings information to : /datadisk/refresh-restimates/rt-estimates-out
+INFO [2021-11-18 05:15:54] Producing following optional outputs: regions, summary, samples, plots, latest
 Logging threshold set at INFO for the EpiNow2 logger
-Writing EpiNow2 logs to the console and: /datadisk/refresh-restimates/epinow-logs/regional-epinow/2021-11-16.log
+Writing EpiNow2 logs to the console and: /datadisk/refresh-restimates/epinow-logs/regional-epinow/2021-11-17.log
 Logging threshold set at INFO for the EpiNow2.epinow logger
-Writing EpiNow2.epinow logs to: /datadisk/refresh-restimates/epinow-logs/epinow/2021-11-16.log
-INFO [2021-11-17 05:25:57] Reporting estimates using data up to: 2021-11-16
-INFO [2021-11-17 05:25:57] Saving estimates to : /datadisk/refresh-restimates/rt-estimates-out
-INFO [2021-11-17 05:25:57] Producing estimates for: Hyde, Avery, Mitchell, Yancey, Gates, Perquimans, Alleghany, Pamlico, Tyrrell, Jones, Warren, Washington, Bertie, Camden, Clay, Graham, Chowan, Swain
-INFO [2021-11-17 05:25:57] Regions excluded: none
-INFO [2021-11-17 06:34:17] Completed regional estimates
-INFO [2021-11-17 06:34:17] Regions with estimates: 18
-INFO [2021-11-17 06:34:17] Regions with runtime errors: 0
-INFO [2021-11-17 06:34:17] Producing summary
-INFO [2021-11-17 06:34:17] No summary directory specified so returning summary output
-INFO [2021-11-17 06:34:18] Saving timings information to : /datadisk/refresh-restimates/rt-estimates-out
+Writing EpiNow2.epinow logs to: /datadisk/refresh-restimates/epinow-logs/epinow/2021-11-17.log
+INFO [2021-11-18 05:15:54] Reporting estimates using data up to: 2021-11-17
+INFO [2021-11-18 05:15:54] Saving estimates to : /datadisk/refresh-restimates/rt-estimates-out
+INFO [2021-11-18 05:15:54] Producing estimates for: Camden, Hyde, Tyrrell, Warren, Alleghany, Washington, Pamlico, Jones, Perquimans, Swain, Avery, Gates, Graham, Mitchell, Bertie, Chowan, Clay, Yancey
+INFO [2021-11-18 05:15:54] Regions excluded: none
+INFO [2021-11-18 06:23:12] Completed regional estimates
+INFO [2021-11-18 06:23:12] Regions with estimates: 18
+INFO [2021-11-18 06:23:12] Regions with runtime errors: 0
+INFO [2021-11-18 06:23:12] Producing summary
+INFO [2021-11-18 06:23:12] No summary directory specified so returning summary output
+INFO [2021-11-18 06:23:13] Saving timings information to : /datadisk/refresh-restimates/rt-estimates-out
 > 
 > proc.time()
       user     system    elapsed 
-104784.752    275.903  22227.971 
+101417.286    274.185  21899.355 
