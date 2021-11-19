@@ -206,7 +206,46 @@ The following objects are masked from ‘package:base’:
 + 																	 rt = rt_opts(prior = list(mean = 1.25, sd = 0.1))))
 + plan("sequential")
 + }
+
+Attaching package: ‘data.table’
+
+The following objects are masked from ‘package:dplyr’:
+
+    between, first, last
+
+
+Attaching package: ‘purrr’
+
+The following object is masked from ‘package:data.table’:
+
+    transpose
+
+The following object is masked from ‘package:magrittr’:
+
+    set_names
+
+The following object is masked from ‘package:EpiNow2’:
+
+    update_list
+
+Using: cone as the data source
+Last date available: 2021-11-18
+prep completedRunning the full modelINFO [2021-11-19 06:33:15] Producing following optional outputs: regions, summary, samples, plots, latest
+Logging threshold set at INFO for the EpiNow2 logger
+Writing EpiNow2 logs to the console and: /datadisk/refresh-restimates/epinow-logs/regional-epinow/2021-11-18.log
+Logging threshold set at INFO for the EpiNow2.epinow logger
+Writing EpiNow2.epinow logs to: /datadisk/refresh-restimates/epinow-logs/epinow/2021-11-18.log
+INFO [2021-11-19 06:33:15] Reporting estimates using data up to: 2021-11-18
+INFO [2021-11-19 06:33:15] Saving estimates to : /datadisk/refresh-restimates/rt-estimates-out
+INFO [2021-11-19 06:33:15] Producing estimates for: 102 regions
+INFO [2021-11-19 06:33:15] Regions excluded: 0 regions
+INFO [2021-11-19 16:39:09] Completed regional estimates
+INFO [2021-11-19 16:39:09] Regions with estimates: 102
+INFO [2021-11-19 16:39:09] Regions with runtime errors: 0
+INFO [2021-11-19 16:39:09] Producing summary
+INFO [2021-11-19 16:39:09] No summary directory specified so returning summary output
+INFO [2021-11-19 16:39:11] Saving timings information to : /datadisk/refresh-restimates/rt-estimates-out
 > 
 > proc.time()
-   user  system elapsed 
-  3.679   2.498  19.111 
+      user     system    elapsed 
+119285.360    314.696  36370.660 
