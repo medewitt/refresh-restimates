@@ -22,10 +22,10 @@ proc.time() - ptm
 
 #cat("\nProcessing Failures\n")
 #system("R CMD BATCH --vanilla generate-estimates-4.R")
-cat("did state and loca again")
-ptm <- proc.time()
-system("R CMD BATCH --vanilla re-process-missing.R")
-proc.time() - ptm\
+#cat("did state and loca again")
+#ptm <- proc.time()
+#system("R CMD BATCH --vanilla re-process-missing.R")
+#proc.time() - ptm\
 
 cat("done with estimates")
 ptm <- proc.time()
