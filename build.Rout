@@ -23,7 +23,7 @@ Type 'q()' to quit R.
 + Sys.sleep(60*30)
 + }
 Using: cone as the data source
-Last date available: 2021-11-19
+Last date available: 2021-11-22
 > 
 > cat("starting")
 starting> ptm <- proc.time()
@@ -33,7 +33,7 @@ First Batch
 > system("R CMD BATCH --vanilla generate-estimates-1.R")
 > proc.time() - ptm
      user    system   elapsed 
-14940.909    22.252  2307.400 
+14500.143    21.729  2165.897 
 > 
 > cat("\nSecond Batch\n")
 
@@ -42,7 +42,7 @@ Second Batch
 > system("R CMD BATCH --vanilla generate-estimates-2.R")
 > proc.time() - ptm
      user    system   elapsed 
-64501.543   136.798 12724.780 
+65311.113   141.088 12930.279 
 > 
 > cat("\nSecond Batch\n")
 
@@ -51,13 +51,10 @@ Second Batch
 > system("R CMD BATCH --vanilla generate-estimates-3.R")
 > proc.time() - ptm
       user     system    elapsed 
-103804.227    279.424  22609.703 
+102916.109    279.532  22380.673 
 > 
 > #cat("\nProcessing Failures\n")
 > #system("R CMD BATCH --vanilla generate-estimates-4.R")
 > cat("did state and loca again")
 did state and loca again> ptm <- proc.time()
 > system("R CMD BATCH --vanilla re-process-missing.R")
-> proc.time() - ptm\
-Error: unexpected input in "proc.time() - ptm\"
-Execution halted
