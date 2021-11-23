@@ -239,3 +239,17 @@ INFO [2021-11-23 06:30:07] Reporting estimates using data up to: 2021-11-22
 INFO [2021-11-23 06:30:07] Saving estimates to : /datadisk/refresh-restimates/rt-estimates-out
 INFO [2021-11-23 06:30:07] Producing estimates for: 102 regions
 INFO [2021-11-23 06:30:07] Regions excluded: 0 regions
+[[1]]
+Stan model 'estimate_infections' does not contain samples.
+
+here are whatever error messages were returned
+INFO [2021-11-23 16:40:08] Completed regional estimates
+INFO [2021-11-23 16:40:08] Regions with estimates: 102
+INFO [2021-11-23 16:40:08] Regions with runtime errors: 0
+INFO [2021-11-23 16:40:08] Producing summary
+INFO [2021-11-23 16:40:08] No summary directory specified so returning summary output
+INFO [2021-11-23 16:40:10] Saving timings information to : /datadisk/refresh-restimates/rt-estimates-out
+> 
+> proc.time()
+      user     system    elapsed 
+119855.407    319.311  36630.764 
