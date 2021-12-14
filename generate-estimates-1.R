@@ -71,6 +71,12 @@ reported_cases <- dat[,`:=` (region=county,
 	.[,.(date,confirm, region)] %>%
 	.[date>as.Date("2020-05-18")]
 
+nc <- reported_cases[,.(confirm = sum(confirm)), by = "date"][,region:="North Carolina"]
+
+cone <- reported_cases[region %in% nccovid::cone_region,.(confirm = sum(confirm)), by = "date"][,region:="Cone Health"]
+
+reported_cases <- rbindlist(list(reported_cases, nc, cone))
+
 # pull low population density counties ------------------------------------
 
 county_info <- nccovid::nc_population[ ,1:2][order(july_2020, decreasing = TRUE)][county!="STATE"]
