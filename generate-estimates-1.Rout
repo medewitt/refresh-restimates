@@ -49,7 +49,7 @@ The following object is masked from ‘package:EpiNow2’:
 > 
 > dat <- nccovid::get_covid_county_plus()
 Using: cone as the data source
-Last date available: 2021-12-13
+Last date available: 2021-12-14
 > 
 > # Wait Until 15 Confirmed cases by county cumulative and within last 16 weeks
 > 
@@ -107,6 +107,12 @@ Last date available: 2021-12-13
 + 	.[,.(date,confirm, region)] %>%
 + 	.[date>as.Date("2020-05-18")]
 > 
+> nc <- reported_cases[,.(confirm = sum(confirm)), by = "date"][,region:="North Carolina"]
+> 
+> cone <- reported_cases[region %in% nccovid::cone_region,.(confirm = sum(confirm)), by = "date"][,region:="Cone Health"]
+> 
+> reported_cases <- rbindlist(list(reported_cases, nc, cone))
+> 
 > # pull low population density counties ------------------------------------
 > 
 > county_info <- nccovid::nc_population[ ,1:2][order(july_2020, decreasing = TRUE)][county!="STATE"]
@@ -129,7 +135,7 @@ prep completed>
 > # Load utils --------------------------------------------------------------
 > if (!exists("setup_future", mode = "function")) source(here::here("util.R"))
 > no_cores <- setup_future(reported_cases = reported_cases)
-INFO [2021-12-13 20:05:11] Using 2 workers with 4 cores per worker
+INFO [2021-12-14 20:05:11] Using 2 workers with 4 cores per worker
 > 
 > # run estimation ----------------------------------------------------------
 > #EpiNow2::setup_logging(file = "log.log")
@@ -170,33 +176,23 @@ INFO [2021-12-13 20:05:11] Using 2 workers with 4 cores per worker
 + 																	 								 future = FALSE),
 + 																	 rt = rt_opts(prior = list(mean = 1.25, sd = 0.25))))
 + }
-Running the full modelINFO [2021-12-13 20:05:11] Producing following optional outputs: regions, summary, samples, plots, latest
+Running the full modelINFO [2021-12-14 20:05:11] Producing following optional outputs: regions, summary, samples, plots, latest
 Logging threshold set at INFO for the EpiNow2 logger
-Writing EpiNow2 logs to the console and: /datadisk/refresh-restimates/epinow-logs/regional-epinow/2021-12-13.log
+Writing EpiNow2 logs to the console and: /datadisk/refresh-restimates/epinow-logs/regional-epinow/2021-12-14.log
 Logging threshold set at INFO for the EpiNow2.epinow logger
-Writing EpiNow2.epinow logs to: /datadisk/refresh-restimates/epinow-logs/epinow/2021-12-13.log
-INFO [2021-12-13 20:05:11] Reporting estimates using data up to: 2021-12-13
-INFO [2021-12-13 20:05:11] Saving estimates to : /datadisk/refresh-restimates/rt-estimates-out
-INFO [2021-12-13 20:05:11] Producing estimates for: Buncombe, Cumberland, Durham, Forsyth, Gaston, Guilford, Mecklenburg, New Hanover, Union, Wake
-INFO [2021-12-13 20:05:11] Regions excluded: none
-INFO [2021-12-13 20:13:37] Completed estimates for: Buncombe
-INFO [2021-12-13 20:19:10] Completed estimates for: Cumberland
-INFO [2021-12-13 20:34:14] Completed estimates for: Durham
-INFO [2021-12-13 20:33:51] Completed estimates for: Forsyth
-INFO [2021-12-13 20:57:23] Completed estimates for: Gaston
-INFO [2021-12-13 20:43:47] Completed estimates for: Guilford
-INFO [2021-12-13 20:50:30] Completed estimates for: Mecklenburg
-INFO [2021-12-13 20:55:28] Completed estimates for: New Hanover
-INFO [2021-12-13 21:03:11] Completed estimates for: Union
-INFO [2021-12-13 21:02:12] Completed estimates for: Wake
-INFO [2021-12-13 21:03:12] Completed regional estimates
-INFO [2021-12-13 21:03:12] Regions with estimates: 10
-INFO [2021-12-13 21:03:12] Regions with runtime errors: 0
-INFO [2021-12-13 21:03:12] Producing summary
-INFO [2021-12-13 21:03:12] No summary directory specified so returning summary output
-INFO [2021-12-13 21:03:13] Saving timings information to : /datadisk/refresh-restimates/rt-estimates-out
+Writing EpiNow2.epinow logs to: /datadisk/refresh-restimates/epinow-logs/epinow/2021-12-14.log
+INFO [2021-12-14 20:05:11] Reporting estimates using data up to: 2021-12-14
+INFO [2021-12-14 20:05:11] Saving estimates to : /datadisk/refresh-restimates/rt-estimates-out
+INFO [2021-12-14 20:05:11] Producing estimates for: Buncombe, Cumberland, Durham, Forsyth, Gaston, Guilford, Mecklenburg, New Hanover, Union, Wake, North Carolina, Cone Health
+INFO [2021-12-14 20:05:11] Regions excluded: none
+INFO [2021-12-14 21:12:45] Completed regional estimates
+INFO [2021-12-14 21:12:45] Regions with estimates: 12
+INFO [2021-12-14 21:12:45] Regions with runtime errors: 0
+INFO [2021-12-14 21:12:45] Producing summary
+INFO [2021-12-14 21:12:45] No summary directory specified so returning summary output
+INFO [2021-12-14 21:12:46] Saving timings information to : /datadisk/refresh-restimates/rt-estimates-out
 > plan("sequential")
 > 
 > proc.time()
      user    system   elapsed 
-21797.155    22.613  3490.688 
+26476.768    28.375  4063.665 
