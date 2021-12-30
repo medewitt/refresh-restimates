@@ -137,17 +137,17 @@ The following objects are masked from ‘package:base’:
 > 
 > (update_dates <- most_current_information[,.(unique(last_update)), by = "county"][order(V1)])
         county         V1
-  1:  Alamance 2021-12-29
-  2: Alexander 2021-12-29
-  3: Alleghany 2021-12-29
-  4:     Anson 2021-12-29
-  5:      Ashe 2021-12-29
+  1:  Alamance 2021-12-30
+  2: Alexander 2021-12-30
+  3: Alleghany 2021-12-30
+  4:     Anson 2021-12-30
+  5:      Ashe 2021-12-30
  ---                     
- 98:     Wayne 2021-12-29
- 99:    Wilkes 2021-12-29
-100:    Wilson 2021-12-29
-101:    Yadkin 2021-12-29
-102:    Yancey 2021-12-29
+ 98:     Wayne 2021-12-30
+ 99:    Wilkes 2021-12-30
+100:    Wilson 2021-12-30
+101:    Yadkin 2021-12-30
+102:    Yancey 2021-12-30
 > # Run validation Scripts
 > library(dcmodify)
 
@@ -177,7 +177,7 @@ $date
 [1] NA
 
 $last_update
-[1] "2021-12-29"
+[1] "2021-12-30"
 
 $variable
 [1] "reporting_overdispersion"
@@ -198,10 +198,10 @@ $sd
 [1] NA
 
 $bottom
-[1] 5e+05
+[1] 30288.04
 
 $lower
-[1] 5e+05
+[1] 276160.1
 
 $central_lower
 [1] 5e+05
@@ -222,4 +222,4 @@ $top
 > 
 > proc.time()
    user  system elapsed 
- 48.580   7.431  41.743 
+ 48.628   7.020  40.818 
