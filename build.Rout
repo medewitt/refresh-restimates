@@ -23,7 +23,7 @@ Type 'q()' to quit R.
 + Sys.sleep(60*30)
 + }
 Using: cone as the data source
-Last date available: 2022-01-04
+Last date available: 2022-01-05
 > 
 > cat("starting")
 starting> ptm <- proc.time()
@@ -33,7 +33,7 @@ First Batch
 > system("R CMD BATCH --vanilla generate-estimates-1.R")
 > proc.time() - ptm
      user    system   elapsed 
-38259.889    29.784  6095.553 
+39622.935    29.636  6148.336 
 > 
 > cat("\nSecond Batch\n")
 
@@ -42,7 +42,7 @@ Second Batch
 > system("R CMD BATCH --vanilla generate-estimates-2.R")
 > proc.time() - ptm
       user     system    elapsed 
-108206.920    143.147  19106.784 
+120052.232    143.577  20467.881 
 > 
 > cat("\nSecond Batch\n")
 
@@ -50,8 +50,8 @@ Second Batch
 > ptm <- proc.time()
 > system("R CMD BATCH --vanilla generate-estimates-3.R")
 > proc.time() - ptm
-    user   system  elapsed 
-146034.7    272.3  28914.2 
+      user     system    elapsed 
+160316.354    281.002  33016.513 
 > 
 > #cat("\nProcessing Failures\n")
 > #system("R CMD BATCH --vanilla generate-estimates-4.R")
@@ -65,14 +65,14 @@ done with estimates> ptm <- proc.time()
 > system("R CMD BATCH --vanilla process-outputs.R")
 > proc.time() - ptm
    user  system elapsed 
-  5.952   3.790  27.788 
+  6.031   4.090  10.291 
 > 
 > cat("done with processing")
 done with processing> ptm <- proc.time()
 > system("R CMD BATCH --vanilla combine-forecasts.R")
 > proc.time() - ptm
    user  system elapsed 
- 50.237   8.686  43.803 
+ 48.776   8.312  40.199 
 > 
 > cat("done with combination")
 done with combination> 
@@ -81,4 +81,4 @@ done with combination>
 > 
 > proc.time()
       user     system    elapsed 
-292706.692    461.152  54319.576 
+320197.305    470.215  59817.573 
