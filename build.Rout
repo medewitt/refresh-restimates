@@ -24,61 +24,48 @@ Type 'q()' to quit R.
 + }
 Using: cone as the data source
 Last date available: 2022-01-14
-> 
-> cat("starting")
-starting> ptm <- proc.time()
-> cat("\nFirst Batch\n")
-
-First Batch
-> system("R CMD BATCH --vanilla generate-estimates-1.R")
-> proc.time() - ptm
-     user    system   elapsed 
-38608.178    33.222  5567.951 
-> 
-> cat("\nSecond Batch\n")
-
-Second Batch
-> ptm <- proc.time()
-> system("R CMD BATCH --vanilla generate-estimates-2.R")
-> proc.time() - ptm
-     user    system   elapsed 
-119318.48    149.12  20920.08 
-> 
-> cat("\nSecond Batch\n")
-
-Second Batch
-> ptm <- proc.time()
-> system("R CMD BATCH --vanilla generate-estimates-3.R")
-> proc.time() - ptm
-      user     system    elapsed 
-168762.309    291.894  32345.271 
-> 
-> #cat("\nProcessing Failures\n")
-> #system("R CMD BATCH --vanilla generate-estimates-4.R")
-> #cat("did state and loca again")
-> #ptm <- proc.time()
-> #system("R CMD BATCH --vanilla re-process-missing.R")
-> #proc.time() - ptm\
-> 
-> cat("done with estimates")
-done with estimates> ptm <- proc.time()
-> system("R CMD BATCH --vanilla process-outputs.R")
-> proc.time() - ptm
-   user  system elapsed 
-  7.132   4.809  34.384 
-> 
-> cat("done with processing")
-done with processing> ptm <- proc.time()
-> system("R CMD BATCH --vanilla combine-forecasts.R")
-> proc.time() - ptm
-   user  system elapsed 
- 52.622   8.776  46.834 
-> 
-> cat("done with combination")
-done with combination> 
-> system("R CMD BATCH --vanilla  correct-state.R")
-> system("R CMD BATCH --vanilla  prob_spread.R")
-> 
-> proc.time()
-      user     system    elapsed 
-326896.384    491.525  59045.234 
+Using: cone as the data source
+Last date available: 2022-01-14
+Using: cone as the data source
+Last date available: 2022-01-14
+Using: cone as the data source
+Last date available: 2022-01-14
+Using: cone as the data source
+Last date available: 2022-01-14
+Using: cone as the data source
+Last date available: 2022-01-14
+Using: cone as the data source
+Last date available: 2022-01-14
+Using: cone as the data source
+Last date available: 2022-01-14
+Using: cone as the data source
+Last date available: 2022-01-14
+Using: cone as the data source
+Last date available: 2022-01-14
+Using: cone as the data source
+Last date available: 2022-01-14
+Using: cone as the data source
+Last date available: 2022-01-14
+Using: cone as the data source
+Last date available: 2022-01-14
+Using: cone as the data source
+Last date available: 2022-01-14
+Using: cone as the data source
+Last date available: 2022-01-14
+Using: cone as the data source
+Last date available: 2022-01-14
+Using: cone as the data source
+Last date available: 2022-01-14
+Using: cone as the data source
+Last date available: 2022-01-14
+Using: cone as the data source
+Last date available: 2022-01-14
+Using: cone as the data source
+Last date available: 2022-01-14
+Using: cone as the data source
+Last date available: 2022-01-14
+Using: cone as the data source
+Error in curl::curl_download(input, tmpFile, mode = "wb", quiet = !showProgress) : 
+  HTTP error 503.
+Calls: tail -> <Anonymous> -> <Anonymous> -> <Anonymous>
+Execution halted
