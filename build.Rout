@@ -23,49 +23,62 @@ Type 'q()' to quit R.
 + Sys.sleep(60*30)
 + }
 Using: cone as the data source
-Last date available: 2022-01-14
-Using: cone as the data source
-Last date available: 2022-01-14
-Using: cone as the data source
-Last date available: 2022-01-14
-Using: cone as the data source
-Last date available: 2022-01-14
-Using: cone as the data source
-Last date available: 2022-01-14
-Using: cone as the data source
-Last date available: 2022-01-14
-Using: cone as the data source
-Last date available: 2022-01-14
-Using: cone as the data source
-Last date available: 2022-01-14
-Using: cone as the data source
-Last date available: 2022-01-14
-Using: cone as the data source
-Last date available: 2022-01-14
-Using: cone as the data source
-Last date available: 2022-01-14
-Using: cone as the data source
-Last date available: 2022-01-14
-Using: cone as the data source
-Last date available: 2022-01-14
-Using: cone as the data source
-Last date available: 2022-01-14
-Using: cone as the data source
-Last date available: 2022-01-14
-Using: cone as the data source
-Last date available: 2022-01-14
-Using: cone as the data source
-Last date available: 2022-01-14
-Using: cone as the data source
-Last date available: 2022-01-14
-Using: cone as the data source
-Last date available: 2022-01-14
-Using: cone as the data source
-Last date available: 2022-01-14
-Using: cone as the data source
-Last date available: 2022-01-14
-Using: cone as the data source
-Error in curl::curl_download(input, tmpFile, mode = "wb", quiet = !showProgress) : 
-  HTTP error 503.
-Calls: tail -> <Anonymous> -> <Anonymous> -> <Anonymous>
-Execution halted
+Last date available: 2022-01-19
+> 
+> cat("starting")
+starting> ptm <- proc.time()
+> cat("\nFirst Batch\n")
+
+First Batch
+> system("R CMD BATCH --vanilla generate-estimates-1.R")
+> proc.time() - ptm
+     user    system   elapsed 
+31929.777    31.001  4696.961 
+> 
+> cat("\nSecond Batch\n")
+
+Second Batch
+> ptm <- proc.time()
+> system("R CMD BATCH --vanilla generate-estimates-2.R")
+> proc.time() - ptm
+      user     system    elapsed 
+108775.224    145.323  19235.428 
+> 
+> cat("\nSecond Batch\n")
+
+Second Batch
+> ptm <- proc.time()
+> system("R CMD BATCH --vanilla generate-estimates-3.R")
+> proc.time() - ptm
+      user     system    elapsed 
+170494.515    300.153  33186.057 
+> 
+> #cat("\nProcessing Failures\n")
+> #system("R CMD BATCH --vanilla generate-estimates-4.R")
+> #cat("did state and loca again")
+> #ptm <- proc.time()
+> #system("R CMD BATCH --vanilla re-process-missing.R")
+> #proc.time() - ptm\
+> 
+> cat("done with estimates")
+done with estimates> ptm <- proc.time()
+> system("R CMD BATCH --vanilla process-outputs.R")
+> proc.time() - ptm
+   user  system elapsed 
+  6.714   5.034  33.013 
+> 
+> cat("done with processing")
+done with processing> ptm <- proc.time()
+> system("R CMD BATCH --vanilla combine-forecasts.R")
+> proc.time() - ptm
+   user  system elapsed 
+ 52.697   8.973  47.062 
+> 
+> cat("done with combination")
+done with combination> 
+> system("R CMD BATCH --vanilla  correct-state.R")
+> system("R CMD BATCH --vanilla  prob_spread.R")
+> 
+> proc.time()
+      user     system    elapsed 
+311409.273    493.999  57331.731 
