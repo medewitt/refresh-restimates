@@ -49,7 +49,7 @@ The following object is masked from ‘package:EpiNow2’:
 > 
 > dat <- nccovid::get_covid_county_plus()
 Using: cone as the data source
-Last date available: 2022-01-26
+Last date available: 2022-01-27
 > 
 > # Wait Until 15 Confirmed cases by county cumulative and within last 16 weeks
 > 
@@ -161,7 +161,7 @@ prep completed>
 > # Load utils --------------------------------------------------------------
 > if (!exists("setup_future", mode = "function")) source(here::here("util.R"))
 > no_cores <- setup_future(reported_cases = reported_cases)
-INFO [2022-01-26 21:26:40] Using 2 workers with 4 cores per worker
+INFO [2022-01-27 21:19:11] Using 2 workers with 4 cores per worker
 > 
 > # run estimation ----------------------------------------------------------
 > #EpiNow2::setup_logging(file = "log.log")
@@ -203,21 +203,73 @@ INFO [2022-01-26 21:26:40] Using 2 workers with 4 cores per worker
 +                              rt = rt_opts(prior = list(mean = 1.25, sd = 0.25))))
 + 
 + }
-Running the full modelINFO [2022-01-26 21:26:40] Producing following optional outputs: regions, summary, samples, plots, latest
+Running the full modelINFO [2022-01-27 21:19:11] Producing following optional outputs: regions, summary, samples, plots, latest
 Logging threshold set at INFO for the EpiNow2 logger
-Writing EpiNow2 logs to the console and: /datadisk/refresh-restimates/epinow-logs/regional-epinow/2022-01-26.log
+Writing EpiNow2 logs to the console and: /datadisk/refresh-restimates/epinow-logs/regional-epinow/2022-01-27.log
 Logging threshold set at INFO for the EpiNow2.epinow logger
-Writing EpiNow2.epinow logs to: /datadisk/refresh-restimates/epinow-logs/epinow/2022-01-26.log
-INFO [2022-01-26 21:26:40] Reporting estimates using data up to: 2022-01-26
-INFO [2022-01-26 21:26:40] Saving estimates to : /datadisk/refresh-restimates/rt-estimates-out
-INFO [2022-01-26 21:26:40] Producing estimates for: 40 regions
-INFO [2022-01-26 21:26:40] Regions excluded: 0 regions
-INFO [2022-01-27 03:08:14] Completed regional estimates
-INFO [2022-01-27 03:08:14] Regions with estimates: 40
-INFO [2022-01-27 03:08:14] Regions with runtime errors: 0
-INFO [2022-01-27 03:08:14] Producing summary
-INFO [2022-01-27 03:08:14] No summary directory specified so returning summary output
-INFO [2022-01-27 03:08:15] Saving timings information to : /datadisk/refresh-restimates/rt-estimates-out
+Writing EpiNow2.epinow logs to: /datadisk/refresh-restimates/epinow-logs/epinow/2022-01-27.log
+INFO [2022-01-27 21:19:12] Reporting estimates using data up to: 2022-01-27
+INFO [2022-01-27 21:19:12] Saving estimates to : /datadisk/refresh-restimates/rt-estimates-out
+INFO [2022-01-27 21:19:12] Producing estimates for: 40 regions
+INFO [2022-01-27 21:19:12] Regions excluded: 0 regions
+error occurred during calling the sampler; sampling not done
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+Stan model 'estimate_infections' does not contain samples.
+error occurred during calling the sampler; sampling not done
+INFO [2022-01-28 02:39:51] Completed regional estimates
+INFO [2022-01-28 02:39:51] Regions with estimates: 40
+INFO [2022-01-28 02:39:51] Regions with runtime errors: 0
+INFO [2022-01-28 02:39:51] Producing summary
+INFO [2022-01-28 02:39:51] No summary directory specified so returning summary output
+INFO [2022-01-28 02:39:53] Saving timings information to : /datadisk/refresh-restimates/rt-estimates-out
 > 
 > # Now run program to make synthesis
 > # Done
@@ -226,4 +278,4 @@ INFO [2022-01-27 03:08:15] Saving timings information to : /datadisk/refresh-res
 done with estimates> 
 > proc.time()
       user     system    elapsed 
-116638.409    146.216  20505.853 
+108446.114    142.639  19254.118 
