@@ -49,7 +49,7 @@ The following object is masked from ‘package:EpiNow2’:
 > 
 > dat <- nccovid::get_covid_county_plus()
 Using: cone as the data source
-Last date available: 2022-02-18
+Last date available: 2022-02-21
 > 
 > # Wait Until 15 Confirmed cases by county cumulative and within last 16 weeks
 > 
@@ -161,7 +161,7 @@ prep completed>
 > # Load utils --------------------------------------------------------------
 > if (!exists("setup_future", mode = "function")) source(here::here("util.R"))
 > no_cores <- setup_future(reported_cases = reported_cases)
-INFO [2022-02-18 21:20:24] Using 2 workers with 4 cores per worker
+INFO [2022-02-21 21:14:41] Using 2 workers with 4 cores per worker
 > 
 > # run estimation ----------------------------------------------------------
 > #EpiNow2::setup_logging(file = "log.log")
@@ -203,21 +203,21 @@ INFO [2022-02-18 21:20:24] Using 2 workers with 4 cores per worker
 +                              rt = rt_opts(prior = list(mean = 1.25, sd = 0.25))))
 + 
 + }
-Running the full modelINFO [2022-02-18 21:20:24] Producing following optional outputs: regions, summary, samples, plots, latest
+Running the full modelINFO [2022-02-21 21:14:41] Producing following optional outputs: regions, summary, samples, plots, latest
 Logging threshold set at INFO for the EpiNow2 logger
-Writing EpiNow2 logs to the console and: /datadisk/refresh-restimates/epinow-logs/regional-epinow/2022-02-18.log
+Writing EpiNow2 logs to the console and: /datadisk/refresh-restimates/epinow-logs/regional-epinow/2022-02-21.log
 Logging threshold set at INFO for the EpiNow2.epinow logger
-Writing EpiNow2.epinow logs to: /datadisk/refresh-restimates/epinow-logs/epinow/2022-02-18.log
-INFO [2022-02-18 21:20:24] Reporting estimates using data up to: 2022-02-18
-INFO [2022-02-18 21:20:24] Saving estimates to : /datadisk/refresh-restimates/rt-estimates-out
-INFO [2022-02-18 21:20:24] Producing estimates for: 40 regions
-INFO [2022-02-18 21:20:24] Regions excluded: 0 regions
-INFO [2022-02-19 02:30:04] Completed regional estimates
-INFO [2022-02-19 02:30:04] Regions with estimates: 40
-INFO [2022-02-19 02:30:04] Regions with runtime errors: 0
-INFO [2022-02-19 02:30:04] Producing summary
-INFO [2022-02-19 02:30:04] No summary directory specified so returning summary output
-INFO [2022-02-19 02:30:07] Saving timings information to : /datadisk/refresh-restimates/rt-estimates-out
+Writing EpiNow2.epinow logs to: /datadisk/refresh-restimates/epinow-logs/epinow/2022-02-21.log
+INFO [2022-02-21 21:14:41] Reporting estimates using data up to: 2022-02-21
+INFO [2022-02-21 21:14:41] Saving estimates to : /datadisk/refresh-restimates/rt-estimates-out
+INFO [2022-02-21 21:14:41] Producing estimates for: 40 regions
+INFO [2022-02-21 21:14:41] Regions excluded: 0 regions
+INFO [2022-02-22 03:44:02] Completed regional estimates
+INFO [2022-02-22 03:44:02] Regions with estimates: 40
+INFO [2022-02-22 03:44:02] Regions with runtime errors: 0
+INFO [2022-02-22 03:44:02] Producing summary
+INFO [2022-02-22 03:44:02] No summary directory specified so returning summary output
+INFO [2022-02-22 03:44:03] Saving timings information to : /datadisk/refresh-restimates/rt-estimates-out
 > 
 > # Now run program to make synthesis
 > # Done
@@ -226,4 +226,4 @@ INFO [2022-02-19 02:30:07] Saving timings information to : /datadisk/refresh-res
 done with estimates> 
 > proc.time()
       user     system    elapsed 
-102426.159    146.668  18593.766 
+106564.440    141.608  23373.532 
