@@ -49,7 +49,7 @@ The following object is masked from ‘package:EpiNow2’:
 > 
 > dat <- nccovid::get_covid_county_plus()
 Using: cone as the data source
-Last date available: 2022-02-28
+Last date available: 2022-03-01
 > 
 > # Wait Until 15 Confirmed cases by county cumulative and within last 16 weeks
 > 
@@ -135,7 +135,7 @@ prep completed>
 > # Load utils --------------------------------------------------------------
 > if (!exists("setup_future", mode = "function")) source(here::here("util.R"))
 > no_cores <- setup_future(reported_cases = reported_cases)
-INFO [2022-02-28 20:05:13] Using 2 workers with 4 cores per worker
+INFO [2022-03-01 20:05:13] Using 2 workers with 4 cores per worker
 > 
 > # run estimation ----------------------------------------------------------
 > #EpiNow2::setup_logging(file = "log.log")
@@ -176,23 +176,23 @@ INFO [2022-02-28 20:05:13] Using 2 workers with 4 cores per worker
 + 																	 								 future = FALSE),
 + 																	 rt = rt_opts(prior = list(mean = 1.25, sd = 0.25))))
 + }
-Running the full modelINFO [2022-02-28 20:05:13] Producing following optional outputs: regions, summary, samples, plots, latest
+Running the full modelINFO [2022-03-01 20:05:13] Producing following optional outputs: regions, summary, samples, plots, latest
 Logging threshold set at INFO for the EpiNow2 logger
-Writing EpiNow2 logs to the console and: /datadisk/refresh-restimates/epinow-logs/regional-epinow/2022-02-28.log
+Writing EpiNow2 logs to the console and: /datadisk/refresh-restimates/epinow-logs/regional-epinow/2022-03-01.log
 Logging threshold set at INFO for the EpiNow2.epinow logger
-Writing EpiNow2.epinow logs to: /datadisk/refresh-restimates/epinow-logs/epinow/2022-02-28.log
-INFO [2022-02-28 20:05:13] Reporting estimates using data up to: 2022-02-28
-INFO [2022-02-28 20:05:13] Saving estimates to : /datadisk/refresh-restimates/rt-estimates-out
-INFO [2022-02-28 20:05:13] Producing estimates for: Buncombe, Cumberland, Durham, Forsyth, Gaston, Guilford, Mecklenburg, New Hanover, Union, Wake, North Carolina, Cone Health
-INFO [2022-02-28 20:05:13] Regions excluded: none
-INFO [2022-02-28 21:07:18] Completed regional estimates
-INFO [2022-02-28 21:07:18] Regions with estimates: 12
-INFO [2022-02-28 21:07:18] Regions with runtime errors: 0
-INFO [2022-02-28 21:07:18] Producing summary
-INFO [2022-02-28 21:07:18] No summary directory specified so returning summary output
-INFO [2022-02-28 21:07:19] Saving timings information to : /datadisk/refresh-restimates/rt-estimates-out
+Writing EpiNow2.epinow logs to: /datadisk/refresh-restimates/epinow-logs/epinow/2022-03-01.log
+INFO [2022-03-01 20:05:13] Reporting estimates using data up to: 2022-03-01
+INFO [2022-03-01 20:05:13] Saving estimates to : /datadisk/refresh-restimates/rt-estimates-out
+INFO [2022-03-01 20:05:13] Producing estimates for: Buncombe, Cumberland, Durham, Forsyth, Gaston, Guilford, Mecklenburg, New Hanover, Union, Wake, North Carolina, Cone Health
+INFO [2022-03-01 20:05:13] Regions excluded: none
+INFO [2022-03-01 21:13:23] Completed regional estimates
+INFO [2022-03-01 21:13:23] Regions with estimates: 12
+INFO [2022-03-01 21:13:23] Regions with runtime errors: 0
+INFO [2022-03-01 21:13:23] Producing summary
+INFO [2022-03-01 21:13:23] No summary directory specified so returning summary output
+INFO [2022-03-01 21:13:24] Saving timings information to : /datadisk/refresh-restimates/rt-estimates-out
 > plan("sequential")
 > 
 > proc.time()
      user    system   elapsed 
-25932.418    28.422  3736.839 
+25475.844    27.675  4101.893 
