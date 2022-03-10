@@ -41,4 +41,7 @@ cat("done with combination")
 
 system("R CMD BATCH --vanilla  correct-state.R")
 system("R CMD BATCH --vanilla  prob_spread.R")
+system("su runner -c 'git add .'")
+
+system("su runner -c 'git commit 'Automatic Update''")
 system("su runner -c 'git push origin master'")
