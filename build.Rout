@@ -23,4 +23,263 @@ Type 'q()' to quit R.
 + Sys.sleep(60*30)
 + }
 Using: cone as the data source
-Last date available: 2022-03-09
+Last date available: 2022-03-10
+> 
+> cat("starting")
+starting> ptm <- proc.time()
+> cat("\nFirst Batch\n")
+
+First Batch
+> system("R CMD BATCH --vanilla generate-estimates-1.R")
+> proc.time() - ptm
+     user    system   elapsed 
+27059.212    49.670  4131.159 
+> 
+> cat("\nSecond Batch\n")
+
+Second Batch
+> ptm <- proc.time()
+> system("R CMD BATCH --vanilla generate-estimates-2.R")
+> proc.time() - ptm
+     user    system   elapsed 
+86017.551   158.542 15313.862 
+> 
+> cat("\nSecond Batch\n")
+
+Second Batch
+> ptm <- proc.time()
+> system("R CMD BATCH --vanilla generate-estimates-3.R")
+> proc.time() - ptm
+      user     system    elapsed 
+137556.832    283.963  27422.250 
+> 
+> #cat("\nProcessing Failures\n")
+> #system("R CMD BATCH --vanilla generate-estimates-4.R")
+> #cat("did state and loca again")
+> #ptm <- proc.time()
+> #system("R CMD BATCH --vanilla re-process-missing.R")
+> #proc.time() - ptm\
+> 
+> cat("done with estimates")
+done with estimates> ptm <- proc.time()
+> system("R CMD BATCH --vanilla process-outputs.R")
+> proc.time() - ptm
+   user  system elapsed 
+  7.397   5.632  15.325 
+> 
+> cat("done with processing")
+done with processing> ptm <- proc.time()
+> system("R CMD BATCH --vanilla combine-forecasts.R")
+> proc.time() - ptm
+   user  system elapsed 
+ 52.859   8.828  47.730 
+> 
+> cat("done with combination")
+done with combination> 
+> system("R CMD BATCH --vanilla  correct-state.R")
+> system("R CMD BATCH --vanilla  prob_spread.R")
+> system("su runner -c 'git add .'")
+warning: unable to access 'rt-estimates-out/Halifax/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Halifax/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Mecklenburg/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Mecklenburg/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Rowan/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Rowan/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Yancey/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Yancey/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Camden/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Camden/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Alamance/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Alamance/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Swain/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Swain/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Gaston/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Gaston/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Wilson/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Wilson/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Cumberland/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Cumberland/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Rockingham/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Rockingham/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Durham/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Durham/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Lee/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Lee/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Ashe/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Ashe/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Hoke/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Hoke/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Cleveland/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Cleveland/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Carteret/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Carteret/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Montgomery/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Montgomery/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Wake/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Wake/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Alleghany/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Alleghany/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Forsyth/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Forsyth/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Stokes/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Stokes/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Randolph/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Randolph/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Person/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Person/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Iredell/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Iredell/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Warren/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Warren/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Vance/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Vance/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Clay/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Clay/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Caldwell/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Caldwell/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Wayne/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Wayne/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Greene/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Greene/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Cabarrus/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Cabarrus/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Columbus/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Columbus/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Jones/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Jones/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Davie/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Davie/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Beaufort/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Beaufort/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Surry/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Surry/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Edgecombe/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Edgecombe/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Nash/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Nash/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Bertie/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Bertie/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Stanly/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Stanly/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Dare/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Dare/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Wilkes/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Wilkes/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Watauga/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Watauga/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Rutherford/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Rutherford/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Franklin/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Franklin/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Sampson/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Sampson/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Alexander/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Alexander/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Cone Health/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Cone Health/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Pender/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Pender/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Gates/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Gates/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Onslow/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Onslow/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Madison/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Madison/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Harnett/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Harnett/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Craven/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Craven/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Catawba/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Catawba/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Hertford/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Hertford/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Moore/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Moore/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Orange/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Orange/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/North Carolina/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/North Carolina/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Richmond/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Richmond/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Currituck/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Currituck/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Polk/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Polk/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Washington/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Washington/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Granville/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Granville/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Scotland/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Scotland/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Anson/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Anson/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Lincoln/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Lincoln/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Brunswick/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Brunswick/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Chatham/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Chatham/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Graham/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Graham/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Chowan/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Chowan/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Perquimans/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Perquimans/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Guilford/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Guilford/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Johnston/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Johnston/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Burke/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Burke/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Robeson/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Robeson/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Duplin/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Duplin/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Haywood/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Haywood/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Northampton/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Northampton/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Union/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Union/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Pitt/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Pitt/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Cherokee/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Cherokee/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Bladen/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Bladen/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Caswell/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Caswell/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Avery/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Avery/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/McDowell/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/McDowell/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Transylvania/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Transylvania/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Tyrrell/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Tyrrell/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Henderson/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Henderson/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/New Hanover/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/New Hanover/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Hyde/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Hyde/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Yadkin/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Yadkin/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Davidson/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Davidson/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Martin/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Martin/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Jackson/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Jackson/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Pasquotank/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Pasquotank/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Pamlico/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Pamlico/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Lenoir/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Lenoir/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Macon/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Macon/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Mitchell/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Mitchell/latest/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Buncombe/2022-03-10/.gitignore': Permission denied
+warning: unable to access 'rt-estimates-out/Buncombe/latest/.gitignore': Permission denied
