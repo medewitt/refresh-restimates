@@ -23,7 +23,7 @@ Type 'q()' to quit R.
 + Sys.sleep(60*30)
 + }
 Using: cone as the data source
-Last date available: 2022-03-24
+Last date available: 2022-03-25
 > 
 > cat("starting")
 starting> ptm <- proc.time()
@@ -33,7 +33,7 @@ First Batch
 > system("R CMD BATCH --vanilla generate-estimates-1.R")
 > proc.time() - ptm
      user    system   elapsed 
-13241.051    19.186  2040.022 
+12056.752    19.749  1862.887 
 > 
 > cat("\nSecond Batch\n")
 
@@ -42,7 +42,7 @@ Second Batch
 > system("R CMD BATCH --vanilla generate-estimates-2.R")
 > proc.time() - ptm
      user    system   elapsed 
-48973.692    99.872  9498.512 
+50011.772    97.769  9731.096 
 > 
 > cat("\nSecond Batch\n")
 
@@ -51,7 +51,7 @@ Second Batch
 > system("R CMD BATCH --vanilla generate-estimates-3.R")
 > proc.time() - ptm
      user    system   elapsed 
-81887.915   206.083 17627.259 
+85354.657   203.575 17867.529 
 > 
 > #cat("\nProcessing Failures\n")
 > #system("R CMD BATCH --vanilla generate-estimates-4.R")
@@ -65,14 +65,14 @@ done with estimates> ptm <- proc.time()
 > system("R CMD BATCH --vanilla process-outputs.R")
 > proc.time() - ptm
    user  system elapsed 
-  5.051   5.068   9.079 
+  5.138   5.057   9.491 
 > 
 > cat("done with processing")
 done with processing> ptm <- proc.time()
 > system("R CMD BATCH --vanilla combine-forecasts.R")
 > proc.time() - ptm
    user  system elapsed 
- 36.704   6.560  28.107 
+ 37.540   6.439  27.856 
 > 
 > cat("done with combination")
 done with combination> 
@@ -283,18 +283,3 @@ warning: unable to access 'rt-estimates-out/Mitchell/2022-03-10/.gitignore': Per
 warning: unable to access 'rt-estimates-out/Mitchell/latest/.gitignore': Permission denied
 warning: unable to access 'rt-estimates-out/Buncombe/2022-03-10/.gitignore': Permission denied
 warning: unable to access 'rt-estimates-out/Buncombe/latest/.gitignore': Permission denied
-> 
-> system("su runner -c 'git commit -m \'Automatic Update\''")
-[master c044ec4] Automatic
- 14 files changed, 67047 insertions(+), 64252 deletions(-)
- create mode 100644 data/2022-03-25-all-counties.rds
- create mode 100644 epinow-logs/epinow/2022-03-24.log
- create mode 100644 epinow-logs/regional-epinow/2022-03-24.log
- rewrite output/prob_spread.csv (74%)
-> system("su runner -c 'git push origin master'")
-To https://github.com/medewitt/refresh-restimates.git
-   3e54d67..c044ec4  master -> master
-> 
-> proc.time()
-      user     system    elapsed 
-144251.070    341.296  29297.755 
