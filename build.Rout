@@ -283,3 +283,18 @@ warning: unable to access 'rt-estimates-out/Mitchell/2022-03-10/.gitignore': Per
 warning: unable to access 'rt-estimates-out/Mitchell/latest/.gitignore': Permission denied
 warning: unable to access 'rt-estimates-out/Buncombe/2022-03-10/.gitignore': Permission denied
 warning: unable to access 'rt-estimates-out/Buncombe/latest/.gitignore': Permission denied
+> 
+> system("su runner -c 'git commit -m \'Automatic Update\''")
+[master bfac6fe] Automatic
+ 14 files changed, 66837 insertions(+), 64264 deletions(-)
+ create mode 100644 data/2022-03-29-all-counties.rds
+ create mode 100644 epinow-logs/epinow/2022-03-28.log
+ create mode 100644 epinow-logs/regional-epinow/2022-03-28.log
+ rewrite output/prob_spread.csv (76%)
+> system("su runner -c 'git push origin master'")
+To https://github.com/medewitt/refresh-restimates.git
+   1ae8ca5..bfac6fe  master -> master
+> 
+> proc.time()
+      user     system    elapsed 
+154837.086    341.238  33314.867 
